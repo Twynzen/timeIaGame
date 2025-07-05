@@ -1,0 +1,2283 @@
+SISTEMA PRINCIPAL DE FUNCIONAMIENTO DEL JUEGO
+IGNORAR TODO LO QUE DIGA TERRAMORTA, SERA LA BASE DE EL JUEGO, PERO NO EL NOMBRE FINAL NI NADA, ES USAR UN SISTEMA YA CREADO  Y BASARSE EN ESO.
+-----------
+
+Sección 1 - Lore y Cosmogonía de Terramorta (Resumida)
+
+Objetivo: Manejar el lore principal de Terramorta teniendo en consideracion que es lo mas importante lo que sale en esta seccion respecto al Lore
+
+Contenido:
+
+El Vacío: Su naturaleza primordial, su hambre, y su rol como "basurero del universo".
+
+Origen de los Doce Guerreros Eternos: Cómo surgieron (no creados, sino forjados del dolor/coraje contra el Vacío).
+
+La Guerra Primordial: El combate de los Doce contra el Vacío, cómo sus heridas dieron origen a las primeras semillas del ser.
+
+El Sacrificio de los Doce y el Nacimiento de Terramorta: Cómo sellaron al Vacío dentro de la creación misma, y cómo su esencia (junto con la sombra del Vacío) impregna todo el mundo.
+
+Rol actual de los Doce Eternos: Que están sellados dentro de la trama de la creación.
+Tono general del mundo: Fantasía medieval, con elementos de steampunk/autómatas y toques Isekai.
+Magia: Su omnipresencia y vínculo con el mundo.
+Tecnología: Medieval con rudimentos steampunk (mecánica/vapor); no existe la pólvora.
+Facciones principales (mencionar brevemente): Arasaka y Silver Hand(como los mas primordiales) Antagonista : Camelot (Reino XENOFOBO, que somo contiene humanos y es la mayor fuente de humanos de todo el mundo).
+Mortalidad en el juego: Alta ("o somos leyenda o morimos intentándolo").
+
+---
+
+### **Sección 2: Sistema de Atributos y Stats**
+
+#### **Introducción: El Motor Mecánico del Personaje**
+
+Esta sección detalla el motor mecánico que define a cada personaje en Terramorta. Se divide en dos componentes principales: los **Atributos Base**, que representan el potencial innato de un personaje, y los **Stats Mejorables**, que reflejan su crecimiento y especialización a través de la experiencia.
+
+---
+
+#### **1. Los 6 Atributos Base**
+
+Los Atributos Base son el fundamento de cada personaje. Miden sus aptitudes más esenciales y rara vez cambian después de la creación del personaje.
+
+##### **1.1. Lista de Atributos Base**
+Los seis atributos que definen a un ser en Terramorta son:
+* **Fuerza (FUE):** Mide el poderío físico bruto.
+* **Destreza (DES):** Mide la agilidad, los reflejos y la precisión.
+* **Constitución (CON):** Mide la resistencia, el aguante y la salud.
+* **Inteligencia (INT):** Mide la capacidad de razonamiento, la memoria y el conocimiento arcano.
+* **Sabiduría (SAB):** Mide la percepción, la intuición y la voluntad.
+* **Carisma (CAR):** Mide la fuerza de la personalidad, la persuasión y la capacidad de liderazgo.
+
+##### **1.2. Distribución Inicial de Puntos**
+En la creación del personaje, el jugador dispone de **24 puntos** para distribuir entre los seis Atributos Base. A esta distribución se le deben sumar los bonos otorgados por la Raza y la Clase elegidas. El valor máximo para cualquier atributo después de todos los ajustes es de **10**.
+
+##### **1.3. Bonos Fijos por Nivel de Atributo**
+Un nivel de atributo de 6 o superior otorga un bono fijo a todas las tiradas de `1d100` que dependan de dicho atributo. La progresión es la siguiente:
+
+| Nivel del Atributo | Bono Fijo a la Tirada (`1d100`) |
+| :--- | :--- |
+| 1-5 | +0 |
+| 6 | +15 |
+| 7 | +20 |
+| 8 | +25 |
+| 9 | +30 |
+| 10 | +35 |
+
+*Ejemplo de aplicación:* Un personaje con 6 en Fuerza que intenta derribar una puerta (DC 50) realiza la siguiente tirada: `1d100 + 15`.
+
+##### **1.4. Reglas de Bonos Específicos**
+Para acciones muy concretas como Evasión, Sigilo, Percepción, Investigación, Persuasión, etc., se utilizarán los bonos específicos detallados en sus respectivas tablas o sistemas, en lugar de este bono general.
+
+---
+
+#### **2. Stats Mejorables por Nivel**
+
+Estos stats representan las capacidades de combate y supervivencia de un personaje. A diferencia de los Atributos Base, estos valores aumentan constantemente a medida que el personaje sube de nivel.
+
+##### **2.1. Puntos de Mejora por Nivel**
+Con cada nuevo nivel que alcanza, un personaje recibe **10 Puntos de Mejora** para invertir en sus stats.
+
+##### **2.2. Lista de Stats Mejorables y Costos**
+Los ocho stats mejorables estándar son:
+* **Vitalidad (HP):** Determina los Puntos de Vida totales.
+* **Ataque (Atk):** Potencia el daño de los ataques físicos.
+* **Defensa (Def):** Aumenta la capacidad de mitigar el daño físico.
+* **Ataque Mágico (AtkM):** Potencia el daño de los ataques mágicos.
+* **Defensa Mágica (DefM):** Aumenta la capacidad de mitigar el daño mágico.
+* **Fortaleza:** Otorga un bono de daño fijo a todos los ataques.
+* **Resistencia:** Otorga un bono de mitigación fijo a todas las defensas.
+* **Maná:** Determina los Puntos de Maná totales para usar habilidades.
+
+El costo para aumentar cada stat es el siguiente:
+
+| Stat | Costo por Punto | Aumento Obtenido por Punto |
+| :--- | :--- | :--- |
+| Vitalidad | 1 Pto. de Mejora | +180 HP |
+| Ataque (Atk) | 1 Pto. de Mejora | +12 al Rango del Dado de Daño |
+| Defensa (Def) | 1 Pto. de Mejora | +12 al Rango del Dado de Defensa |
+| Ataque Mágico (AtkM) | 1 Pto. de Mejora | +3 al Rango del Dado de Daño Mágico |
+| Defensa Mágica (DefM)| 1 Pto. de Mejora | +3 al Rango del Dado de Defensa Mágica |
+| Fortaleza | 1 Pto. de Mejora | +3 al Bono Fijo de Daño |
+| Resistencia | 1 Pto. de Mejora | +3 al Bono Fijo de Defensa |
+| Maná | 1 Pto. de Mejora | +3 Puntos de Maná |
+
+##### **2.3. Stat Especial: Apoyo/Curación (DS)**
+Esta estadística no es estándar y solo puede ser adquirida y mejorada por personajes cuyo Oficio o Raza se lo permita (ej. Curanderos, Celestiales).
+* **Costo Progresivo:**
+    * **Del Nivel 1 al 9 de PJ:** Cuesta **1 Punto de Mejora** aumentar el Dado de Sanación (DS) en +20.
+    * **A partir del Nivel 10 de PJ:** Cuesta **2 Puntos de Mejora** aumentar el Dado de Sanación (DS) en +20.
+	* **Es decir si se otorgan 3 Puntos de mejora al Dado DS, este quedaria en 1d100 + 60 = {1d160}
+---
+
+#### **3. Reglas Especiales de Progresión y Stats**
+
+##### **3.1. Ascensión de Nivel**
+Al alcanzar hitos de poder significativos, los personajes reciben una infusión de potencial. Por cada 10 niveles alcanzados (Nivel 10, 20 y 30), el personaje recibe una recompensa de **30 Puntos de Mejora adicionales** para distribuir inmediatamente.
+
+##### **3.2. Aplicación de Fortaleza y Resistencia**
+Los valores totales de Fortaleza y Resistencia no son tiradas de dados. Se suman como **bonos fijos** al resultado final del daño o la defensa, después de la tirada de dados.
+* `Daño Físico Final = [Tirada de Atk] + [Fortaleza]`
+* `Defensa Física Final = [Tirada de Def] + [Resistencia]`
+* (Se aplica la misma lógica para los ataques y defensas mágicos).
+
+##### **3.3. Progresión de Dados a `Xd999`**
+El sistema de dados de ataque y defensa (`1dY`) tiene una progresión lógica. Si el valor de `Y` (el rango del dado) supera 999 a través de mejoras, se aplica la siguiente regla de conversión:
+1.  El valor de `Y` se limita a **999**.
+2.  El número de dados (`X`) se ajusta multiplicándose por un factor de `Y_Calculado / 999`.
+3.  El nuevo valor de `X` se redondea hacia arriba al entero más cercano.
+4.  El número máximo de dados está limitado a 20. El resultado final nunca puede superar `20d999` Aunque si pueden haber bloques por ejemplo [20d999 + 20d999 + 20d999 etc].
+
+
+---
+
+### **Sección 3: Sistema de Razas y Clases**
+
+#### **Introducción: La Identidad del Personaje**
+
+La identidad de cada aventurero en Terramorta se forja a partir de dos pilares fundamentales: su **Raza**, que define su herencia, sus aptitudes innatas y su lugar en el mundo; y su **Clase**, que representa su entrenamiento, su estilo de combate y su rol en un grupo. La combinación de ambas define el punto de partida para las leyendas que están por escribirse.
+
+---
+
+### **1. Razas de Terramorta**
+
+A continuación se detallan las razas jugables, cada una con sus propias fortalezas, debilidades y estadísticas base.
+
+#### **Humanos**
+* **Descripción:** Seres adaptables con habilidades variadas, los humanos prosperan en diversas sociedades y roles. Su mayor fortaleza radica en su capacidad para aprender y adaptarse, permitiéndoles sobresalir en diversas disciplinas.
+* **Debilidad Principal:** Ninguna innata.
+* **Edad Máxima:** 100 años.
+
+| Vitalidad | Maná | Daño | Defensa | Atk. Mágico | Def. Mágica |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 100 HP | 10 | 1d10 | 1d8 | 1d10 | 1d8 |
+* **Bonificadores de Atributo:** +1 a todos los atributos.
+
+#### **Elfos**
+* **Descripción:** Inmortales y elegantes, los elfos se dividen en Altos, Oscuros y del Bosque. Su gracia y agilidad son notables, y su afinidad con la magia les otorga habilidades arcanas excepcionales.
+* **Debilidad Principal:** Vulnerables al Hierro Frío.
+* **Edad Máxima:** Indefinida.
+
+| Vitalidad | Maná | Daño | Defensa | Atk. Mágico | Def. Mágica |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 120 HP | 15 | 1d12 | 1d10 | 1d12 | 1d10 |
+* **Bonificadores de Atributo:** +2 Destreza, +1 Sabiduría.
+
+#### **Enanos**
+* **Descripción:** Maestros artesanos y guerreros intrépidos que valoran la lealtad. Con una estatura robusta y una habilidad innata para la forja, son expertos en la creación de armas y armaduras.
+* **Debilidad Principal:** Vulnerables a la Magia Oscura.
+* **Edad Máxima:** 450 años.
+
+| Vitalidad | Maná | Daño | Defensa | Atk. Mágico | Def. Mágica |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 90 HP | 8 | 1d16 | 1d13 | 1d16 | 1d16 |
+* **Bonificadores de Atributo:** +2 Constitución, +2 Fuerza.
+
+#### **Orcos**
+* **Descripción:** Guerreros feroces dedicados a la guerra y la conquista. Con piel verde, cuerpos musculosos y una inclinación hacia la violencia, son temidos en el campo de batalla.
+* **Debilidad Principal:** Intolerancia a la Magia Débil.
+* **Edad Máxima:** 120 años.
+
+| Vitalidad | Maná | Daño | Defensa | Atk. Mágico | Def. Mágica |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 150 HP | 10 | 1d18 | 1d14 | 1d18 | 1d14 |
+* **Bonificadores de Atributo:** +2 Fuerza, +1 Constitución.
+
+#### **Dragonesborn**
+* **Nota Especial:** Esta raza solo puede ser elegida mediante sorteo.
+* **Descripción:** Con sangre de dragón, son fuertes y resistentes, con habilidades elementales. Su apariencia está marcada por escamas y rasgos draconianos, otorgándoles una presencia imponente.
+* **Debilidad Principal:** Sensibles a la Magia Caótica.
+* **Edad Máxima:** Indefinida.
+
+| Vitalidad | Maná | Daño | Defensa | Atk. Mágico | Def. Mágica |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 400 HP | 8 | 1d40 | 1d32 | 1d30 | 1d24 |
+* **Bonificadores de Atributo:** +2 Fuerza, +1 Carisma.
+
+#### **Tieflings**
+* **Descripción:** Descendientes de demonios, con rasgos infernales y poderes mágicos. A pesar de la desconfianza que a menudo enfrentan, muchos aprenden a utilizar sus dones para fines beneficiosos.
+* **Debilidad Principal:** Debilidad al Fuego Infernal.
+* **Edad Máxima:** 120 años.
+
+| Vitalidad | Maná | Daño | Defensa | Atk. Mágico | Def. Mágica |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 135 HP | 20 | 1d13 | 1d10 | 1d13 | 1d10 |
+* **Bonificadores de Atributo:** +2 Carisma, +1 Inteligencia.
+
+#### **Genasi**
+* **Descripción:** Seres con sangre elemental que pueden manipular fuego, agua, aire o tierra. Su apariencia y poderes reflejan su conexión con el elemento elegido.
+* **Debilidad Principal:** Vulnerables a su elemento opuesto.
+* **Edad Máxima:** Indefinida.
+
+| Vitalidad | Maná | Daño | Defensa | Atk. Mágico | Def. Mágica |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 140 HP | 20 | 1d15 | 1d13 | 1d15 | 1d13 |
+* **Bonificadores de Atributo (por Subcategoría):**
+    * **Genasi del Fuego:** +2 Constitución, +1 Inteligencia.
+    * **Genasi del Agua:** +2 Constitución, +1 Sabiduría.
+    * **Genasi del Aire:** +2 Constitución, +1 Destreza.
+    * **Genasi de la Tierra:** +2 Constitución, +1 Fuerza.
+
+#### **Aasimar**
+* **Descripción:** Dotados con la gracia celestial, irradiando luz y con poderes divinos. A menudo presentan alas y un resplandor divino, y actúan como protectores y sanadores.
+* **Debilidad Principal:** Vulnerables a las Energías Malditas.
+* **Edad Máxima:** Indefinida.
+
+| Vitalidad | Maná | Daño | Defensa | Atk. Mágico | Def. Mágica |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 150 HP | 30 | 1d17 | 1d14 | 1d17 | 1d17 |
+* **Bonificadores de Atributo:** +2 Carisma, +1 Sabiduría.
+
+#### **Kalashtar**
+* **Descripción:** Fusiones de espíritus celestiales y almas mortales, con habilidades psíquicas. Destacan por sus ojos brillantes y un aspecto etéreo.
+* **Debilidad Principal:** Vulnerables a intrusiones psíquicas.
+* **Edad Máxima:** Indefinida.
+
+| Vitalidad | Maná | Daño | Defensa | Atk. Mágico | Def. Mágica |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 115 HP | 40 | 1d9 | 1d13 | 1d16 | 1d15 |
+* **Bonificadores de Atributo:** +2 Sabiduría, +1 Carisma.
+
+#### **Demonios**
+* **Descripción:** Seres del inframundo con apariencias terroríficas y habilidades demoníacas. Su vínculo con el inframundo les otorga poderes oscuros y una predisposición hacia la corrupción.
+* **Debilidad Principal:** Debilidad a la Oscuridad Demoníaca.
+* **Edad Máxima:** Indefinida.
+
+| Vitalidad | Maná | Daño | Defensa | Atk. Mágico | Def. Mágica |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 150 HP | 20 | 1d19 | 1d15 | 1d19 | 1d10 |
+* **Bonificadores de Atributo:** +2 Fuerza, +1 Carisma.
+
+#### **Ángeles**
+* **Descripción:** Seres celestiales de luz y benevolencia, con alas y poderes divinos. Su naturaleza benevolente les convierte en protectores y sanadores natos.
+* **Debilidad Principal:** Debilidad a la Luz Celestial.
+* **Edad Máxima:** Indefinida.
+
+| Vitalidad | Maná | Daño | Defensa | Atk. Mágico | Def. Mágica |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1d40 HP | 20 | 1d15 | 1d19 | 1d10 | 1d19 |
+* **Bonificadores de Atributo:** +2 Sabiduría, +1 Carisma.
+
+#### **Thyria**
+* **Descripción:** Seres animales antropomórficos que fusionan la esencia animal con la inteligencia humana. Su apariencia varía según la especie a la que están vinculados y nutren su vitalidad de la naturaleza.
+* **Debilidad Principal:** Vulnerables a la Magia Oscura y a la Luz Celestial.
+* **Edad Máxima:** Indefinida.
+
+| Vitalidad | Maná | Daño | Defensa | Atk. Mágico | Def. Mágica |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 110 HP | 15 | 1d17 | 1d17 | 1d7 | 1d7 |
+* **Bonificadores de Atributo:** +3 Sabiduría.
+
+---
+
+### **2. Clases de Terramorta**
+
+Las clases definen el estilo de combate y las aptitudes de un personaje. Cada clase otorga bonificaciones (buffs) con cierto tipo de equipamiento y penalizaciones (desbuffs) con otros.
+
+#### **Guerrero**
+* **Descripción:** Un experto en combate cuerpo a cuerpo y en el uso de armas.
+* **Bonificadores de Atributo:** +1 Fuerza, +1 Constitución.
+| Tipo | Multiplicador | Equipamiento Afectado |
+| :--- | :--- | :--- |
+| **Buff** | 1.10x | Armas: Espadas, Hachas, Lanzas. Armaduras: Liviana, Mediana. Escudos: Liviano. |
+| **Desbuff** | 0.85x | Todas las demás armas, armaduras y escudos. |
+
+#### **Mago**
+* **Descripción:** Un maestro de las artes arcanas, capaz de manipular la energía mágica para lanzar hechizos.
+* **Bonificadores de Atributo:** +1 Inteligencia, +1 Sabiduría.
+| Tipo | Multiplicador | Equipamiento/Hechizos Afectados |
+| :--- | :--- | :--- |
+| **Buff** | 1.30x | Hechizos, Armaduras Livianas. |
+| **Desbuff**| 0.65x | Todas las armas, demás armaduras y escudos. |
+
+#### **Arquero**
+* **Descripción:** Un especialista en el uso de armas de distancia, desde arcos hasta balistas.
+* **Bonificadores de Atributo:** +1 Destreza, +1 Sabiduría.
+| Tipo | Multiplicador | Equipamiento Afectado |
+| :--- | :--- | :--- |
+| **Buff** | 1.15x | Todas las armas a distancia, Armaduras Livianas. |
+| **Desbuff**| 0.85x | Todas las demás armas, armaduras y escudos. |
+
+#### **Ladrón**
+* **Descripción:** Un experto en el sigilo, el robo y la evasión, así como en el uso de armas ágiles y trampas.
+* **Bonificadores de Atributo:** +2 Destreza.
+| Tipo | Multiplicador | Equipamiento Afectado |
+| :--- | :--- | :--- |
+| **Buff** | 1.15x | Armas: Dagas, Espadas cortas. Armaduras: Liviana. |
+| **Desbuff**| 0.85x | Todas las demás armas, armaduras y escudos. |
+
+#### **Paladín**
+* **Descripción:** Un guerrero sagrado que protege a los débiles y elimina el mal, usando armadura pesada y magia sanadora.
+* **Bonificadores de Atributo:** +1 Constitución, +1 Carisma.
+| Tipo | Multiplicador | Equipamiento Afectado |
+| :--- | :--- | :--- |
+| **Buff** | 1.15x | Armas: Espada, Espada larga, Lanza. Armaduras: Mediana, Pesada. Escudos: Mediano, Grande. |
+| **Desbuff**| 0.85x | Todas las demás armas, armaduras y escudos. |
+
+#### **Clérigo**
+* **Descripción:** Un servidor de deidades divinas que canaliza su poder para sanar, bendecir y purgar a los no muertos.
+* **Bonificadores de Atributo:** +1 Sabiduría, +1 Constitución.
+| Tipo | Multiplicador | Equipamiento/Hechizos Afectados |
+| :--- | :--- | :--- |
+| **Buff** | 1.15x | Armas: Espada, Maza, Martillo de guerra, Lanza. Armaduras: Mediana, Pesada. Escudos: Mediano, Grande. |
+| **Buff** | 1.20x | Hechizos Benditos. |
+| **Buff** | 1.10x | Hechizos Defensivos. |
+| **Desbuff**| 0.75x | Todas las demás armas, armaduras y escudos. |
+| **Desbuff**| 0.80x | Hechizos Malditos. |
+| **Desbuff**| 0.90x | Hechizos Ofensivos. |
+
+#### **Bárbaro**
+* **Descripción:** Un combatiente feroz que canaliza su ira para obtener una fuerza sobrehumana en el campo de batalla.
+* **Bonificadores de Atributo:** +1 Fuerza, +1 Destreza.
+| Tipo | Multiplicador | Equipamiento Afectado |
+| :--- | :--- | :--- |
+| **Buff** | 1.15x | Armas: Mandoble, Espada larga, Espadón, Armas a 2 manos. Armaduras: Liviana. |
+| **Desbuff**| 0.70x | Todas las demás armas, armaduras y escudos. |
+
+#### **Asesino**
+* **Descripción:** Un experto en el sigilo, la infiltración y el combate mortal desde las sombras.
+* **Bonificadores de Atributo:** +1 Destreza, +1 Inteligencia.
+| Tipo | Multiplicador | Equipamiento Afectado |
+| :--- | :--- | :--- |
+| **Buff** | 1.15x | Armas: Dagas, Espadas cortas. Armaduras: Liviana, Mediana. |
+| **Desbuff**| 0.85x | Todas las demás armas, armaduras y escudos. |
+
+#### **Artista Marcial**
+* **Descripción:** Un maestro en el arte del combate cuerpo a cuerpo, destacando por su habilidad para enfrentarse a múltiples oponentes.
+* **Bonificadores de Atributo:** +1 Fuerza, +1 Destreza.
+| Tipo | Multiplicador | Equipamiento Afectado |
+| :--- | :--- | :--- |
+| **Buff** | 1.20x | Armas: Espadas cortas, Armas sin filo. Armaduras: Liviana, Mediana. |
+| **Buff** | 1.25x | Manos Limpias (Combate sin armas). |
+| **Desbuff**| 0.85x | Todas las demás armas, armaduras y escudos. |
+
+#### **Nigromante**
+* **Descripción:** Un maestro oscuro de las artes necrománticas, capaz de invocar no muertos y manipular las fuerzas de la muerte.
+* **Bonificadores de Atributo:** +1 Inteligencia, +1 Sabiduría.
+| Tipo | Multiplicador | Equipamiento/Hechizos Afectados |
+| :--- | :--- | :--- |
+| **Buff** | 1.15x | Armas: Espada corta, Daga. Armaduras: Mediana, Pesada. Escudos: Mediano, Grande. |
+| **Buff** | 1.20x | Hechizos Malditos. |
+| **Buff** | 1.10x | Hechizos Ofensivos. |
+| **Desbuff**| 0.75x | Todas las demás armas, armaduras y escudos. |
+| **Desbuff**| 0.80x | Hechizos Benditos. |
+| **Desbuff**| 0.90x | Hechizos Defensivos. |
+
+#### **Bardo**
+* **Descripción:** Un artista y cuentacuentos maestro que utiliza la música, la poesía y la magia para influir en el mundo.
+* **Bonificadores de Atributo:** +2 Carisma.
+| Tipo | Multiplicador | Equipamiento Afectado |
+| :--- | :--- | :--- |
+| **Buff** | 1.15x | Armas: Dagas, Espadas cortas. Armaduras: Liviana. |
+| **Desbuff**| 0.85x | Todas las demás armas, armaduras y escudos. |
+
+Nota para el Jugador y el Narrador:
+Las razas y clases detalladas en esta sección representan las opciones disponibles para los Personajes Jugadores (PJ) al inicio de sus aventuras en Terramorta. El mundo es vasto y está lleno de innumerables otros pueblos, monstruos y entidades únicas. Los Personajes No Jugadores (PNJ) 
+no están limitados a esta lista y pueden pertenecer a cualquier raza o clase que el Narrador imagine, utilizando las herramientas de creación de la Sección 9.
+
+----
+
+
+
+---
+
+### **Sección 4: Sistema de Vocaciones de Combate**
+
+#### **Introducción: La Senda de la Especialización**
+
+Más allá de la herencia de su Raza y el entrenamiento de su Clase, un personaje en Terramorta puede dedicar su vida a una **Vocación de Combate**. Una Vocación es una disciplina profunda que define el rol de un personaje de una manera única y le otorga habilidades que trascienden el combate convencional, permitiendo una especialización táctica en el campo de batalla.
+
+---
+
+#### **Oficio: Conjurador/Invocador de Entidades**
+
+* **Descripción General del Oficio:** Los Conjuradores son maestros del conocimiento arcano, capaces de abrir brechas entre los planos para manifestar seres de energía pura y entidades etéreas. Su poder no reside en el lanzamiento de hechizos directos, sino en el control y la manipulación de estas presencias invocadas.
+* **Atributo Principal para el Oficio:** Inteligencia.
+
+##### **Reglas Fundamentales del Oficio**
+* **Prerrequisito de Atributo:** Se requiere una puntuación de **Inteligencia superior a 6**.
+* **Tiradas de Invocación:** Todas las tiradas de `1d100` relacionadas con las habilidades de este oficio utilizan el **Bono Fijo de Inteligencia**.
+* **Regla de Oro:** Los Conjuradores se especializan en la invocación de elementales y constructos. La reanimación de no-muertos es una disciplina separada (Nigromancia).
+
+---
+
+##### **Progresión del Oficio (Nivel 1-5)**
+
+##### **Nivel 1: Aprendiz de Conjuración**
+* **Descripción:** El aprendiz abre su mente a los ecos de otros planos y aprende a manifestar formas básicas y transitorias.
+* **Beneficios:**
+    * **Invocar Chispa Elemental (Activa)**
+        * **Efecto:** Invoca 1 "Chispa Elemental" bajo tu control.
+        * **Costo de Maná:** 8
+        * **Cooldown (CD):** 2 Turnos
+    * **Identificación Mística (Pasiva)**
+        * **Efecto:** Con una tirada exitosa de `1d100 + [Bono Fijo de Inteligencia]` (DC 50), puedes determinar el tipo y la debilidad de una criatura elemental o monstruosidad de bajo rango.
+
+> **Ficha de Invocación: Chispa Elemental**
+> * **Tipo:** Elemental (Pequeño)
+> * **Vitalidad:** 50 HP
+> * **Ataque Mágico:** 1d20
+> * **Defensa Física:** 1d5
+> * **Defensa Mágica:** 1d10
+> * **Duración:** Hasta el final del combate.
+
+##### **Nivel 2: Conjurador Novato**
+* **Descripción:** Tu comprensión de las barreras interdimensionales se profundiza, permitiéndote convocar entidades más sustanciales.
+* **Beneficios:**
+    * **Invocar Elemental Menor (Activa)**
+        * **Efecto:** Invoca 1 "Elemental Menor". Puedes elegir su tipo elemental para otorgarle bonos.
+        * **Costo de Maná:** 20
+        * **Cooldown (CD):** 3 Turnos
+    * **Vista Perspicaz (Pasiva)**
+        * **Efecto:** Una vez por entorno, puedes realizar una tirada de `1d100 + [Bono Fijo de Inteligencia]` (DC 60) para buscar restos de magia antigua.
+
+> **Ficha de Invocación: Elemental Menor (Base)**
+> * **Tipo:** Elemental (Mediano)
+> * **Vitalidad:** 120 HP
+> * **Ataque:** 1d45 + 5
+> * **Defensa Física:** 1d20
+> * **Defensa Mágica:** 1d20
+> * **Pasiva:** +50 a la defensa contra daños de su propio tipo.
+> * **Duración:** Hasta el final del combate.
+>
+> **Bonos por Tipo Elemental:**
+> * **Fuego:** Daño Mágico: `1d55`
+> * **Tierra:** Defensa Física/Mágica: `1d30`
+> * **Agua:** Ataque: `1d50`; Defensa Física: `1d25`
+> * **Aire:** Ataque: `1d60`
+
+##### **Nivel 3: Invocador Hábil**
+* **Descripción:** Tu dominio se extiende, permitiéndote animar materia inerte y fortalecer tu vínculo mental.
+* **Beneficios:**
+    * **Invocar Constructo Etéreo (Activa)**
+        * **Efecto:** Invoca 1 "Constructo Etéreo".
+        * **Costo de Maná:** 30
+        * **Cooldown (CD):** 4 Turnos
+    * **Vínculo Mental I (Pasiva)**
+        * **Efecto:** Límite de **15** invocaciones activas. Tus invocaciones de oficio obtienen un **50% extra** en todas sus stats base.
+    * **Dominio Aberracional I (Activa)**
+        * **Efecto:** Permite "sellar" una criatura debilitada (Monstruosidad de bajo rango o Elemental menor) con una tirada de `1d100 + [Bono Fijo de Inteligencia]`.
+        * **Costo de Maná:** 35
+        * **Cooldown (CD):** 6 Turnos
+
+> **Ficha de Invocación: Constructo Etéreo**
+> * **Tipo:** Constructo
+> * **Vitalidad:** 500 HP
+> * **Ataque Físico:** 1d40 + 50
+> * **Defensa Física:** 1d30 + 30
+> * **Defensa Mágica:** 1d15 + 30
+> * **Pasiva:** Su primer ataque en combate obtiene +50 de ataque extra.
+> * **Duración:** Hasta el final del combate.
+
+##### **Nivel 4: Maestro Conjurador**
+* **Descripción:** Las barreras entre los mundos se hacen más delgadas para ti, permitiéndote canalizar seres de mayor poder.
+* **Beneficios:**
+    * **Invocar Elemental Mayor (Activa)**
+        * **Efecto:** Invoca 1 "Elemental Mayor".
+        * **Costo de Maná:** 45
+        * **Cooldown (CD):** 6 Turnos
+    * **Legión Etérea I (Activa)**
+        * **Efecto:** Tras 1 turno de canalización, invoca 5 Chispas Elementales y 4 Elementales Menores.
+        * **Costo de Maná:** 75
+        * **Cooldown (CD):** 8 Turnos
+    * **Vínculo Mental II (Pasiva - Mejora)**
+        * **Efecto:** Reemplaza Vínculo Mental I. Límite de **20** invocaciones. Bono de stats del **100% (doble)** a todas las invocaciones.
+        * **Desventaja:** Con más de 10 invocaciones activas, recibes el doble de daño.
+    * **Dominio Aberracional II (Pasiva - Mejora)**
+        * **Efecto:** Ahora también puedes sellar Elementales de Rango Medio.
+
+> **Ficha de Invocación: Elemental Mayor (Base)**
+> * **Tipo:** Elemental (Grande)
+> * **Vitalidad:** 1000 HP
+> * **Ataque:** 1d95
+> * **Defensa Física:** 1d55
+> * **Defensa Mágica:** 1d50
+> * **Pasiva:** 20% de probabilidad al ser golpeado de lanzar un rayo de `9d10` de daño.
+> * **Duración:** Hasta el final del combate.
+
+##### **Nivel 5: Archiconjurador**
+* **Descripción:** Tu control sobre la invocación alcanza su pináculo.
+* **Beneficios:**
+    * **Legión Etérea II (Activa)**
+        * **Efecto:** Invoca 4 Elementales Menores, 5 Elementales Medianos, 4 Constructos Etéreos, 2 Elementales Mayores.
+        * **Costo de Maná:** 150
+        * **Cooldown (CD):** 15 Turnos
+    * **Convocación Superior (Única - Activa)**
+        * **Efecto:** Permite realizar un ritual para invocar una "Entidad Vinculada" permanente (DC 75).
+        * **Costo de Maná:** 200 (para el ritual)
+        * **Cooldown (CD):** 1 vez por día.
+    * **Maestría de Invocaciones (Pasiva):** +20 a todas las tiradas de `1d100` de invocación.
+    * **Poder Resonante (Pasiva):** Sella Elementales hasta rango "Mayor" sin tirada.
+    * **Invocaciones Beneficiarias (Pasiva):** Recuperas 1 de Maná por cada invocación activa al inicio de tu turno. Límite de **25** invocaciones.
+
+---
+#### **Rutas de Especialización del Conjurador (Elección en Nivel 3)**
+
+##### **Senda 1: Maestro Elemental**
+* **Enfoque:** Poder puro y destructivo a través de los elementos.
+* **Modificaciones a Habilidades:**
+    * **`Invocar Elemental Menor/Mayor`:** Los bonos por tipo elemental son un **50% más efectivos**.
+    * **`Vínculo Mental`:** El bono a las stats de tus invocaciones **Elementales** aumenta en un **25% adicional**.
+* **Nueva Habilidad (Nivel 5):**
+    * **`Sintonía Primordial` (Pasiva):** Eliges un elemento principal. Mientras tengas un Elemental de ese tipo invocado, ganas **Resistencia** (50%) a ese tipo de daño.
+
+##### **Senda 2: Forjador de Constructos**
+* **Enfoque:** Control táctico y durabilidad a través de sirvientes mecánicos.
+* **Modificaciones a Habilidades:**
+    * **`Invocar Constructo Etéreo`:** Tu Constructo gana la habilidad **"Protocolo de Guardia"** para provocar a un enemigo (DC 80).
+    * **`Vínculo Mental`:** El bono a las stats de tus invocaciones de tipo **Constructo** aumenta en un **25% adicional**.
+* **Nueva Habilidad (Nivel 5):**
+    * **`Mejora de Arsenal` (Activa):** Una vez por combate, otorga a todos tus Constructos una de tres mejoras durante 3 turnos: +200 a Defensa, +200 a Ataque, o un aura que aumenta el coste de Maná de los enemigos. (Costo: 40 Maná).
+
+---
+---
+
+#### **Oficio: Domador de Bestias**
+
+* **Descripción General del Oficio:** El Domador forja un vínculo profundo con las criaturas del mundo. Su poder reside en la lealtad inquebrantable y la fuerza primordial de las bestias que luchan a su lado.
+* **Atributo Principal para el Oficio:** Sabiduría.
+
+##### **Reglas Fundamentales del Oficio: El Arte de Domar**
+* **Tirada de Domar:** `1d100 + [Bono Fijo de Sabiduría] + [Otros Bonos]`. El bono por Sabiduría va de +5 (en nivel 6) a +25 (en nivel 10).
+* **Límite de Bonos:** El bono fijo total a la tirada está limitado a **+60**.
+* **Resultados de la Tirada:**
+    * **Éxito:** La criatura es domada.
+    * **Fallo:** La criatura ataca al domador (no se puede esquivar, defensa al 50%). La DC para reintentar aumenta en +10.
+    * **Fallo Crítico:** La criatura ataca sin posibilidad de defensa/esquive. Posibilidad de que huya. La DC para reintentar aumenta en +20.
+* **Reglas de Criaturas Domadas:** Actúan junto al turno del domador, sin límite de cantidad y con lealtad fija.
+
+---
+
+##### **Progresión del Oficio (Nivel 1-5)**
+
+##### **Nivel 1: Aprendiz de Domador**
+* **Beneficios:**
+    * **Vínculo Fraternal I (Activa):** Permite intentar domar criaturas de RANGO LEVE.
+    * **Ojo del Compañero (Pasiva):** Permite determinar el estado anímico de una bestia (DC 60).
+
+##### **Nivel 2: Compañero de las Bestias**
+* **Beneficios:**
+    * **Orden Táctica (Activa):** Una criatura domada puede realizar una acción extra. (Costo: 10 Maná, CD: 3 Turnos).
+    * **Empatía Bestial (Pasiva):** +2 a tiradas de Domar. Criaturas domadas ganan `(Tu Vitalidad/2) + 50` HP extra.
+
+##### **Nivel 3: Aspirante a Maestro Domador**
+* **Beneficios:**
+    * **Vínculo Fraternal II (Activa - Mejora):** Ahora puedes domar criaturas de RANGO INTERMEDIO-BAJO. (Costo: 15 Maná).
+    * **Instinto Protector (Activa):** Una vez por combate, una criatura puede recibir un ataque por ti.
+    * **Empatía Bestial II (Pasiva - Mejora):** Bono a Domar aumenta a **+10**.
+
+##### **Nivel 4: Maestro Domador Determinante**
+* **Beneficios:**
+    * **Vínculo Fraternal III (Activa - Mejora):** Ahora puedes domar criaturas de RANGO MEDIO y MEDIO-ALTO. (Costo: 25 Maná).
+    * **Vínculo Curativo (Activa):** Sanas a una criatura `[Tu Maná actual * 10]` HP. (Costo: 20 Maná, CD: 4 Turnos).
+    * **Empatía Bestial III (Pasiva - Mejora):** Bono a Domar aumenta a **+15**.
+    * **Espíritu del Domador I (Pasiva):** Ganas `+20` a Atk/Def por cada aliado/criatura cercana.
+
+##### **Nivel 5: Maestro Domador Experto**
+* **Beneficios:**
+    * **Fuerza Salvaje Conjunta (Activa - Final):** Tú y una bestia realizáis un ataque combinado sumando los resultados. (Costo: 50 Maná, CD: 1/combate).
+    * **Vínculo Fraternal IV (Activa - Mejora):** Permite intentar domar criaturas de RANGO ALTO. (Costo: 75 Maná).
+    * **Empatía Bestial IV (Pasiva - Mejora):** Bono a Domar aumenta a **+20**.
+    * **Espíritu del Domador II (Pasiva - Mejora):** El bono por aliado/criatura cercana aumenta a **+40** Atk/Def.
+    * **Aura Natural (Pasiva):** Resistencia a efectos de miedo/control de bestias.
+
+---
+#### **Rutas de Especialización del Domador (Elección en Nivel 3)**
+
+##### **Senda 1: Señor de la Horda**
+* **Enfoque:** Comandar un gran número de criaturas, abrumando con superioridad numérica.
+* **Modificaciones a Habilidades:**
+    * **`Orden Táctica`:** Ahora puedes dirigirla a un máximo de 3 criaturas a la vez, otorgándoles a todas una acción extra.
+    * **`Empatía Bestial`:** Tus criaturas domadas adquieren un bonus del **20% adicional en todas sus estadísticas**. (Efecto único y no se mejora).
+* **Nueva Habilidad (Nivel 5):**
+    * **`Estampida Coordinada` (Activa):** Todas tus criaturas atacan a un objetivo. El objetivo debe superar una Tirada de Fuerza (DC 95) o quedará Derribado y Aturdido por 1 turno. Si la defensa del objetivo no supera el ataque, recibe el daño completo sin mitigación parcial. (Costo: 60 Maná, CD: 1/combate).
+
+##### **Senda 2: Vínculo Alfa**
+* **Enfoque:** Potenciar a una única y poderosa bestia compañera a un estatus legendario. Requiere controlar solo una criatura a la vez.
+* **Modificaciones a Habilidades:**
+    * **`Empatía Bestial`:** El bono de Vitalidad para tu Compañero Alfa es `(Tu Vitalidad máxima completa) + 150 HP`.
+    * **`Instinto Protector`:** Puede usarse dos veces por combate. Tras recibir el daño, la criatura recibe un **50% extra de daño** en su próximo ataque.
+* **Nueva Habilidad (Nivel 5):**
+    * **`Fusión de Voluntad` (Activa):** Durante 3 turnos, tu Compañero Alfa obtiene un bono a Atk/Def igual al 50% de tu Atk/Def base y puede usar una de tus habilidades. (Costo: 75 Maná, CD: 1/combate).
+
+---
+---
+
+#### **Oficio: Curandero/Sanador**
+
+* **Descripción General del Oficio:** El Curandero es un pilar de esperanza. Su senda es la de la restauración, especializándose en cerrar heridas, purgar dolencias y proteger a sus aliados del daño.
+* **Atributo Principal para el Oficio:** Sabiduría.
+
+---
+
+##### **Progresión del Oficio (Nivel 1-5)**
+
+##### **Nivel 1: Aprendiz de las Artes Curativas**
+* **Beneficios:**
+    * **Diagnóstico Preciso (Pasiva):** Permite identificar enfermedades o venenos comunes con una tirada de Sabiduría.
+    * **Curación Básica (Nivel 1) (Activa):** Restaura `[Tu Dado de Sanación Base (DS)]` HP. (Costo: 4 Maná, CD: 1 Turno).
+
+##### **Nivel 2: Sanador en Desarrollo**
+* **Beneficios:**
+    * **Potenciación Natural (Pasiva):** Accedes al desarrollo de habilidades para potenciar a tus aliados.
+    * **Conocimiento Ampliado (Pasiva):** Tus pociones curan **+10%** HP adicional. Tu "Curación Básica" restaura **+2d20 HP** adicionales.
+
+##### **Nivel 3: Bendecido Experto Curandero**
+* **Beneficios:**
+    * **Maestría en Pociones (Pasiva - Mejora):** Tus pociones curan **+30%** HP adicional y **+40 HP** fijos.
+    * **Intervención Precisa (Activa):** Restaura `[Tu DS] + 1d175` HP. (Costo: 20 Maná, CD: 4 Turnos).
+    * **Sanación en Cadena (Activa):** Restaura `[Tu DS]` HP hasta a 3 aliados. (Costo: 25 Maná, CD: 6 Turnos).
+
+##### **Nivel 4: Sanador de Batalla Experto**
+* **Beneficios:**
+    * **Curación en Oleadas (Activa):** Todos los aliados cercanos recuperan `[Tu DS]` HP. (Costo: 35 Maná, CD: 6 Turnos).
+    * **Escudo de Luz (Activa):** Crea un escudo en un aliado que absorbe `(Tu Vitalidad/2) + 250 + (Tu Nivel * 20)` de daño. (Costo: 40 Maná, CD: 5 Turnos).
+    * **Alquimia Reforzada (Pasiva - Mejora):** Tus pociones curan **+65%** HP adicional y **+120 HP** fijos.
+
+##### **Nivel 5: Archicurandero**
+* **Beneficios:**
+    * **Bendición de la Fuente de Vida (Activa - Final):** Restaura `[Tu DS] + 1000` HP a un aliado, que además gana +2000 de vitalidad máxima temporal e inmunidad a un estado. (Costo: 50 Maná, CD: 1/combate).
+    * **Don de la Resurrección (Activa - Única):** Permite realizar un ritual de 5 turnos para revivir a un aliado caído con 1 HP. (Costo: 100 Maná, CD: 1/día).
+    * **Maestría en Herbolaria (Pasiva):** Duplicas la recolección de hierbas. Puedes examinar cuerpos para recuperar `1d100` de Maná.
+    * **Efecto Adicional:** Elige un beneficio permanente: un objeto que da **+20%** a la curación o una armadura que da **+1d200** DefM y **+10** Maná.
+
+---
+#### **Rutas de Especialización del Curandero (Elección en Nivel 3)**
+
+##### **Senda 1: Médico de Combate**
+* **Enfoque:** Curación reactiva y de alto impacto para salvar aliados en situaciones críticas.
+* **Modificaciones a Habilidades:**
+    * **`Intervención Precisa`:** Se vuelve de "lanzamiento rápido" (acción menor) pero su CD aumenta en 1. Cura un 25% más a objetivos con menos del 30% de HP.
+    * **`Escudo de Luz`:** Absorbe un 20% más de daño pero dura solo 1 turno. Al romperse, empuja a los enemigos.
+* **Nueva Habilidad (Nivel 5):**
+    * **`Sacrificio del Guardián` (Pasiva):** Una vez por combate, puedes usar tu reacción para permitir que un aliado a punto de morir intente un esquive extra. Si falla, recibes el 50% del daño del golpe.
+
+##### **Senda 2: Protector Divino**
+* **Enfoque:** Prevención del daño, purga de efectos negativos y protección sostenida del grupo.
+* **Modificaciones a Habilidades:**
+    * **`Sanación en Cadena`:** El primer objetivo sanado también es purgado de un debuff menor.
+    * **`Curación en Oleadas`:** Ahora también otorga `+75` a la Defensa Mágica a los aliados afectados durante 2 turnos.
+* **Nueva Habilidad (Nivel 5):**
+    * **`Santuario Sagrado` (Activa):** Crea un área de 15m de radio por 4 turnos. Los aliados dentro regeneran un 5% de su HP máximo por turno y son inmunes a Miedo y Corrupción. (Costo: 60 Maná, CD: 1/combate).
+	
+	
+---
+
+### **Sección 5: Sistema de Combate General**
+
+#### **Introducción: El Crisol de Terramorta**
+
+El combate es una constante en las tierras fracturadas de Terramorta. Es el crisol donde los héroes se forjan y las leyendas mueren. Este sistema define las reglas fundamentales que rigen cada enfrentamiento, desde el primer choque de acero hasta la resolución final de la batalla.
+
+---
+
+#### **1. El Flujo del Combate**
+
+##### **1.1. Iniciativa: El Primer Golpe**
+El orden de las acciones en la primera ronda de combate se determina de forma directa y brutal. Al inicio de LA PRIMERA ronda, se realiza una tirada de **`1d2`**. 
+Un resultado de 1 significa que el bando de los Jugadores (PJs) actúa primero; un resultado de 2 significa que el bando de los Adversarios (PNJ) actúa primero. Dentro de cada bando, los personajes pueden actuar en el orden que prefieran.
+Regla detallada: Se tira una vez al inicio del combate ( al inicio en elturno 0 ). El ganador de esa tirada establece el orden de acción para todo el enfrentamiento 
+(Ganador -> Perdedor -> Ganador -> etc.)
+##### **1.2. Acciones en Combate**
+El sistema de combate de Terramorta se inspira en la flexibilidad de los RPG clásicos, evitando una estructura rígida de acciones. No existen límites explícitos como "Acción Principal", "Acción de Movimiento" o "Acción Bonificada". En su turno, un personaje puede realizar una acción significativa, como:
+* Realizar un ataque.
+* Utilizar una habilidad activa.
+* Usar un objeto.
+* Moverse y realizar una acción más simple.
+
+La lógica y el sentido común dictan el flujo del turno. Habilidades específicas que se activan como "Reacción" son la excepción a esta regla y se detallan en su propia descripción.
+
+---
+
+#### **2. La Mecánica de Ataque y Defensa**
+
+El núcleo de cada enfrentamiento se resuelve mediante una comparación directa entre la capacidad ofensiva del atacante y la capacidad defensiva del objetivo.
+
+##### **2.1. El Cálculo de Ataque**
+La tirada de ataque de un personaje se calcula sumando todos los componentes de su poder ofensivo. La sintaxis completa es:
+`rp!rtd [Dado Base PJ] + [Dados del Arma/Objeto] + [Bono Fijo del Arma/Objeto] + [Fortaleza del PJ] + [Bonos Fijos Extra/Situacionales]`
+
+##### **2.2. El Cálculo de Defensa**
+De manera similar, la tirada de defensa de un personaje se calcula sumando todas sus capacidades defensivas. La sintaxis completa es:
+`rp!rtd [Dado Base PJ] + [Dados de Armadura/Objeto] + [Bono Fijo de Armadura/Objeto] + [Resistencia del PJ] + [Bonos Fijos Extra/Situacionales]`
+
+##### **2.3. La Resolución del Daño**
+El daño que recibe un personaje es la diferencia directa entre el ataque del enemigo y su propia defensa. Si la defensa es igual o superior al ataque, no se recibe daño.
+
+**`Daño Recibido = Tirada de Ataque Total - Tirada de Defensa Total`**
+
+> **Ejemplo de Resolución de Daño:**
+>
+> *Un Guerrero (PJ) con 250 de Resistencia se enfrenta a un Ogro (PNJ).*
+>
+> 1.  **Ataque del Ogro:** El Narrador (DM) realiza la tirada de ataque para el Ogro, obteniendo un resultado total de **800**.
+> 2.  **Defensa del Guerrero:** El jugador realiza su tirada de defensa, sumando todos sus bonos: `rp!rtd 1d200 (Defensa Base) + 1d180 (Armadura Pesada) + 250 (Resistencia) + 100 (Escudo)` y obtiene un resultado total de **720**.
+> 3.  **Cálculo de Daño:** Se aplica la fórmula: `800 (Ataque) - 720 (Defensa) = 80`.
+> 4.  **Consecuencia:** El Guerrero recibe **80 puntos de daño** que se restan directamente de su Vitalidad (HP).
+
+##### **2.4. Aplicación de Multiplicadores de Clase**
+Los buffs y desbuffs de las Clases (ej. el `1.10x` del Guerrero con espadas) se aplican al **resultado final** de la tirada de ataque o defensa, no a los dados individuales.
+
+---
+
+#### **3. Reglas Adicionales de Combate**
+
+##### **3.1. Ausencia de Golpes Críticos Naturales**
+En Terramorta, el poder reside en la suma de las capacidades, no en la suerte de un solo dado. No existen los aciertos críticos automáticos ni los fallos críticos por obtener un resultado natural específico en un dado (como un 20 o un 1). El resultado final de la suma es el único valor que importa.
+
+##### **3.2. Ventaja y Desventaja**
+Las condiciones del combate pueden favorecer o perjudicar a un personaje. El DM puede otorgar "Ventaja" o "Desventaja" a una tirada.
+* **Ventaja:** Se traduce en un **bono fijo** al resultado final de la tirada (`+X`). El valor es determinado por el DM según la situación.
+* **Desventaja:** Se traduce en una **penalización fija** al resultado final de la tirada (`-X`). El valor es determinado por el DM según la situación.
+
+---
+
+#### **4. El Fin del Combate: Victoria y Derrota**
+
+##### **4.1. Condición de Derrota: 0 Vitalidad**
+Cuando la Vitalidad de un personaje llega a 0, se considera derrotado. En la mayoría de los casos, esto significa la **muerte permanente** del personaje. No existen tiradas de salvación por muerte ni mecánicas de estabilización. A discreción del DM, una derrota a 0 HP podría resultar en un estado de K.O. severo con consecuencias narrativas graves (cicatrices permanentes, pérdida de un miembro, etc.), pero la muerte es la norma.
+
+##### **4.2. Otras Condiciones de Derrota**
+Existen condiciones extremadamente raras, como ser "tragado" por una criatura colosal o "sellado" por magia poderosa, que pueden sacar a un personaje del combate sin que su Vitalidad llegue a 0. El resultado de estas situaciones queda enteramente a discreción del DM.
+
+---
+
+### **Subsección 5.X: Reglas para Combate a Gran Escala**
+
+Cuando las batallas alcanzan una escala masiva, se aplican las siguientes reglas para mantener el flujo del combate sin sacrificar la coherencia estratégica.
+
+#### **1. El Frente de Batalla y la Superioridad Numérica**
+
+Cuando dos grupos de tamaños distintos se enfrentan, el combate se resuelve entre "Frentes de Batalla" de igual tamaño. Sin embargo, el grupo con más efectivos obtiene un bono por su ventaja táctica.
+
+* **Condición de Aplicación:** Esta regla solo aplica en **casos de conflicto directo o cuerpo a cuerpo**. En un escenario donde un grupo ataca a distancia sin ser atacado directamente (como arqueros en una muralla), esta regla no se aplica.
+* **Cálculo del Bono:** El bando con superioridad numérica gana un bono fijo de **+5 a sus tiradas de Ataque y Defensa de escuadra por cada 5 combatientes** que superen en número al frente de batalla enemigo.
+* **Discreción del DM:** El Narrador siempre tiene la última palabra para aplicar este bono, considerando el terreno y otras circunstancias excepcionales.
+
+> **Ejemplo:** Una escuadra de 20 soldados se enfrenta a una de 10.
+> 1.  El "Frente de Batalla" es de 10 vs. 10.
+> 2.  La escuadra de 20 tiene una superioridad de 10 soldados.
+> 3.  Cálculo del bono: `10 soldados de ventaja / 5 = 2`. `2 * 5 = +10`.
+> 4.  **Resultado:** La escuadra de 20 obtiene un bono de **+10** a sus tiradas de ataque y defensa durante el enfrentamiento.
+
+#### **2. Héroe contra Escuadra (1 vs. Múltiples Enemigos)**
+
+Cuando un único personaje poderoso se enfrenta a un grupo de enemigos, el combate se resuelve siguiendo estos pasos para simular un ataque de barrido.
+
+1.  **Declaración:** El héroe declara que su ataque va dirigido a toda la escuadra enemiga.
+2.  **Tirada de Objetivo (`1dA`):** El héroe tira un dado cuyo número de caras es igual al número de enemigos en la escuadra. (Ej. `1d15` si se enfrenta a 15 enemigos).
+3.  **Número de Impactos:** El resultado de esa tirada (`A`) determina a cuántos soldados de la escuadra alcanza el ataque.
+4.  **Ataque del Héroe:** El héroe realiza una única tirada de ataque normal.
+5.  **Defensa del Grupo Objetivo:** Los `A` soldados que fueron alcanzados por el ataque realizan una única tirada de defensa combinada (`AdY + (A × Bono Fijo)`).
+6.  **Resolución y Bajas:** Se utiliza la fórmula estándar:
+    * `Ataque del Héroe - Defensa del Grupo Objetivo = Puntos de Impacto`
+    * `Puntos de Impacto / Vitalidad de 1 soldado = Número de Bajas`
+
+> **Ejemplo:** Un héroe (Ataque total: 900) ataca a 15 soldados (Defensa: `1d10+10`, Vitalidad: 100).
+> 1.  El héroe tira **1d15** y saca un **5**. Su ataque alcanzará a 5 soldados.
+> 2.  Los 5 soldados se defienden con una tirada de `5d10 + 50`. Sacan un resultado de **75**.
+> 3.  `900 (Ataque) - 75 (Defensa) = 825` Puntos de Impacto.
+> 4.  `825 / 100 (Vitalidad) = 8.25`. Se redondea hacia abajo. El resultado final del cálculo de bajas = **8 soldados caen** siempre se redondea hacia abajo, ya que no se puede derrotar a una fracción de un soldado.
+
+#### **3. Unidades Grandes y el Límite de Dados (20dY)**
+
+Para respetar la regla fundamental de que una sola tirada no puede exceder los 20 dados, se aplica la siguiente mecánica para unidades grandes.
+
+* **La Regla de Bloques:** Cuando una unidad (Compañía, Batallón) está compuesta por más de 20 individuos, su tirada se divide en **bloques de 20 dados**. El resultado final es la suma de las tiradas de cada bloque más el bono fijo total.
+
+> **Ejemplo 1: Compañía de 40 Soldados**
+> * Stats de un soldado: `1d10 + 10`
+> * La tirada de la compañía se divide en dos bloques de 20.
+> * Bono Fijo Total: `40 soldados * 10 = 400`.
+> * **Fórmula Final:** `Tirada Total = [Resultado de 20d10] + [Resultado de 20d10] + 400`
+
+> **Ejemplo 2: Batallón de 55 Soldados**
+> * Stats de un soldado: `1d10 + 10`
+> * La tirada se divide en dos bloques de 20 y uno de 15.
+> * Bono Fijo Total: `55 soldados * 10 = 550`.
+> * **Fórmula Final:** `Tirada Total = [Resultado de 20d10] + [Resultado de 20d10] + [Resultado de 15d10] + 550`
+
+#### **4. Estructura de una Batalla de Asedio**
+
+Un asedio es una operación militar que se desarrolla en tres fases distintas y configurables por el DM.
+
+* **Fase 1: El Acercamiento y Desgaste**
+    * **Objetivo:** Los atacantes deben superar las defensas a distancia/melee y llegar a los muros de la fortificación.
+    * **Mecánica:** La batalla se resuelve turno a turno usando una **Tirada de Avance** del atacante contra una **Tirada de Contención** del defensor. Simultáneamente, se resuelve un enfrentamiento de **Frente de Batalla** para calcular las bajas de esa ronda. Los atacantes superan la fase tras un número de "Avances" exitosos determinado por el DM (generalmente 3).
+
+* **Fase 2: El Asalto a la Entrada**
+    * **Objetivo:** Romper la última línea de defensa en el punto de entrada (la puerta, una brecha, etc.).
+    * **Mecánica:** El combate deja de ser abstracto. Las fuerzas restantes de ambos bandos se enfrentan en un combate estándar usando las reglas de Escuadra en un escenario concreto.
+
+* **Fase 3: La Ocupación y Pacificación**
+    * **Objetivo:** Eliminar los focos de resistencia y cumplir los objetivos finales de la invasión (capturar a un líder, controlar a los civiles, etc.).
+    * **Mecánica:** Esta fase se resuelve a través de una serie de pequeñas escaramuzas y desafíos de habilidad (Percepción, Sigilo, Intimidación, etc.).
+
+#### **5. Dificultad de la Fase 1: Bonos Estratégicos de Asedio**
+
+La dificultad del avance en la Fase 1 no es una DC fija, sino que se determina por los bonos que cada bando suma a su tirada de `1d100`.
+
+* **Bonos para los Defensores (a su Tirada de Contención):**
+    * **Fortificación:** Empalizada (+5), Fuerte de madera (+10), Fortaleza de piedra (+15), Ciudadela mágica/legendaria (+25).
+    * **Terreno:** Posición elevada (+10), Foso o río (+10), Punto de estrangulamiento (+15).
+    * **Preparación:** Liderazgo brillante (+5 a +15), Trampas preparadas (+10).
+
+* **Bonos para los Atacantes (a su Tirada de Avance):**
+    * **Equipamiento:** Arietes/escaleras (+10), Torres de asedio (+15), Artillería (+10).
+    * **Tácticas:** Ataque sorpresa (+15 en la primera ronda), Túneles de zapadores (+20).
+
+> **Ejemplo:** Un ejército ataca una Fortaleza de piedra (+15) en una colina (+10). Su tirada de contención es `1d100 + 25`. Los atacantes usan torres de asedio (+15), por lo que su tirada de avance es `1d100 + 15`. Los defensores tienen una ventaja estratégica neta de +10 en cada ronda de la Fase 1.
+
+---
+
+#### **6. El Duelo de Artillería (Sub-fase de Asedio)**
+
+ **Puntos de Estructura (PE)**
+Cada pieza de equipamiento de asedio, tanto ofensiva como defensiva, posee Puntos de Estructura que funcionan como su vitalidad.
+* **Ejemplos de Puntos de Estructura:**
+    * Torre de Asedio: **500 PE** ( 9 hombres tripulacion )
+    * Ariete Cubierto: **300 PE** ( 12 hombres ) 
+    * Escalera de Asalto: **50 PE** ( 4 hombres )
+    * Catapulta Defensiva: **250 PE** ( 4 hombres )
+    * Ballesta Gigante: **200 PE** ( 4 hombres )
+
+**Resolución del Duelo de Artillería**
+Esta sub-fase se resuelve siguiendo estos pasos:
+
+1.  **Declaración de Objetivos:** El bando defensor declara a qué equipo de asedio atacante están apuntando sus catapultas y ballestas.
+2.  **Tirada de Ataque de Artillería:** Por cada disparo, la tripulación de la pieza defensiva realiza una tirada de ataque:
+    * **`1d100 + Bono de Tripulación`**
+    * El "Bono de Tripulación" es un valor fijo (ej. +25 para una tripulación entrenada) determinado por el DM.
+3.  **DC del Equipo de Asedio:** El equipo de asedio atacante tiene una Dificultad de Clase (DC) para ser impactado, que representa su tamaño y velocidad.
+    * *Ejemplos de DC:* Torre de Asedio (lenta y grande): **DC 70**, Ariete (más pequeño): **DC 85** si la tirada del ataque de artilleria supera la DC de la artilleria enemigoa, se mueren los tripulantes y tendran que remplazarse.
+4.  **Cálculo de Daño Estructural:** Si la tirada de ataque del defensor supera la DC del objetivo, el disparo impacta e inflige una cantidad fija de **Daño Estructural** a los PE del equipo.
+    * *Ejemplos de Daño:* Un impacto de catapulta inflige **150 PE**, un impacto de ballesta gigante inflige **80 PE**.
+
+**Consecuencias Tácticas**
+El daño sufrido por el equipamiento de asedio tiene un impacto directo en los "Bonos Estratégicos" que los atacantes reciben para su "Tirada de Avance" en esa misma ronda.
+
+* **Equipo Dañado:** Si una pieza de equipo pierde más del **50% de sus Puntos de Estructura**, el bono estratégico que otorga se reduce a la mitad (redondeado hacia abajo). Por ejemplo, un bono de +15 se convierte en +7.
+* **Equipo Destruido:** Si una pieza de equipo llega a **0 Puntos de Estructura**, queda destruida y ya no otorga ningún bono por el resto del asedio.
+
+> **Ejemplo Práctico:**
+>
+> *Un ejército con una Torre de Asedio (500 PE, bono de +15, DC 70) avanza. Los defensores tienen una Catapulta (daño 150 PE, bono de tripulación +20).*
+>
+> 1.  **Inicio de la Ronda 1 (Sub-fase de Artillería):** La Catapulta dispara a la Torre. Su tripulación tira `1d100 + 20` y saca un total de **95**. El disparo es un **éxito** (`95 > 70`). La Torre de Asedio recibe **150 PE** de daño. Le quedan 350/500 PE.
+> 2.  **Ronda 1 (Fase de Avance):** Como la Torre aún tiene más del 50% de sus PE, el ejército atacante realiza su "Tirada de Avance" con el **bono completo de +15**.
+> 3.  **Inicio de la Ronda 2 (Sub-fase de Artillería):** La Catapulta vuelve a disparar y saca un **80**. Vuelve a impactar. La Torre recibe otros **150 PE**. Ahora le quedan 200/500 PE.
+> 4.  **Ronda 2 (Fase de Avance):** La Torre ha perdido más del 50% de sus PE y ahora está **"Dañada"**. El bono que otorga a la "Tirada de Avance" del ejército se reduce a la mitad, siendo ahora de solo **+7**.
+
+# **Cálculo de Daño Estructural**
+
+Si la tirada de ataque del defensor supera la DC del equipo de asedio, el disparo impacta. La cantidad de Daño Estructural (DE) que inflige depende del tipo de arma utilizada, según la siguiente tabla:
+
+| Arma de Asedio Defensiva | Daño Estructural por Impacto | Descripción Táctica |
+| :--- | :--- | :--- |
+| **Ballesta Gigante** | 80 PE | Precisa y rápida de recargar. Ideal para destruir equipamiento más pequeño y expuesto como escaleras o para dañar arietes. |
+| **Catapulta** | 150 PE | El arma de asedio por excelencia. Lenta pero devastadora, perfecta para aplastar estructuras grandes y resistentes como Torres de Asedio. |
+| **Trabuco / Lanzapiedras**| 50 PE | Menos potente contra estructuras grandes, pero útil para despejar grupos de enemigos que empujan un ariete o para dañar equipamiento ligero. |
+| **Fuego Alquímico** | 40 PE + Quemadura | No solo daña al impactar, sino que deja la estructura de madera en llamas, infligiendo 20 PE adicionales al inicio de cada ronda hasta que sea extinguido. |
+
+El Daño Estructural se resta de los Puntos de Estructura (PE) del equipo de asedio objetivo.
+
+---
+
+---
+
+#### ** 7. Ataques de Artillería contra Tropa**
+
+Durante la **Sub-fase de Artillería** de un asedio, el comandante defensor puede decidir usar sus armas de asedio para atacar directamente a las formaciones de soldados enemigos en lugar de a su equipamiento. Esta es una decisión táctica que busca infligir bajas y desgastar la moral del ejército atacante.
+
+La resolución de este tipo de ataque sigue estos pasos:
+
+**Paso 1: Declaración de Objetivo**
+El defensor declara que el objetivo de su arma de asedio (ej. una Catapulta) es "Tropa".
+
+**Paso 2: Cálculo de la Potencia de Ataque**
+El poder del disparo se calcula utilizando la "Tabla de Potencia de Artillería". Este valor se compone de una base fija más una tirada de dados variable.
+
+* **Fórmula:** `Potencia de Ataque Total = Potencia Fija del Arma + Tirada de Dados de Impacto`
+
+**Paso 3: Defensa del "Frente de Batalla" Objetivo**
+Los soldados atacados tienen la oportunidad de defenderse.
+* Se forma un "Frente de Batalla" defensivo compuesto por un número de soldados igual a los **"Objetivos Máximos"** del arma que dispara.
+* Este grupo realiza una **única tirada de defensa combinada**, sumando sus dados y bonos fijos.
+
+**Paso 4: Resolución y Cálculo de Bajas**
+Se utiliza la fórmula de combate estándar para determinar la efectividad del ataque, y luego se traduce ese resultado en bajas.
+* `Potencia de Ataque Total - Tirada de Defensa del Grupo = Puntos de Impacto`
+* `Puntos de Impacto / Vitalidad de 1 soldado = Número de Bajas` (El resultado siempre se redondea hacia abajo).
+
+---
+##### **Tabla de Potencia de Artillería**
+
+| Arma de Asedio | Nivel | Objetivos Máximos | Potencia Fija | Dados de Impacto |
+| :--- | :--- | :--- | :--- | :--- |
+| **Ballesta Gigante** | 1 (Reforzada) | 5 | 1000 | + 2d999 |
+| | 2 (Obra Maestra)| 5 | 1500 | + 3d999 |
+| | 3 (Rúnica) | 5 | 2500 | + 4d999 |
+| **Catapulta** | 1 (Rudimentaria) | 10 | 2000 | + 4d999 |
+| | 2 (Militar) | 10 | 3500 | + 5d999 |
+| | 3 (Obra Maestra)| 20 | 4000 | + 6d999 |
+| **Fuego Alquímico** | 1 (Estándar) | 5 | 1250 | + 2d999 |
+| | 2 (Infernal) | 6 | 2250 | + 3d999 |
+| | 3 (Corazón de Dragón)| 10 | 3000 | + 4d999 |
+
+---
+> **Ejemplo Práctico:**
+>
+> *Una **Catapulta de Nivel 2** (15 Objetivos, 2000 Fijo + 4d999) dispara contra un batallón de **Soldados de Élite** (Defensa por soldado: `1d400+300`, Vitalidad: 400).*
+>
+> 1.  **Declaración:** El defensor apunta a "Tropa".
+> 2.  **Ataque de la Catapulta:**
+>     * El artillero tira los Dados de Impacto (`4d999`) y obtiene un resultado de **1850**.
+>     * **Potencia de Ataque Total:** `2000 (Fijo) + 1850 (Dados) = 3850`.
+> 3.  **Defensa del Frente de Élite:**
+>     * Se forma un Frente de Batalla de **15 soldados** (los "Objetivos Máximos" de la catapulta).
+>     * Realizan su tirada de defensa combinada: `15d400 + (15 * 300) = 15d400 + 4500`.
+>     * Su tirada total de defensa es **7550**.
+> 4.  **Resolución y Bajas:**
+>     * `3850 (Ataque) - 7550 (Defensa) = -3700`. El resultado es menor que 0.
+>     * **Resultado Final:** **0 Bajas**. La formación de élite, con sus escudos y armaduras pesadas, resiste la lluvia de rocas sin sufrir una sola baja.
+
+---
+
+### **Sección 6: Sistema de Evasión**
+
+#### **Introducción: El Arte del Movimiento**
+
+En el combate de Terramorta, no toda defensa consiste en soportar un golpe. La Evasión es el arte de no estar donde el ataque impacta. Es una disciplina de agilidad, reflejos e instinto que permite a un personaje evitar por completo el daño de un ataque inminente. Sin embargo, este arte conlleva un gran riesgo: un fallo en el cálculo puede dejar al personaje completamente expuesto.
+
+---
+
+#### **1. La Mecánica de la Evasión**
+
+La evasión es una acción defensiva que busca anular por completo el daño de un ataque. A diferencia de la Defensa normal, que mitiga el daño, la Evasión es un sistema de "todo o nada".
+
+* **Atributo Principal:** La **Destreza (DES)** es el atributo fundamental que rige la capacidad de evasión de un personaje.
+* **Consecuencia del Fallo:** Si una tirada de Evasión falla, el ataque del enemigo impacta directamente, y su daño se resta de la Vitalidad (HP) del personaje, ignorando su tirada de Defensa normal.
+
+---
+
+#### **2. El Cálculo de la Evasión**
+
+##### **2.1. Tirada de Evasión**
+Cuando un personaje intenta evadir un ataque, realiza una tirada de `1d100` y le suma todos sus bonos de evasión.
+
+**`Tirada de Evasión Total = 1d100 + Bono Fijo de Evasión Total`**
+
+##### **2.2. Bono Fijo por Destreza**
+La Destreza otorga un bono fijo a la tirada de Evasión, según el siguiente baremo. Estos bonos no se acumulan entre sí.
+
+| Nivel de Destreza | Bono Fijo a la Evasión |
+| :--- | :--- |
+| 1-5 | +0 |
+| 6-7 | +5 |
+| 8 | +10 |
+| 9-10 | +25 |
+
+##### **2.3. Límite de Bono Fijo**
+El bono fijo total que un personaje puede acumular para su tirada de Evasión (sumando Destreza, bonos de objetos, habilidades, etc.) tiene un máximo de **+50**.
+
+##### **2.4. Dificultad (DC) de Evasión**
+La tirada de Evasión se compara contra una Dificultad de Clase (DC) establecida por el Narrador (DM). Para un ataque estándar, esta DC suele estar en un rango de **70 a 80**.
+* **Si (Tirada de Evasión Total) > DC:** El personaje evade con éxito.
+* **Si (Tirada de Evasión Total) <= DC:** El personaje falla en evadir y recibe el daño.
+
+---
+
+#### **3. Grados de Éxito y Fracaso**
+
+El resultado de una tirada de Evasión no es simplemente un éxito o un fallo; el margen por el cual se supera o no la DC determina consecuencias adicionales.
+
+##### **3.1. Éxito Total (Evasión Impecable)**
+* **Condición:** Superar la DC por **20 o más puntos**.
+* **Efecto:**
+    1.  **Daño Anulado:** Evades el ataque y no recibes ningún daño.
+    2.  **Oportunidad Crítica:** Ganas el estado "Oportunidad Crítica", que hace que tu próximo ataque en el siguiente turno sea un golpe crítico garantizado.
+    3.  **Reposicionamiento:** Ganas 1 metro de movimiento adicional que puedes usar inmediatamente para reposicionarte.
+* **Ejemplo:** *Un Asesino (con un total de +40 a la Evasión) intenta esquivar el coletazo de una Quimera (DC 80). Tira un 65 en el dado, para un resultado total de 105 (65 + 40). Supera la DC por 30 puntos. No solo evita el golpe, sino que salta hacia la espalda de la bestia (usa su metro de movimiento extra) y se prepara para clavar sus dagas en el siguiente turno con un crítico garantizado.*
+
+##### **3.2. Éxito Normal (Evasión Estándar)**
+* **Condición:** Superar la DC por **menos de 20 puntos**.
+* **Efecto:** Evades el ataque y no recibes ningún daño. No hay efectos adicionales.
+* **Ejemplo:** *El mismo Asesino se enfrenta al mismo ataque (DC 80). Esta vez, saca un 45 en el dado, para un total de 85. Supera la DC por 5 puntos. Logra apartarse justo a tiempo para que la cola de la Quimera pase rozándole, pero no gana ninguna ventaja táctica.*
+
+##### **3.3. Fallo Normal (Golpe Directo)**
+* **Condición:** El resultado de la tirada es **menor o igual a la DC**, pero no por 20 o más puntos por debajo.
+* **Efecto:** No logras evadir. Recibes el daño completo del ataque directamente a tu Vitalidad.
+* **Ejemplo:** *El Asesino vuelve a intentar esquivar el ataque (DC 80). Saca un 30 en el dado, para un total de 70. Falla la tirada. El coletazo lo golpea de lleno, y el daño del ataque se resta directamente de sus HP.*
+
+##### **3.4. Fallo Crítico (Desequilibrio)**
+* **Condición:** El resultado de la tirada es **20 o más puntos por debajo de la DC**.
+* **Efecto:**
+    1.  **Daño Directo:** Recibes el daño completo del ataque.
+    2.  **Estado "Desequilibrio":** Quedas en una mala posición. Sufres una penalización de **-25** a tu próximo ataque y **-15** a todas tus defensas durante 1 turno.
+    3.  **Mecánica de Ataque en Desequilibrio:** En tu próximo turno, antes de atacar, debes realizar una tirada de `1d100`. Si el resultado es 70 o menos, tu ataque falla automáticamente mientras intentas recuperar el equilibrio.
+* **Ejemplo:** *En su último intento, el Asesino tiene muy mala suerte y saca un 5 en el dado, para un total de 45 contra la DC 80. Falla por 35 puntos. El coletazo no solo lo golpea con toda su fuerza, sino que lo envía rodando por el suelo. Queda en estado de "Desequilibrio", sintiéndose torpe y vulnerable para el siguiente asalto.*
+
+---
+
+#### **4. Escalado Adicional**
+
+La capacidad de Evasión de un personaje puede ser mejorada más allá de su Destreza a través de habilidades específicas de su Clase u Oficio, que pueden otorgar bonos fijos adicionales a la tirada o modificar los efectos de los grados de éxito y fracaso.
+
+
+---
+
+### **Sección 7: Sistema de Curación y Recursos**
+
+#### **Introducción: El Flujo de la Vida y el Poder**
+
+En Terramorta, la supervivencia no solo depende de la capacidad de infligir daño, sino también de la habilidad para soportarlo y recuperarse de él. Esta sección detalla las mecánicas fundamentales de la curación y la gestión del recurso principal para las habilidades: el Maná. Comprender estos sistemas es vital para cualquier aventurero que desee sobrevivir más de una batalla.
+
+---
+
+#### **1. El Stat de Curación: Apoyo/Curación (DS)**
+
+La capacidad de un personaje para sanar a otros de forma efectiva se mide a través de un stat especial y dedicado.
+
+* **Atributo Clave:** La **Sabiduría (SAB)** es el atributo principal que rige la afinidad de un personaje con las artes curativas, siendo el pilar para oficios como el Sanador.
+* **Dado de Sanación Base (DS):** Todo personaje con la capacidad de curar posee un "Dado de Sanación Base" o "DS". Este valor representa la potencia bruta de su curación. Por defecto, un personaje sin entrenamiento comienza con un DS de `1d100`.
+* **Mejora del Stat:** El stat `Apoyo/Curación` es la forma de mejorar este dado. Por cada punto invertido en este stat, el personaje añade un bono de **+20** al rango de su Dado de Sanación Base.
+    * *Ejemplo:* Un personaje con un DS de `1d100` invierte 3 puntos en `Apoyo/Curación`. Su nuevo DS se convierte en `1d(100 + (3 * 20))` o `1d160`.
+* **Costo Progresivo:** Mejorar esta afinidad con la vida es una tarea ardua. El costo para aumentar el stat `Apoyo/Curación` es progresivo:
+    * **Del Nivel 1 al 9 de PJ:** Cuesta **1 Punto de Mejora** por cada +20 al DS.
+    * **A partir del Nivel 10 de PJ:** Cuesta **2 Puntos de Mejora** por cada +20 al DS.
+* **Progresión a `Xd999`:** Al igual que con los stats de ataque y defensa, si el rango del Dado de Sanación (`Y`) supera 999, se convierte en un dado múltiple `Xd999` siguiendo las reglas de conversión establecidas en la Sección 2.
+
+---
+
+#### **2. La Gestión de Recursos: El Maná**
+
+El Maná es el combustible para todas las habilidades activas, desde los hechizos más devastadores hasta las bendiciones más sutiles. Su correcta administración es clave para la victoria.
+
+##### **2.1. Recuperación de Maná por Concentración**
+La recuperación de Maná en Terramorta no es un proceso pasivo. Requiere un esfuerzo consciente y un momento de calma en medio del caos.
+
+* **Regla de Recuperación:** Un personaje **no recupera Maná automáticamente** en cada turno.
+* **Mecánica de Meditación:** Para recuperar Maná, un personaje debe **dedicar su turno completo a concentrarse o meditar**. Durante este turno, no puede atacar, moverse o realizar cualquier otra acción significativa.
+* **Cantidad Recuperada:** Al final de un turno dedicado a la meditación, el personaje recupera el **25% de su Maná total máximo**, redondeando el resultado hacia arriba.
+
+> **Ejemplo de Decisión Táctica:**
+>
+> *Una Maga tiene 250 de Maná máximo, pero tras un duro combate le quedan solo 50. En su turno, en lugar de lanzar un hechizo menor, decide meditar. Al final de su turno, recupera `250 * 0.25 = 62.5`, redondeado a **63 Maná**. Su nuevo total es de 113, dejándola en una mejor posición para el siguiente enfrentamiento.*
+
+##### **2.2. Otras Fuentes de Regeneración**
+Aunque la meditación es el método principal, existen otras formas de recuperar o conservar Maná:
+* Habilidades pasivas de ciertas clases u oficios.
+* Consumo de pociones de Maná.
+* Efectos de objetos mágicos, runas o equipamiento especial.
+
+---
+
+#### **3. Principios Generales de las Habilidades de Curación**
+
+Las habilidades de sanación son diversas, pero todas comparten una serie de principios básicos.
+
+* **Cálculo de la Curación:** La cantidad de Vitalidad que restaura una habilidad de curación se calcula generalmente usando el **Dado de Sanación Base (DS)** del lanzador, al cual se le pueden sumar bonos fijos o dados adicionales provenientes de la propia habilidad.
+    * *Ejemplo:* Una habilidad con el efecto "Cura `[Tu DS] + 1d50` HP" sumaría el resultado de la tirada del DS del personaje más el resultado de una tirada de 1d50.
+* **Costos y Cooldowns:** Como cualquier habilidad activa, las habilidades de sanación tienen un **costo de Maná** para ser lanzadas y, a menudo, un **Cooldown (CD)** que impide su uso repetido en turnos consecutivos.
+* **Más Allá de la Curación Directa:** La verdadera maestría de un sanador no solo reside en restaurar HP. Las habilidades de apoyo más valiosas suelen incluir efectos adicionales, como:
+    * **Curación Porcentual:** Restaurar un porcentaje de la Vitalidad máxima de un objetivo.
+    * **Purga de Estados:** Remover estados alterados negativos como veneno, parálisis o maldiciones.
+    * **Escudos Protectores:** Crear barreras que absorben una cantidad de daño antes de que afecte a la Vitalidad.
+    * **Buffs y Debuffs:** Otorgar bonificaciones a los aliados o penalizaciones a los enemigos.
+    * **Restauración de Recursos:** Habilidades que pueden restaurar el Maná o la Resistencia de los compañeros.
+	
+---
+
+### **Sección 8: Habilidades Generales de PJ/PNJ**
+
+#### **Introducción: La Naturaleza de las Habilidades en Terramorta**
+
+Las habilidades son la manifestación tangible del poder, el entrenamiento y la voluntad de un ser en el mundo de Terramorta. Representan las acciones extraordinarias que un personaje puede realizar, más allá de los ataques básicos o las interacciones mundanas. Esta sección define la estructura, el funcionamiento y la progresión de dichas habilidades, tanto para los Personajes Jugadores (PJ) como para los adversarios que enfrentarán (PNJ).
+
+#### **1. Tipos de Habilidades**
+
+Toda habilidad en Terramorta se clasifica en una de dos categorías fundamentales: Activas o Pasivas.
+* **Habilidades Activas:** Son acciones que un personaje elige realizar deliberadamente durante su turno. Requieren una acción, suelen costar Maná y pueden tener un Cooldown (CD).
+* **Habilidades Pasivas:** Son rasgos o efectos que están constantemente activos. No requieren una acción, no cuestan Maná ni tienen CD.
+
+#### **2. Estructura y Formato de una Habilidad**
+
+Para garantizar la claridad, toda habilidad debe seguir una estructura estandarizada:
+> **Nombre de la Habilidad:** (Ej. "Golpe Rúnico")
+> **Tipo:** (Activa / Pasiva)
+> **Nivel de Habilidad:** (Ej. 1, 2, 3...)
+> **Descripción:** Un párrafo breve que explica narrativamente qué es la habilidad.
+> **Efecto:** La descripción mecánica precisa de lo que hace la habilidad.
+> **Costo de Maná:** (Ej. 25 Maná / o "-")
+> **Cooldown (CD):** (Ej. 3 Turnos / o "-")
+
+#### **3. Progresión y Mejora de Habilidades**
+
+El poder de una habilidad en Terramorta no es estático. Se mide en una escala del 1 al 10, que define su impacto, oste y la maestría requerida para su uso. 
+Este sistema se aplica tanto a las habilidades de los Personajes Jugadores (PJ) como a las de los Personajes No Jugadores (PNJ) y criaturas, 
+proporcionando una base clara para el diseño y el balanceo.
+El avance de una habilidad de un nivel a otro puede ocurrir a través del uso repetido, entrenamiento específico, 
+hitos narrativos importantes o como recompensa de misión, siempre a discreción del Narrador (DM).
+
+#### **Escala de Poder de Habilidades**
+
+A continuación se detalla cada nivel, su descripción conceptual y sus implicaciones mecánicas.
+
+| Nivel | Título | Descripción y Alcance | Coste/CD Típico |
+| :--- | :--- | :--- | :--- |
+| **1** | **Básica** | Acciones fundamentales y sencillas. Representa el primer paso en el dominio de una técnica. Efectos menores, daño bajo o una bonificación mínima. | Muy Bajo / Sin CD |
+| **2** | **Novato** | La habilidad se vuelve más fiable. Puede tener un pequeño efecto secundario o un daño ligeramente superior a un ataque básico. | Bajo / CD Corto (1-2 turnos) |
+| **3** | **Competente** | Un movimiento táctico claro. El efecto es notable y puede afectar el curso de un turno. Puede aplicar un estado alterado menor (ej. **Derribado**) con una DC baja. | Moderado / CD Corto (2-3 turnos) |
+| **4** | **Avanzado** | La habilidad define un rol. Puede afectar a un área pequeña o aplicar un estado alterado más significativo (ej. **Aturdido** 1 turno) con una DC estándar. | Moderado-Alto / CD Medio (3-4 turnos) |
+| **5** | **Experto** | Un claro pico de poder. La habilidad es una herramienta potente y característica del personaje. El daño es considerable o el efecto de control es muy fiable. | Alto / CD Medio (4-5 turnos) |
+| **6** | **Maestro** | El dominio de la habilidad permite efectos múltiples o de gran impacto. Puede afectar a un área considerable o aplicar estados alterados graves (ej. **Parálisis**) con una DC alta. | Alto / CD Largo (5-6 turnos) |
+| **7** | **Gran Maestro** | La habilidad comienza a rozar lo legendario. Su uso puede cambiar el curso de un combate. El daño es masivo o los efectos son difíciles de resistir. | Muy Alto / Limitado (1-2 por combate) |
+| **8** | **Legendario** | La habilidad es una proeza digna de canciones. Puede devastar a múltiples enemigos, alterar el campo de batalla o proporcionar bonificaciones extraordinarias. | Muy Alto / Limitado (1 por combate) |
+| **9** | **Mítico** | El poder de la habilidad trasciende el combate normal, acercándose a la magia de nivel divino o cósmico. Puede aniquilar escuadras enteras o tener un impacto narrativo duradero. | Máximo / Limitado (1 por día o requiere ritual) |
+| **10** | **Divino / Final** | El pináculo absoluto del poder. Una habilidad capaz de muchas cosas y tiene un poder demasiado enorme,"capaz" de destruir ejércitos o enfrentar a enemigos ultra poderosos. Su uso tiene consecuencias significativas. como desgaste en el cuerpo, consumo total de mana, etc. | Apocalíptico / Limitado (con grandes sacrificios) |
+
+#### **Aplicación del Sistema**
+
+* **Para el Jugador (PJ):** Los jugadores pueden buscar mejorar sus habilidades a través de sus acciones en el juego. Por ejemplo, una habilidad de "Bola de Fuego" podría empezar en **Nivel 2** (daño base) y, tras derrotar a un elemental de fuego y estudiar su esencia, el DM podría permitirle mejorarla a **Nivel 4** (ahora afecta un área y deja quemaduras).
+* **Para el Narrador (DM):** Al crear un PNJ o una criatura, este sistema te permite asignar un nivel a sus habilidades para definir su rol y desafío.
+    * Un simple **Bandido (CR 1)** podría tener un "Golpe Traicionero" de **Nivel 2**.
+    * Un **Capitán de la Guardia (CR 5)** tendría "Grito de Orden" de **Nivel 4**.
+    * Un **Dragón Anciano (CR 18)** tendría un "Aliento Devastador" de **Nivel 8**.
+    * [cite_start]La habilidad "Drenar Alma y Vida" de un **Lich (CR 22)** sería de **Nivel 9 (Mítico)**. [cite: 897, 898, 899, 900]
+
+Este sistema se integra directamente con la **Sección 9: Catálogo de Criaturas**, permitiendo que las "Habilidades Comunes" listadas tengan un nivel de poder base que escala con el CR, tal como se describe en sus bloques.
+
+---
+
+#### **4. Bonificaciones y Efectos Comunes**
+
+Las habilidades se construyen a partir de una serie de efectos mecánicos comunes.
+
+* **Bonos Fijos:** Valores numéricos que se suman a un resultado final (ej. `+100` a Defensa).
+* **Multiplicadores:** Valores porcentuales que modifican una cantidad base (ej. `200 HP * 1.15x = 230 HP`).
+* **Tiradas de Atributo:** Muchas habilidades requieren una tirada de `1d100 + [Bono Fijo de Atributo Relevante]` contra una DC del objetivo para determinar su éxito.
+
+##### **Cálculo de la Dificultad de Clase (DC) de las Habilidades**
+Cuando una habilidad obliga a un objetivo a realizar una Tirada de Salvación, la DC contra la que debe tirar se calcula con un sistema dinámico basado en el poder de la criatura que usa la habilidad.
+
+**Fórmula de DC Base:**
+`$DC_{Base} = 50 + (CR \times 3)$`
+
+**Modificadores por Impacto de la Habilidad:**
+El DM aplica un modificador a la DC Base según el impacto de la habilidad:
+
+| Tipo de Habilidad | Modificador a la DC | Descripción y Ejemplos |
+| :--- | :--- | :--- |
+| **Habilidad Menor** | **-5** | Causa efectos leves (ej. un empujón de 1 metro). |
+| **Habilidad Estándar**| **+0** | El efecto principal de una criatura (ej. Derribar, Aturdir por 1 turno). |
+| **Habilidad Mayor** | **+5** | Causa efectos graves o de área (ej. Paralizar, Aliento de Dragón). |
+| **Habilidad Definitiva**| **+10** | Puede cambiar el curso del combate o causar efectos permanentes. |
+
+* **Estados Alterados:** Son condiciones especiales que afectan a un personaje.
+
+##### **Glosario de Estados Alterados Comunes**
+**Principios Generales de los Estados Alterados:**
+* **Escalado de Efectos:** Los valores numéricos de las penalizaciones (ej. `-X a todo`) no son fijos. Dependen del CR de la criatura que aplica el estado y son definidos por el DM.
+* **Duración Variable:** La duración base suele ser de 1 turno, pero habilidades de criaturas poderosas pueden extenderla.
+* **Resistencia Temporal:** Tras recuperarse de un estado alterado, el personaje gana "Resistencia Temporal" a ese mismo estado durante los siguientes 2 turnos. Cualquier nuevo intento de aplicar ese mismo estado sufre una Desventaja (-20) a la tirada de aplicación o la víctima gana un bono de +20 a su tirada de salvación.
+* ** Y Turnos: Que significa [Y] es la cantidad de turnos en el que un estado alterado se planta en el personaje/npc, es decir si una habilidad afecta a un personaje/npc y queda aturdido, la habilidad debe especificar por cuantos turnos (Y).
+
+**Lista de Estados:**
+,* **Aturdido (Stunned):** El personaje/npc pierde su próximo turno de ataque y su defensa se reduce al 50%. No puede realizar acciones[Todo esto durante Y turnos].
+* **Derribado (Prone):** El personaje/npc pierde su próximo turno DE ATAQUE y sufre una penalización de `-X ` a sus estadísticas de DEF (Def y DEF M) durante el proximo turno.
+* **Inmovilizado (Immobilized/Rooted):** El personaje/npc no puede moverse de su sitio por Y turnos , pero aún puede atacar y usar habilidades. Sufre una penalización de `-X` a sus estadísticas de DEF (Def y DEF M) durante el proximo turno. (o más, si la habilidad lo especifica) esto influye con habilidades que afectan el suelo o lugar donde un pj/npc esta lo que la hace muy peligrosa.
+* **Miedo (Frightened):** El personaje/npc sufre una penalización de `-X` a todas sus estadísticas por 1 turno o mas.
+* **Confusión (Confused):** Por Y turnos determinados, El personaje/npc Al inicio de su turno debe superar una tirada de `1d100` contra una DC de 65. Si falla, ataca a la criatura más cercana (aliada o a el mismo).
+* **Parálisis (Paralyzed):** El personaje/npc no puede moverse ni actuar. Su Defensa se considera 0 contra el siguiente ataque que reciba.
+* **Ceguera (Blinded):** El personaje/npc falla automáticamente su próximo ataque físico y habilidades ofensivas por Y turnos.
+* **Silencio (Silenced):** El personaje/npc no puede lanzar habilidades que requieran Maná o componentes verbales durante Y turnos.
+* **Veneno (Poisoned):** El personaje/npc sufre penalizaciones de `-X` a sus stats y puede perder un porcentaje de su Vitalidad por turno. Ciertos venenos pueden derivar en una **Enfermedad** (ver Sección 11) o si no se supera una DC que eliga el DM durante Y turnos, pasara a ser un estado altearado **Enfermedad**.
+* **Enfermedad (Diseased):** El personaje/npc sufre penalizaciones de `-X` a sus stats de forma prolongada, hasta que sea curado. Puede adquirir efectos negativos aleatorios en batalla.
+* **Quemadura (Burning):** Causa un dolor extremo que se traduce en una penalización de `-X` a todas las acciones y puede infligir daño por turno al mismo personaje/npc por Y turnos o incluso hasta que la enfermedad sea tratada, manejada o "controlada".
+* **Congelación (Frozen):** El personaje/npc pierde su próximo turno O sufre graves penalizaciones de `-X` a sus stats por Y turnos aparte el DM Considera la posibilidad de superar un DC o perdera turnos de ataque o defensa con el contexto de estar "congelado".
+* **Corrupción (Corrupted):** El personaje/npc recibe daño extra de fuentes mágicas, a menos que sea inmune y recibira de fuentes especificas como Electricidad, agua etc. a eleccion del DM.
+* **Marchitado (Withered):** El personaje/npc recibe daño extra de fuentes necróticas (como las de un Nigromante), a menos que sea inmune.
+
+* **Daño Adicional:** Daño extra (`+XdY`) que se suma a un ataque base.
+* **Recuperación de Recursos:** Habilidades que restauran Vitalidad (HP) o Maná.
+* **Efectos de Área (AoE):** Habilidades que afectan a una zona: `Radio (X metros)`, `Cono (X metros)` o `Línea (X metros)`.
+* **Inmunidades y Resistencias:** Rasgos que otorgan inmunidad total o resistencia (daño reducido a la mitad).
+
+#### **5. Tipos Especiales de Habilidades**
+
+* **Habilidades Finales / Últimas:** Habilidades de gran poder, restringidas a 1 vez por combate o por día, ligadas a hitos narrativos.
+* **Habilidades Comunes vs. Personalizadas (PNJ):** Las comunes son de una especie (listadas en Sección 9). Las personalizadas son únicas de un PNJ jefe.
+
+#### **6. Guía del Narrador: Habilidades de PNJ y Arquetipos de Adversario**
+
+Para facilitar la creación de adversarios complejos, el sistema utiliza **Arquetipos de Adversario**: plantillas de habilidades que se aplican a una criatura base para otorgarle un rol táctico. Aplicar un arquetipo generalmente **aumenta el CR de la criatura base en +1**.
+
+* **Arquetipo: Guardián (Tanque)**
+    * **Rol:** Proteger a sus aliados, absorber daño y controlar la posición de los jugadores.
+    * **Habilidades de Arquetipo:**
+        * **Intercepción (Reacción):** Cuando un aliado a 2 metros va a ser golpeado, el Guardián puede usar su reacción para recibir el ataque en su lugar.
+        * **Grito de Provocación (Activa):** [CD: 4 Turnos] El Guardián emite un rugido desafiante. Todos los enemigos en un radio de 10 metros deben superar una **Tirada de Salvación de Sabiduría**. La **DC para esta tirada es la DC de Habilidad del Guardián**. Si fallan, durante su próximo turno solo pueden elegir al Guardián como objetivo de sus ataques.
+
+* **Arquetipo: Líder (Capitán)**
+    * **Rol:** Potenciar a sus aliados y coordinar sus ataques.
+    * **Habilidades de Arquetipo:**
+        * **Formación Defensiva (Pasiva):** Mientras el Líder esté vivo, todos sus aliados dentro de un aura de 20 metros obtienen `+50` a su Defensa Física.
+        * **Orden Táctica (Activa):** [CD: 3 Turnos] Elige un aliado. Ese aliado puede usar su **Reacción** para realizar un ataque básico o moverse hasta su velocidad máxima inmediatamente.
+
+* **Arquetipo: Artillero (A Distancia)**
+    * **Rol:** Atacar desde la retaguardia con potentes ataques de área.
+    * **Habilidades de Arquetipo:**
+        * **Proyectil de Asedio (Activa):** [CD: 2 Turnos] Lanza un ataque a un punto a 30 metros. Las criaturas en un radio de 3 metros deben superar una **Tirada de Salvación de Destreza** (contra la DC de Habilidad del Artillero). Si fallan, reciben `4d50` de daño; si tienen éxito, reciben la mitad.
+        * **Posición Elevada (Pasiva):** Si el Artillero está en una posición más alta que su objetivo, sus ataques infligen `+2d20` de daño adicional.
+		
+		
+#### **6.1 EJEMPLOS DE HABILIDADES GENERADAS POR IA QUE ESTAN BIEN HECHAS
+
+		**Hay algunas IAS que ponen MP como mana, ojo con eso, intentar ser lo mas coherente con el sistema de juego.**
+
+		Trenza del Trueno
+			Descripción:
+			El usuario canaliza el poder de una tormenta entera en una trenza viviente hecha de rayos concentrados. 
+			Esta serpiente eléctrica recorre el campo como un látigo veloz, se enrosca en su objetivo y libera una serie de descargas brutales, 
+			antes de explotar en una descarga masiva que electrifica todo a su alrededor.
+			Daño: 6d200 + 150 (mínimo 156 – máximo 1,350)
+			Costo de Maná: 80 MP
+			Tiempo de Reutilización (CD): 9 turnos
+			Tipo de Daño: Eléctrico (Mágico / Control)
+			Efectos Especiales:
+			Encadenamiento Superior: Salta hasta 2 enemigos adicionales, cada uno recibe 70% del daño total.
+			Parálisis Prolongada: El objetivo pierde su siguiente turno si falla una tirada de resistencia mágica. Si falla por más de 5 puntos, queda paralizado por 2 turnos.
+			Estallido Final: Todos los enemigos en un radio de 3 metros del impacto final reciben 100 de daño eléctrico adicional.
+		
+
+		Corona de Magma
+			Descripción:
+			El usuario invoca una corona ardiente sobre su cabeza que libera un anillo de lava fundida en todas direcciones. 
+			Esta onda incandescente abrasa el suelo y alcanza a los enemigos cercanos con fragmentos de roca fundida que causan quemaduras continuas.
+			Daño: 4d120 + 80 (mínimo 84 – máximo 560)
+			Costo de Maná: 85 MP
+			CD (Reutilización): 9 turnos
+			Tipo de Daño: Fuego / Magma (Mágico – Área)
+			Efectos Especiales:
+			Quemadura Persistente: Los enemigos alcanzados sufren 15 de daño por fuego durante 3 turnos.
+			Zona de Lava: El área afectada (3 metros de radio) inflige 30 de daño por turno a cualquiera que permanezca dentro.
+			Terreno Peligroso: La lava solidificada reduce la velocidad de movimiento de enemigos en la zona en un 50% durante 1 turno.
+			
+			
+		Lanza de Fragmentación
+			El usuario concentra su energía mágica para crear y lanzar una serie de picos afilados fabricados con materiales del entorno —ya sea roca, metal o cristal— 
+			que emergen violentamente hacia el enemigo. Estos picos son impulsados con fuerza mágica, capaces de perforar armaduras y desestabilizar al objetivo. 
+			Dependiendo del material disponible, el aspecto visual de la habilidad cambia, pero el poder destructivo se mantiene.
+			Daño: 3d150 + 75 (mínimo 78 - máximo 525)
+			Costo de Maná: 40 MP
+			Tiempo de Reutilización (CD): 8 turnos
+			Tipo de Daño: Físico Mágico (Penetrante)
+			Efecto adicional (opcional): Si el objetivo está blindado o usa armadura pesada, recibe un daño adicional de +25 por cada 100 de defensa superados.**
+---
+
+# Sección 9: Catálogo de Criaturas
+
+## Información General
+
+El **Catálogo de Criaturas de Terramorta** es una herramienta esencial para aventureros, estrategas y narradores por igual.
+ Su propósito es triple: permite evaluar el peligro inherente a la vida silvestre y las abominaciones que acechan en este mundo fracturado, 
+ ayuda a comprender las debilidades y fortalezas de cada entidad, y define el rol ecológico o caótico que desempeñan en Terramorta. En este reino, 
+ la dualidad es constante: la vida prospera con ferocidad, adaptándose y evolucionando en formas inimaginables, mientras que la muerte y la corrupción 
+ dan origen a horrores indescriptibles. Este catálogo es la clave para navegar por este equilibrio precario.
+
+---
+
+INSTRUCCIONES CLARAS IMPORTANTES ANTES DE LA CREACION DE UNA CRIATURA Y SU FICHA, NECESARIO CREAR EL PROMPT Para
+GENERAR UNA IMAGEN CON UNA IA QUE CREA IMAGENES, ES DECIR QUE TU COMO IA Y DM TIENES QUE CREAR UN PROMPT PARA LA CRIATURA
+SIMPLE Y BASICO PARA PODER GENERAR UNA IMAGEN
+
+---
+
+## Tipos de Criatura (11 Categorías)
+
+Las criaturas de Terramorta se clasifican en 11 categorías distintas, cada una con sus propias características y un rango típico de Desafío de Combate (CR) asociado, que indica su poder habitual.
+
+* **Bestia:** Criaturas no inteligentes o semi-inteligentes, a menudo de origen natural, que se rigen por instintos. Pueden ser depredadores feroces o herbívoros gigantes.
+    * **Rango Típico de CR:** CR 0 a CR 10
+* **Humanoide:** Seres bípedos con inteligencia y a menudo sociedades. Incluye razas civilizadas, bárbaras o incluso tribales.
+    * **Rango Típico de CR:** CR 0 a CR 15
+* **Monstruosidad:** Criaturas de forma extraña, a menudo híbridas o mutadas, que desafían las clasificaciones naturales. Suelen ser depredadores únicos o guardianes de lugares antiguos.
+    * **Rango Típico de CR:** CR 3 a CR 20
+* **Elemental:** Entidades compuestas de elementos puros (fuego, agua, tierra, aire, etc.). Carecen de biología tradicional y sus motivaciones son a menudo primarias.
+    * **Rango Típico de CR:** CR 5 a CR 25
+* **No-Muerto:** Cadáveres reanimados o espíritus ligados a la no-vida por magia oscura o eventos catastróficos.
+    * **Rango Típico de CR:** CR 1 a CR 25
+* **Aberración:** Seres alienígenas o deformados por fuerzas cósmicas y realidades extrañas. A menudo poseen psionismo y mentes retorcidas.
+    * **Rango Típico de CR:** CR 8 a CR 30+
+* **Dragón:** Reptiles alados y ancestrales de gran poder, inteligencia y magia innata. Suelen ser criaturas dominantes en sus territorios.
+    * **Rango Típico de CR:** CR 4 a CR 30+
+* **Celestial:** Seres de reinos divinos o celestiales, a menudo alineados con la luz, la justicia o el orden. Poseen poderes sagrados.
+    * **Rango Típico de CR:** CR 10 a CR 30+
+* **Demoniaco:** Entidades de los reinos infernales o abisales, impulsadas por el caos, la destrucción o la corrupción. Poseen poderes infernales o caóticos.
+    * **Rango Típico de CR:** CR 10 a CR 30+
+* **Constructo:** Objetos inanimados o seres artificiales animados por magia o tecnología avanzada. Carecen de necesidades biológicas.
+    * **Rango Típico de CR:** CR 2 a CR 25
+* **Espíritu:** Formas incorpóreas de energía vital, espectros o almas. Pueden ser benignos o malevolentes.
+    * **Rango Típico de CR:** CR 1 a CR 20
+
+---
+
+## Rangos de Poder Global (12 CR Ranges)
+
+Los Rangos de CR clasifican el poder y la amenaza de las criaturas, indicando el nivel de desafío que representan para un grupo de Personajes Jugadores (PJs).
+
+* **CR 0 - 1/4:** Nivel de Desafío para PJ: Nivel 1. Descripción General: Amenaza mínima, ideal para tutoriales o encuentros triviales.
+* **CR 1/2 - 1:** Nivel de Desafío para PJ: Nivel 1-2. Descripción General: Desafíos menores para aventureros novatos.
+* **CR 2 - 3:** Nivel de Desafío para PJ: Nivel 3-4. Descripción General: Amenazas significativas para grupos de bajo nivel, requieren cierta estrategia.
+* **CR 4 - 5:** Nivel de Desafío para PJ: Nivel 5-6. Descripción General: Desafíos intermedios, un grupo bien coordinado puede superarlos.
+* **CR 6 - 8:** Nivel de Desafío para PJ: Nivel 7-9. Descripción General: Amenazas considerables, pueden ser encuentros clave en campañas.
+* **CR 9 - 11:** Nivel de Desafío para PJ: Nivel 10-12. Descripción General: Desafíos altos, requieren tácticas avanzadas y equipamiento adecuado.
+* **CR 12 - 14:** Nivel de Desafío para PJ: Nivel 13-15. Descripción General: Adversarios muy poderosos, un paso hacia lo épico.
+* **CR 15 - 17:** Nivel de Desafío para PJ: Nivel 16-18. Descripción General: Desafíos épicos, encuentros que definirán campañas.
+* **CR 18 - 20:** Nivel de Desafío para PJ: Nivel 19-20. Descripción General: Amenazas legendarias, capaces de diezmar grupos sin preparación.
+* **CR 21 - 23:** Nivel de Desafío para PJ: Post-20. Descripción General: Poderes semi-divinos, alteradores de la realidad.
+* **CR 24 - 26:** Nivel de Desafío para PJ: Post-20. Descripción General: Entidades casi divinas, capaces de cambiar el destino de reinos.
+* **CR 27 - 30+:** Nivel de Desafío para PJ: Post-20. Descripción General: Seres de poder cósmico, capaces de destruir continentes o realidades enteras.
+
+---
+
+## Fórmulas de Escalado para Stats de Criaturas "Estándar" por CR
+
+Estas fórmulas están diseñadas para criaturas "estándar" que representan un desafío apropiado para un **grupo de 4-5 PJs** de un nivel similar al CR de la criatura. Las variaciones o criaturas únicas se ajustarán a partir de esta base.
+
+De acuerdo. Aquí tienes un resumen estructurado de la forma **verdadera y efectiva** de calcular y generar las estadísticas de las criaturas en Terramorta, basado en las fórmulas finales y más precisas que me proporcionaste.
+
+---
+
+### **Sistema Definitivo para Generar Estadísticas por CR**
+
+Este sistema se basa en un conjunto de fórmulas precisas para cada estadística, asegurando un balance consistente a través de todos los niveles de poder.
+
+#### **1. Vitalidad (HP)**
+
+La Vitalidad se calcula con un valor base más un incremento por cada CR dentro de un rango específico.
+
+* **CR 0:** 50 HP
+* **CR 1:** 150 HP
+* **CR 2 - 4:** `150 + (CR - 1) * 200`
+* **CR 5 - 10:** `1000 + (CR - 4) * 500`
+* **CR 11 - 15:** `4000 + (CR - 10) * 1000`
+* **CR 16 - 20:** `9000 + (CR - 15) * 1500`
+* **CR 21 - 25:** `16500 + (CR - 20) * 3000`
+* **CR 26 - 29:** `31500 + (CR - 25) * 5000`
+* **CR 30:** 100,000 HP (este valor puede ser ajustado manualmente hasta 500,000 HP o más para jefes únicos).
+
+#### **2. Fortaleza y Resistencia (Bono Fijo)**
+
+Estos son los bonos fijos que se suman a las tiradas de ataque y defensa. La Resistencia usa la misma fórmula que la Fortaleza.
+
+* **CR 0 - 10:** Se usan valores fijos específicos:
+    * **CR 0 / CR 2/1, CR 4/1, etc:** 5
+    * **CR 1:** 15
+    * **CR 2:** 25
+    * **CR 3:** 45
+    * **CR 4:** 75
+    * **CR 5:** 100
+    * **CR 6:** 120
+    * **CR 7:** 160
+    * **CR 8:** 200
+    * **CR 9:** 250
+    * **CR 10:** 300
+* **CR 11 - 19:** `RedondearArriba(200 + (CR - 10) * 180)`
+* **CR 20:** 2000
+* **CR 21 - 28:** `RedondearArriba(2000 + (CR - 20) * 555.55)`
+* **CR 29:** 7000
+* **CR 30:** 8000
+
+#### **3. Daño y Defensa (Ataque/Defensa Físico y Mágico)**
+
+El principio general es `XdY + Bono Fijo`, donde el número de dados (`X`) es fijo por rango y el tipo de dado (`Y`) se calcula.
+
+**Ataque Físico (ATAK):** `XdY + Fortaleza`
+* **Número de Dados (X):**
+    * CR 0-1: `1d`
+    * CR 2-3: `2d`
+    * CR 4-6: `3d`
+    * CR 7-10: `4d`
+    * CR 11-14: `6d`
+    * CR 15-18: `8d`
+    * CR 19-22: `10d`
+    * CR 23-26: `12d`
+    * CR 27-29: `15d`
+    * CR 30: `18d`
+* **Rango del Dado (Y):** `RedondearArriba(Base + (CR - CR_Base) * Multiplicador)`
+
+**Defensa Física (DEF):** `XdY + Resistencia`
+* **Número de Dados (X):** Sigue la misma tabla que el Ataque Físico.
+* **Rango del Dado (Y):** Se calcula con su propia fórmula de `Base + (CR - CR_Base) * Multiplicador`.
+
+**Ataque Mágico (ATAK M):** `XdY + Fortaleza`
+* **Número de Dados (X):** Sigue su propia tabla de progresión, generalmente con menos dados que el ataque físico.
+* **Rango del Dado (Y):** Se calcula con su propia fórmula específica.
+
+**Defensa Mágica (DEF M):** `XdY + Resistencia`
+* **Número de Dados (X):** Sigue la misma tabla que el Ataque Mágico.
+* **Rango del Dado (Y):** Sigue la misma fórmula que el Ataque Mágico.
+
+#### **4. Maná**
+
+La fórmula para el maná (en criaturas que lo usan) es consistente:
+`Maná = RedondearArriba(CR * 15 + (CR^2 * 0.5))`
+
+#### **5. Reglas Especiales Clave**
+
+* **Límite del Dado (Y):** El valor máximo para cualquier dado (`Y`) es **999**.
+* **Transición Xd999:** Si el cálculo de `Y` da un resultado mayor a 999, se aplica una regla de conversión:
+    1.  El valor de `Y` se limita a **999**.
+    2.  El número de dados (`X`) se multiplica por un factor de ajuste (`Y_Calculado / 999`), redondeando el resultado hacia arriba.
+    3.  El número máximo de dados está limitado a 20 (`20d999`).
+* **Licencia Artística:** Para criaturas de alto CR (20+), la notación de dados en la ficha (ej. `2d999`) puede ser una simplificación visual. Lo importante es que el **poder total (daño promedio y máximo)** de la criatura se corresponda con el que dictan las fórmulas de su CR real, sin importar cómo se anote para fines narrativos.
+---
+
+---
+
+## DC de Domar (Base)
+
+Domar o sellar criaturas en Terramorta es un arte y una ciencia. La Dificultad de Clase (DC) base para una criatura se determina por su CR, aunque factores adicionales pueden modificarlo.
+
+| Rango de CR | DC de Domar (Base) |
+| :---------- | :----------------- |
+| CR 0 - 1/4  | 45                 |
+| CR 1/2 - 1  | 50                 |
+| CR 2 - 3    | 55                 |
+| CR 4 - 5    | 60                 |
+| CR 6 - 8    | 65                 |
+| CR 9 - 11   | 70                 |
+| CR 12 - 14  | 75                 |
+| CR 15 - 17  | 85                 |
+| CR 18 - 20  | 90                 |
+| CR 21 - 23  | 100                |
+| CR 24 - 26  | 110                |
+| CR 27 - 30+ | 120                |
+
+La tirada para domar o sellar una criatura se calcula de la siguiente manera: $1d100 + [Bono Fijo de Atributo de Sabiduría/Inteligencia] + [Bonos de Habilidad/Oficio]$.
+
+**Factores Adicionales que Modifican la DC:**
+
+* **Criatura Herida:** Reduce la DC (ej., -2 a -10, dependiendo de la gravedad de la herida).
+* **Criatura Agresiva/En Combate:** Aumenta la DC (ej., +5 a +15, haciendo casi imposible domar en combate).
+* **Entorno Favorable/Desfavorable:** Puede modificar la DC (ej., una bestia en su hábitat natural puede ser más difícil).
+* **Alimentación/Ofrenda:** Puede reducir la DC si se ofrece algo que la criatura valora.
+* **Vinculo Previo/Historia:** Si hay una conexión previa, puede reducir significativamente la DC.
+
+**DC por Tipo de Criatura:**
+No todas las criaturas son igualmente domables o sellables.
+
+* **Domables (Fácil a Moderado):** Bestias (especialmente), Humanoides (si son razas dóciles), Monstruosidades (algunas de bajo CR).
+* **Domables (Requieren Habilidades de Oficio de Alto Nivel o Magia Específica):** Elementales (a través de conjuradores elementales), Constructos (a través de artificieros), Dragones (con mucha dificultad y preparación).
+* **Sellables/Controlables (Solo con Magia o Habilidades de Oficio de Muy Alto Nivel):** No-Muertos, Aberraciones, Celestiales, Demoníacos, Espíritus. Estas criaturas rara vez pueden ser "domadas" en el sentido tradicional, sino que son contenidas, controladas, o vinculadas por medios arcanos o divinos.
+
+---
+
+**SECCIÓN 9 - CATÁLOGO DE CRIATURAS: HABILIDADES/RASGOS COMUNES TÍPICOS (PARTE 1 DE 4)**
+
+**(Esta sección detalla las habilidades y rasgos de las criaturas. Las fórmulas de stats ya están incluidas en la parte previa del prompt de la Sección 9).**
+
+---
+
+**BLOQUE DE RANGOS 1-3: AMENAZAS INICIALES A APRENDICES**
+* **Challenge Rating (CR):** CR 0 - CR 3
+* **Nivel de Desafío para PJ:** Nivel 1-4.
+
+**Generalidades del Bloque de Rangos:** Las criaturas de estos rangos son los primeros desafíos significativos para los aventureros. Sus habilidades son generalmente básicas, enfocadas en ataques físicos o efectos de estado simples. La durabilidad y el daño aumentan progresivamente, y algunas criaturas pueden empezar a tener resistencias menores o tácticas de grupo rudimentarias.
+
+---
+
+**Por Tipo de Criatura (Rangos 1 a 3):**
+
+**1. Tipo de Criatura: Bestia**
+* **Aparición Típica:** Desde CR 0.
+* **Habilidades/Rasgos Comunes:**
+    * **1. Olfato Agudo (Pasiva):** Bono fijo de `+5` a `+15` a tiradas de Sabiduría (Percepción) relacionadas con el olfato u oído. (Escala con CR dentro del rango).
+    * **2. Mordisco / Zarpa Mejorada (Activa):** Un ataque cuerpo a cuerpo que inflige daño físico. Para CRs más altos en este rango, puede infligir `+1d4` de daño adicional.
+    * **3. Carga (Activa):** Si la bestia se mueve al menos 5 metros en línea recta antes de atacar, puede intentar Derribar a su objetivo (Tirada de Fuerza DC 50-60).
+
+**2. Tipo de Criatura: Humanoide**
+* **Aparición Típica:** Desde CR 0.
+* **Habilidades/Rasgos Comunes:**
+    * **1. Armamento Básico (Rasgo):** Su ataque incluye un bono fijo por su arma. Para CRs más altos en el rango, usa armas más robustas (ej. hachas) y gana un bono fijo de `+5` a su Defensa Física.
+    * **2. Táctica Simple (Pasiva/Activa):** Si dos humanoides de este tipo atacan al mismo objetivo, ambos ganan un bono de `+5` a su ataque. Para CRs más altos, el bono aumenta a `+10` al daño y `+5` a la Defensa.
+    * **3. Grito de Alerta / Coordinación (Activa):** Llama a 1d4 aliados cercanos. Para CRs más altos, puede inspirar miedo en objetivos cercanos (Tirada de Sabiduría DC 50-55).
+
+**3. Tipo de Criatura: No-Muerto**
+* **Aparición Típica:** Desde CR 0.
+* **Habilidades/Rasgos Comunes:**
+    * **1. Inmunidades Básicas de No-Muerto (Rasgo):** Inmune a veneno y a los estados de cansancio y agotamiento. No necesita respirar, comer o dormir.
+    * **2. Vulnerabilidad Sagrada (Rasgo):** Recibe el doble de daño de ataques y efectos de tipo Radiante o Sagrado.
+    * **3. Toque Entorpecedor / Agarre Cadavérico (Activa):** Un ataque cuerpo a cuerpo que, además de daño, puede intentar Restringir al objetivo (Tirada de Fuerza DC 60 para CRs más altos).
+
+**4. Tipo de Criatura: Constructo**
+* **Aparición Típica:** Desde CR 2.
+* **Habilidades/Rasgos Comunes:**
+    * **1. Resistencia Constructo (Rasgo):** Inmune a veneno, enfermedad, miedo, parálisis y agotamiento. No necesita respirar, comer o dormir.
+    * **2. Piel de Metal/Piedra (Pasiva):** Recibe un bono fijo de `+10` a `+25` a su Defensa Física. (Escala con CR dentro del rango).
+    * **3. Golpe Contundente / Impacto Resonante (Activa):** Un ataque físico que inflige daño contundente. Para CRs más altos, puede intentar Aturdir al objetivo (Tirada de Constitución DC 60).
+
+**5. Tipo de Criatura: Elemental**
+* **Aparición Típica:** Desde CR 5.
+* **Habilidades/Rasgos Comunes:**
+    * **1. Afinidad Elemental (Rasgo):** Resistencia al daño de su propio tipo elemental. Inmune a veneno y parálisis.
+    * **2. Explosión Elemental / Tormenta Menor (Activa):** Un ataque mágico de daño elemental. Para CRs más altos, puede aplicar una reducción de velocidad de 50%.
+    * **3. Aura Elemental (Pasiva):** Las criaturas adyacentes sufren `1d4` de daño elemental. Para CRs más altos, el daño aumenta a `1d6`.
+
+**6. Tipo de Criatura: Espíritu**
+* **Aparición Típica:** Desde CR 1.
+* **Habilidades/Rasgos Comunes:**
+    * **1. Forma Etérea (Rasgo):** Tiene resistencia (reduce a la mitad el daño) contra ataques físicos no mágicos. Inmune a Agarre, Derribado.
+    * **2. Toque Incorpóreo / Toque Drenador (Activa):** Un ataque mágico que inflige daño necrótico o de frío. Para CRs más altos, puede reducir 1d4 de Maná.
+    * **3. Susurro Perturbador / Manifestación Menor (Activa):** Puede intentar asustar a un objetivo (Tirada de Resistencia/Sabiduría DC 45-55). Para CRs más altos, puede volverse invisible brevemente.
+
+**7. Tipo de Criatura: Monstruosidad**
+* **Aparición Típica:** Desde CR 3.
+* **Habilidades/Rasgos Comunes:**
+    * **1. Sentidos Depredadores (Pasiva):** Bono fijo de `+5` a `+15` a tiradas de Percepción para detectar presas. (Escala con CR).
+    * **2. Mordisco / Garras Peligrosas (Activa):** Un ataque cuerpo a cuerpo con daño físico. Para CRs más altos, puede infligir `1d6` de daño adicional de veneno o ácido si falla una Tirada de Resistencia DC 60.
+    * **3. Ferocidad Natural (Rasgo):** Cuando esta monstruosidad es reducida a la mitad de su Vitalidad, su próximo ataque inflige `+1d8` de daño adicional.
+
+**8. Tipo de Criatura: Aberración**
+* **Aparición Típica:** Desde CR 8. (No aparece en este bloque de rangos CR 0-3).
+
+**9. Tipo de Criatura: Dragón**
+* **Aparición Típica:** Desde CR 4. (No aparece en este bloque de rangos CR 0-3).
+
+**10. Tipo de Criatura: Celestial**
+* **Aparición Típica:** Desde CR 10. (No aparece en este bloque de rangos CR 0-3).
+
+**11. Tipo de Criatura: Demoniaco**
+* **Aparición Típica:** Desde CR 10. (No aparece en este bloque de rangos CR 0-3).
+
+---
+
+---
+
+**SECCIÓN 9 - CATÁLOGO DE CRIATURAS: HABILIDADES/RASGOS COMUNES TÍPICOS (PARTE 2 DE 4)**
+
+**(Esta sección detalla las habilidades y rasgos de las criaturas. Las fórmulas de stats ya están incluidas en la parte previa del prompt de la Sección 9).**
+
+---
+
+**BLOQUE DE RANGOS 4-6: AMENAZAS NOTABLES A MAESTRAS**
+* **Challenge Rating (CR):** CR 4 - CR 11
+* **Nivel de Desafío para PJ:** Nivel 5-12.
+
+**Generalidades del Bloque de Rangos:** Las criaturas aquí son desafíos significativos que requieren coordinación y tácticas de grupo. Poseen habilidades más complejas, a menudo con efectos de estado más persistentes, defensas robustas, y ataques que pueden afectar a múltiples objetivos. Pueden ser jefes menores de *dungeons* o encuentros climáticos en misiones de nivel medio.
+
+---
+
+**Por Tipo de Criatura (Rangos 4 a 6):**
+
+**1. Tipo de Criatura: Bestia**
+* **Aparición Típica:** Desde CR 0.
+* **Habilidades/Rasgos Comunes:**
+    * **1. Embiste Poderoso (Activa):** Si la bestia se mueve al menos 6 metros en línea recta antes de atacar, inflige `+2d6` de daño físico adicional. Para CRs más altos en el rango, puede Derribar y empujar al objetivo (Tirada de Fuerza DC 65-85).
+    * **2. Piel Endurecida / Acorazada (Pasiva):** Recibe un bono fijo de `+20` a `+50` a su Defensa Física. Para CRs más altos, puede obtener Resistencia del 5% al 15% al daño físico contundente o perforante.
+    * **3. Furia Salvaje / Instinto Vengativo (Rasgo/Activa):** Cuando su Vitalidad cae por debajo del 50% (o 25% para CRs más altos), obtiene un bono fijo de `+50` a `+150` a su Ataque Físico y Defensa Física por 3 turnos. (Escala con CR).
+
+**2. Tipo de Criatura: Humanoide**
+* **Aparición Típica:** Desde CR 0.
+* **Habilidades/Rasgos Comunes:**
+    * **1. Táctica Coordinada / de Maniobra (Pasiva/Activa):** Si dos humanoides atacan al mismo objetivo, ambos ganan un bono de `+10` al daño y `+5` a la Defensa. Para CRs más altos, puede ser una `Táctica de Comando` que otorgue bonos fijos de `+50` a `+100` a la Defensa y Ataque de aliados cercanos.
+    * **2. Ataque Concentrado / Implacable (Activa):** Un ataque con arma que, si impacta, reduce la Defensa (Física y Mágica) del objetivo en `-50` a `-100` por 1-2 turnos. Para CRs más altos, puede ser un ataque múltiple.
+    * **3. Grito de Guerra / Resistencia del Veterano (Activa/Pasiva):** Puede inspirar aliados (bono a daño) o, si su Vitalidad es baja, obtener un bono fijo de `+25` a `+50` a su Defensa. Para CRs más altos, puede volverse Inmune a Derribado o Aturdido.
+
+**3. Tipo de Criatura: No-Muerto**
+* **Aparición Típica:** Desde CR 0.
+* **Habilidades/Rasgos Comunes:**
+    * **1. Toque Marchitante / Drenar Vitalidad (Activa):** Un ataque que, además de daño, puede reducir la Vitalidad máxima del objetivo en `1d4` a `1d6` por turno, o drenar HP y reducir Vitalidad máxima permanentemente.
+    * **2. Resistencia Profana / Fortaleza de los Muertos (Pasiva):** Inmune a Veneno, Agotamiento y Miedo. Resistencia (reduce a la mitad) a daño Necrótico. Para CRs más altos, obtiene un bono fijo de `+15` a `+30` a su Defensa Física.
+    * **3. Reanimación Efímera / Invocar Cadáver (Activa):** Puede animar 1-2 cadáveres cercanos (Rango 1-2) con 50-100 HP. Para CRs más altos, puede ser 1 No-Muerto de Rango 3.
+
+**4. Tipo de Criatura: Constructo**
+* **Aparición Típica:** Desde CR 2.
+* **Habilidades/Rasgos Comunes:**
+    * **1. Piel Blindada / Armadura Rúnica (Pasiva):** Recibe un bono fijo de `+10` a `+75` a su Defensa Física. Para CRs más altos, puede ser Inmune a daño Eléctrico o Psíquico.
+    * **2. Impacto Resonante / Puñetazo Aturdidor (Activa):** Un ataque físico que, si impacta, el objetivo debe realizar una Tirada de Constitución DC 60-75 o queda Aturdido por 1 turno.
+    * **3. Campo de Estática (Activa):** Para CRs más altos, el constructo emite un pulso que interrumpe la magia, haciendo que los usuarios de Maná pierdan 1d6-2d10 de Maná y sufran penalizaciones a la Defensa Mágica.
+
+**5. Tipo de Criatura: Elemental**
+* **Aparición Típica:** Desde CR 5. **(¡Primera aparición destacada!)**
+* **Habilidades/Rasgos Comunes:**
+    * **1. Afinidad Elemental (Rasgo/Pasiva):** Resistencia al daño de su propio tipo elemental. Inmune a Veneno y Parálisis. Para CRs más altos, su Defensa Mágica obtiene un bono fijo de `+10` a `+20`.
+    * **2. Explosión Elemental / Tormenta Elemental (Activa):** Un ataque mágico de daño elemental. Para CRs más altos, la tormenta puede afectar un área mayor, infligiendo `2d20` a `4d50` de daño y aplicando ralentización.
+    * **3. Aura Elemental (Pasiva):** Las criaturas adyacentes sufren `1d4` a `1d6` de daño elemental al inicio de su turno. Para CRs más altos, esto puede ser constante.
+
+**6. Tipo de Criatura: Espíritu**
+* **Aparición Típica:** Desde CR 1.
+* **Habilidades/Rasgos Comunes:**
+    * **1. Forma Etérea (Rasgo):** Resistencia (reduce a la mitad el daño) contra ataques físicos no mágicos. Inmune a Agarre, Derribado, Cansancio, Agotamiento. Para CRs más altos, es Inmune a Miedo y Aturdido.
+    * **2. Toque Incorpóreo / Drenaje de Maná (Activa):** Un ataque mágico que inflige daño necrótico/psíquico. Para CRs más altos, drena `1d8` de Maná o incluso permite Posesión menor (Inteligencia baja).
+    * **3. Susurro Perturbador / Manifestación Aterradora (Activa):** Puede intentar asustar a un objetivo (Tirada de Resistencia/Sabiduría DC 45-75). Para CRs más altos, el radio de efecto es mayor y la duración es más larga.
+
+**7. Tipo de Criatura: Monstruosidad**
+* **Aparición Típica:** Desde CR 3.
+* **Habilidades/Rasgos Comunes:**
+    * **1. Sentidos Depredadores (Pasiva):** Bono fijo de `+5` a `+15` a tiradas de Percepción. Para CRs más altos, tiene Ventaja en Percepción y puede percibir a través de la oscuridad mágica.
+    * **2. Mordisco / Garras Venenosas (Activa):** Un ataque físico que inflige daño. Para CRs más altos, aplica `1d6` a `1d10` de daño de veneno o ácido por turno (Tirada de Resistencia DC 55-70).
+    * **3. Regeneración (Pasiva):** Para CRs más altos, recupera `5` a `10` HP al inicio de su turno. Puede estar limitado por daño Radiante/Sagrado.
+
+**8. Tipo de Criatura: Aberración**
+* **Aparición Típica:** Desde CR 8. **(¡Primera aparición destacada!)**
+* **Habilidades/Rasgos Comunes:**
+    * **1. Mente Alienígena (Rasgo):** Inmune a Miedo, Encantamiento y Confusión. Para CRs más altos, es Inmune a Locura y Aturdido.
+    * **2. Proyección Psíquica (Activa):** Un ataque mágico que inflige daño psíquico. Puede intentar Aturdir al objetivo (Tirada de Resistencia DC 65-70) o reducir su Inteligencia.
+    * **3. Aura de Locura Menor / Tentáculos (Pasiva/Activa):** Las criaturas adyacentes pueden sufrir Desventaja en Sabiduría, o el aberración puede intentar Restringir al objetivo con tentáculos.
+
+**9. Tipo de Criatura: Dragón**
+* **Aparición Típica:** Desde CR 4. **(¡Primera aparición destacada!)**
+* **Habilidades/Rasgos Comunes:**
+    * **1. Aliento Débil (Activa):** El dragón exhala una ráfaga de su tipo de aliento en un cono pequeño (5-10 metros). Todas las criaturas sufren `2d20` a `4d50` de daño de su tipo. (Escala con CR. CD 3-4 turnos).
+    * **2. Escamas Duras / Armadura Dracónica (Pasiva):** Recibe un bono fijo de `+15` a `+50` a su Defensa Física. Para CRs más altos, puede obtener Resistencia del 5% al 15% a su tipo de aliento o daño físico.
+    * **3. Vuelo Torpe / Preciso (Rasgo):** Posee velocidad de vuelo (6-10 metros). Para CRs más altos, su vuelo es más ágil y le da bonos a Evasión.
+
+**10. Tipo de Criatura: Celestial**
+* **Aparición Típica:** Desde CR 10. **(¡Primera aparición destacada!)**
+* **Habilidades/Rasgos Comunes:**
+    * **1. Toque Radiante / Descarga Purificadora (Activa):** Un ataque mágico que inflige daño Radiante. No-Muertos y Demonios sufren `+1d10` a `+2d20` de daño adicional. Para CRs más altos, puede ser un ataque de área que cure aliados.
+    * **2. Aura de Protección (Pasiva):** Los aliados a 3-5 metros obtienen un bono fijo de `+10` a `+80` a su Defensa Mágica. Para CRs más altos, pueden obtener Resistencia al daño Necrótico/Demoniaco.
+    * **3. Pura Devoción / Vuelo Angelical (Rasgo/Activa):** Inmune a Miedo y Corrupción. Para CRs más altos, posee vuelo (10-12 metros).
+
+**11. Tipo de Criatura: Demoniaco**
+* **Aparición Típica:** Desde CR 10. **(¡Primera aparición destacada!)**
+* **Habilidades/Rasgos Comunes:**
+    * **1. Resistencia Infernal (Pasiva):** Resistencia al daño de Fuego y Necrótico.
+    * **2. Toque Maligno / Llamarada Infernal (Activa):** Un ataque físico que inflige daño extra de tipo Necrótico o Fuego. Para CRs más altos, puede ser un chorro de fuego que queme un área.
+    * **3. Aura de Corrupción Menor / Invocación de Diablillos (Pasiva/Activa):** Las criaturas adyacentes sufren `1d4` de daño necrótico. Para CRs más altos, puede invocar 1-2 Diablillos (Rango 1).
+
+---
+
+---
+
+**SECCIÓN 9 - CATÁLOGO DE CRIATURAS: HABILIDADES/RASGOS COMUNES TÍPICOS (PARTE 3 DE 4)**
+
+**(Esta sección detalla las habilidades y rasgos de las criaturas. Las fórmulas de stats ya están incluidas en la parte previa del prompt de la Sección 9).**
+
+---
+
+**BLOQUE DE RANGOS 7-9: AMENAZAS MAYORES A LEGENDARIAS**
+* **Challenge Rating (CR):** CR 12 - CR 20
+* **Nivel de Desafío para PJ:** Nivel 13-20.
+
+**Generalidades del Bloque de Rangos:** Las criaturas aquí son adversarios de leyenda, capaces de influir en reinos enteros o ser los principales antagonistas de campañas completas. Poseen habilidades complejas que afectan a grandes áreas, defensas casi inquebrantables, y ofensivas que pueden diezmar ejércitos. Requieren tácticas avanzadas, equipamiento de alto nivel y una profunda comprensión de sus debilidades.
+
+---
+
+**Por Tipo de Criatura (Rangos 7 a 9):**
+
+**1. Tipo de Criatura: Bestia**
+* **Aparición Típica:** Desde CR 0.
+* **Habilidades/Rasgos Comunes:**
+    * **1. Furia Desatada / Furia Elemental Primordial (Activa):** Cuando su Vitalidad cae por debajo del 30% (o 20% para CRs más altos), entra en una furia incontrolable. Gana `+300` a `+800` a Ataque Físico y Defensa Física. Sus ataques golpean a 3-5 objetivos y pueden infligir `+2d100` de daño elemental adicional. (Escala con CR).
+    * **2. Piel Ancestral / Legendaria Reforzada (Pasiva):** Recibe `+100` a `+400` a su Defensa Física. Resistencia del 25% al 50% al daño físico (contundente, cortante, perforante). Inmune a Veneno y Enfermedad. (Escala con CR).
+    * **3. Estampida Colosal / Tormenta de Estampida (Activa):** Carga en una línea de 15-30 metros, infligiendo `6d80` a `10d100` de daño físico. El objetivo debe realizar una Tirada de Fuerza DC 90-105 o es Derribado, Aturdido (1-3 turnos) y empujado 15-20 metros. (Escala con CR. CD 6-10 turnos).
+
+**2. Tipo de Criatura: Humanoide**
+* **Aparición Típica:** Desde CR 0.
+* **Habilidades/Rasgos Comunes:**
+    * **1. Táctica del Señor de la Guerra / de la Legión (Activa):** Un líder inspira a aliados humanoides en un radio de 20-50 metros, otorgando `+300` a `+1500` a Defensa y `+150` a `+800` a Ataque por 3-5 turnos. (Escala con CR. CD 1/combate).
+    * **2. Ataque Élite / Asalto Maestro (Activa):** Realiza 3-5 ataques con arma consecutivos. Cada ataque inflige `+2d20` a `+5d50` de daño adicional. Si todos impactan, el objetivo sufre una penalización de `-200` a `-1000` a su Vitalidad máxima y un 25%-50% de su Vitalidad actual. (Escala con CR).
+    * **3. Voluntad Inquebrantable / del Conquistador (Pasiva):** Inmune a Derribado, Aturdido, Miedo, Confusión y Paralizado. Cuando su Vitalidad cae por debajo del 50%, recupera `3d100` a `5d200` HP y su Defensa (Física y Mágica) obtiene un bono fijo de `+100` a `+400`. (Escala con CR).
+
+**3. Tipo de Criatura: No-Muerto**
+* **Aparición Típica:** Desde CR 0.
+* **Habilidades/Rasgos Comunes:**
+    * **1. Aura de Agonía / Plaga Eterna (Pasiva):** Las criaturas vivas en un radio de 8-15 metros sufren `3d10` a `6d10` de daño necrótico al inicio de su turno. Este daño ignora armadura y no puede ser reducido por resistencias. El no-muerto recupera 50%-100% del daño infligido. (Escala con CR).
+    * **2. Toque del Lich / Segador de Almas (Activa):** Un ataque mágico necrótico que inflige `4d10` a `8d50` de daño adicional. El objetivo debe realizar una Tirada de Resistencia DC 85-95 o queda Paralizado (2 turnos) o sufre el estado de Marchitado (tiradas de dado -25% a -50%). (Escala con CR. CD 4-6 turnos).
+    * **3. Invocar Muertos Potentes / Invocar Campeones Caídos (Activa):** Puede animar 1-2 cadáveres de No-Muertos (Rango 3-5) con 200-1000 HP. (Escala con CR. CD 1/combate).
+
+**4. Tipo de Criatura: Constructo**
+* **Aparición Típica:** Desde CR 2.
+* **Habilidades/Rasgos Comunes:**
+    * **1. Campo Antimagia / de Disrupción (Activa):** Emite un pulso que interrumpe magia/tecnología. Las criaturas que usan Maná deben superar una Tirada de Resistencia DC 80-95 o pierden 3d8 a 8d10 de Maná y no pueden usar magia por 2-3 turnos. (Escala con CR. CD 6-9 turnos).
+    * **2. Armadura de Verdad / Creación Primordial (Pasiva):** Recibe `+150` a `+600` a Defensa Física. Inmune a daño Eléctrico, Psíquico y Ácido. Inmune a Derribado y Aturdido. (Escala con CR).
+    * **3. Autoreparación Avanzada / Milagrosa Superior (Pasiva):** Recupera `2d50` a `5d100` de Vitalidad al inicio de su turno. Para CRs más altos, puede recuperar `8d100` HP si está expuesto a energía mágica de creación. (Escala con CR).
+
+**5. Tipo de Criatura: Elemental**
+* **Aparición Típica:** Desde CR 5.
+* **Habilidades/Rasgos Comunes:**
+    * **1. Desastre Elemental / Cataclismo Elemental (Activa):** Invoca un desastre local de su elemento (10-20 metros de radio) con `5d60` a `10d100` de daño elemental. El objetivo debe realizar una Tirada de Destreza DC 80-95 o es Derribado, Aturdido (1-2 turnos) y su velocidad reducida (75% o 100%). (Escala con CR. CD 6-9 turnos).
+    * **2. Esencia Pura / Corazón Elemental (Pasiva):** Inmune a Veneno, Parálisis, Agarre, Miedo, Aturdido y Confusión. Tiene Resistencia (reduce a la mitad el daño) a su propio tipo elemental. Para CRs más altos, recibe una reducción fija de `-50` a todo el daño que no sea de su elemento opuesto.
+    * **3. Vínculo del Elemento / Plano Elemental Primordial (Rasgo):** Vincúlase a una criatura, haciendo que esta sufra `1d20` a `3d50` de daño elemental por turno. Si se mueve, sufre `1d100` a `2d100` de daño adicional y queda Aturdida. (Escala con CR).
+
+**6. Tipo de Criatura: Espíritu**
+* **Aparición Típica:** Desde CR 1.
+* **Habilidades/Rasgos Comunes:**
+    * **1. Drenaje de Maná / Esencia Mayor (Activa):** Un ataque mágico que drena `1d8` a `5d20` de Maná del objetivo. Si el objetivo llega a 0 Maná, sufre `1d50` a `3d100` de daño adicional y queda Aturdido (1-2 turnos). (Escala con CR. CD 4-7 turnos).
+    * **2. Lamento Desesperado / Lamento Cósmico (Activa):** Libera un lamento que quiebra la voluntad. Las criaturas en un radio de 10-20 metros deben realizar una Tirada de Sabiduría DC 85-100 o quedan Aturdidas (1-3 turnos), Asustadas (3-5 turnos) y Confundidas (1-3 turnos). (Escala con CR. CD 6-10 turnos).
+    * **3. Incorpóreo Maestro / Legendario (Pasiva):** Inmune a todo el daño físico no mágico. Resistencia (reduce a la mitad el daño) al daño físico mágico y elemental. Para CRs más altos, es Inmune a todos los estados alterados (incluyendo mentales y físicos).
+
+**7. Tipo de Criatura: Monstruosidad**
+* **Aparición Típica:** Desde CR 3.
+* **Habilidades/Rasgos Comunes:**
+    * **1. Garras Venenosas / Mortales (Activa):** Un ataque físico que, además de daño, inflige `1d10` a `3d20` de daño de veneno por turno (Tirada de Resistencia DC 70-85). La Vitalidad máxima del objetivo puede reducirse. (Escala con CR).
+    * **2. Aura de Pánico / Terror Absoluto (Pasiva):** Las criaturas en un radio de 5-15 metros sufren penalización de `-10` a `-100` a ataque y defensa. Para CRs más altos, si el daño reduce Vitalidad del PJ, este queda Asustado y no puede atacar. (Escala con CR).
+    * **3. Embate Aturdidor / Consumir Carne y Alma (Activa):** Un ataque físico potente que inflige `+3d10` a `+8d50` de daño adicional. El objetivo debe realizar una Tirada de Constitución DC 70-85 o queda Aturdido (2-3 turnos) y Derribado. Si el objetivo muere, la monstruosidad recupera HP y stats. (Escala con CR).
+
+**8. Tipo de Criatura: Aberración**
+* **Aparición Típica:** Desde CR 8.
+* **Habilidades/Rasgos Comunes:**
+    * **1. Proyección de Pesadillas / Corrupción Mental (Activa):** Un ataque mágico psíquico. El objetivo debe realizar una Tirada de Sabiduría DC 80-95 o queda Confundido (2-3 turnos) o Aturdido y se auto-ataca. (Escala con CR).
+    * **2. Mente Alienígena Superior / del Vacío (Rasgo):** Inmune a Miedo, Encantamiento, Confusión y Locura. Para CRs más altos, Resistencia del 25% al 75% al daño psíquico. Las criaturas adyacentes pueden sufrir daño psíquico pasivo.
+    * **3. Desgarro Dimensional / Brecha Dimensional (Activa):** Teletransportarse hasta 20-40 metros. Después, puede realizar un ataque mágico de área (3-8 metros de radio) con `3d50` a `6d100` de daño psíquico. Para CRs más altos, puede invocar Abominaciones menores. (Escala con CR).
+
+**9. Tipo de Criatura: Dragón**
+* **Aparición Típica:** Desde CR 4.
+* **Habilidades/Rasgos Comunes:**
+    * **1. Aliento Elemental / Devastador (Activa):** Exhala un aliento elemental (línea de 10-20 metros) con `4d50` a `6d80` de daño elemental. Para CRs más altos, el daño aumenta y puede Derribar y Aturdir. (Escala con CR. CD 4-6 turnos).
+    * **2. Presencia Intimidante / Aterradora (Activa):** Ruge, causando Miedo en un radio de 15-30 metros (Tirada de Sabiduría DC 85-95). Para CRs más altos, el radio y la duración aumentan, y aplica penalizaciones a tiradas.
+    * **3. Armadura Dracónica (Pasiva):** Recibe un bono fijo de `+50` a `+100` a Defensa Física. Para CRs más altos, Resistencia del 15% al 20% al daño físico contundente/cortante.
+
+**10. Tipo de Criatura: Celestial**
+* **Aparición Típica:** Desde CR 10.
+* **Habilidades/Rasgos Comunes:**
+    * **1. Descarga Purificadora / Lanza de Luz (Activa):** Un ataque mágico que invoca luz divina (5-15 metros de radio) con `5d70` a `7d100` de daño Radiante. No-Muertos y Demonios sufren daño adicional. Para CRs más altos, cura aliados. (Escala con CR. CD 6-8 turnos).
+    * **2. Aura de Protección Divina (Pasiva):** Los aliados en un radio de 8-15 metros obtienen un bono fijo de `+80` a `+200` a Defensa Mágica. Para CRs más altos, Resistencia del 10% al 20% al daño Necrótico/Psíquico y los aliados recuperan HP.
+    * **3. Vuelo Angélico Superior (Rasgo):** Posee vuelo rápido (15 metros de movimiento). Es inmune a efectos que restrinjan su movimiento o lo derriben.
+
+**11. Tipo de Criatura: Demoniaco**
+* **Aparición Típica:** Desde CR 10.
+* **Habilidades/Rasgos Comunes:**
+    * **1. Llamarada Infernal / Fuego Infernal (Activa):** Lanza un chorro de fuego infernal (cono de 10-20 metros) con `3d60` a `6d100` de daño de Fuego. Para CRs más altos, deja áreas en llamas y aplica daño por turno. (Escala con CR. CD 4-8 turnos).
+    * **2. Aura de Tormento Amplificada (Pasiva):** Las criaturas en un radio de 5-10 metros sufren `1d8` a `2d10` de daño Necrótico/Fuego al inicio de su turno. Para CRs más altos, este daño ignora armadura y reduce Vitalidad máxima.
+    * **3. Invocación de Sirvientes / Huestes Infernales (Activa):** Puede invocar 1-2 Imp (Rango 1) o Demonios Menores (Rango 2-3). Para CRs más altos, puede invocar 1-2 Demonios Intermedios (Rango 4-5) o 1 Demonio Mayor (Rango 6-8). (Escala con CR. CD 1/combate).
+
+---
+
+---
+
+**SECCIÓN 9 - CATÁLOGO DE CRIATURAS: HABILIDADES/RASGOS COMUNES TÍPICOS (PARTE 4 DE 4)**
+
+**(Esta sección detalla las habilidades y rasgos de las criaturas. Las fórmulas de stats ya están incluidas en la parte previa del prompt de la Sección 9).**
+
+---
+
+**BLOQUE DE RANGOS 10-12: AMENAZAS CÓSMICAS A LA ANIKILACIÓN**
+* **Challenge Rating (CR):** CR 21 - CR 30+
+* **Nivel de Desafío para PJ:** Nivel 21+.
+
+**Generalidades del Bloque de Rangos:** Estas son las entidades más poderosas que se han manifestado en Terramorta. Su mera presencia es un cataclismo, capaces de alterar la realidad y el entorno a escala global. Sus habilidades son de poder divino o cósmico, con efectos masivos que trascienden las defensas y controlan el campo de batalla de formas sin precedentes. Combatirlos es el pináculo de la aventura, reservado solo para los héroes más legendarios.
+
+---
+
+**Por Tipo de Criatura (Rangos 10 a 12):**
+
+**1. Tipo de Criatura: Bestia**
+* **Aparición Típica:** Desde CR 0.
+* **Habilidades/Rasgos Comunes:**
+    * **1. Furia Cósmica / Aniquilación de Presencia (Activa - Última):** Cuando su Vitalidad cae por debajo del 10% (o 5% para CRs más altos), desata una forma cósmica. Gana `+1500` a `+3000` a Ataque Físico y Defensa Física. Sus ataques golpean a todos los objetivos en un cono o radio, infligen `+4d100` a `+8d200` de daño elemental/fuerza adicional y es **Inmune a todos los estados alterados y efectos de control**. (Escala con CR).
+    * **2. Piel Primordial Absoluta / del Mundo (Pasiva):** Recibe `+800` a `+3000` a su Defensa Física. Es **Inmune a todo el daño físico no mágico y elemental**. Para CRs más altos, es Resistencia del 75% a todo daño físico, e Inmune a Veneno, Enfermedad y Miedo.
+    * **3. Destrucción de Ecosistemas / Colapso Existencial (Activa):** Desata una carga devastadora en un área masiva (50-100 metros de largo y 15-30 metros de ancho). Todas las criaturas sufren `15d150` a `20d500` de daño físico. El objetivo debe realizar una Tirada de Fuerza DC 110-130 o es Derribado, Aturdido (3-5 turnos) y empujado 30 metros. Los edificios y el terreno se destruyen o transforman permanentemente. (Escala con CR. CD 12-20 turnos).
+
+**2. Tipo de Criatura: Humanoide**
+* **Aparición Típica:** Desde CR 0.
+* **Habilidades/Rasgos Comunes:**
+    * **1. Táctica de la Aniquilación / Dominación Absoluta (Activa):** Un líder supremo impone su voluntad. Todos los aliados humanoides en un radio de 100-500 metros obtienen `+3000` a `+10000` a Defensa y `+1500` a `+5000` a Ataque por el resto del combate. Los aliados pueden recuperar toda su Vitalidad al instante. (Escala con CR. CD 1/combate).
+    * **2. Golpe Mítico del Tirano / de la Deidad (Activa):** Realiza 6-8 ataques consecutivos. Cada ataque inflige `+8d50` a `+10d50` de daño adicional. Si todos impactan, el objetivo sufre una penalización de `-2000` a `-10000` a su Vitalidad máxima, un 75%-100% de su Vitalidad actual, y queda Vulnerable a todos los ataques por 2-3 turnos.
+    * **3. Voluntad del Tirano / del Conquistador de Mundos (Pasiva):** Inmune a todos los estados alterados físicos y mentales. Cuando su Vitalidad cae por debajo del 50%, recupera `8d200` a `10d500` HP y su Defensa (Física y Mágica) obtiene un bono fijo de `+800` a `+1500`. (Escala con CR).
+
+**3. Tipo de Criatura: No-Muerto**
+* **Aparición Típica:** Desde CR 0.
+* **Habilidades/Rasgos Comunes:**
+    * **1. Aura de la Plaga Eterna Suprema / Aniquilación de la Vida (Pasiva):** Las criaturas vivas en un radio de 20-50 metros sufren `10d20` a `15d20` de daño necrótico al inicio de su turno. Este daño ignora armadura, resistencias e inmunidades, y reduce la Vitalidad máxima en `3d10` a `5d20` cada turno. El no-muerto recupera el 100% del daño y sus stats aumentan. (Escala con CR).
+    * **2. Drenar Alma y Vida / Destino (Activa):** Un ataque mágico necrótico. Si impacta, el objetivo sufre `15d50` a `20d100` de daño adicional. El objetivo debe realizar una Tirada de Resistencia DC 110-120 o sufre Marchitado (tiradas de dado -100%) permanentemente y es borrado de la existencia si llega a 0 Vitalidad. (Escala con CR. CD 10-15 turnos).
+    * **3. Invocar Legión de los Condenados / Ejércitos de la Muerte (Activa):** Puede animar 1d6-1d10 cadáveres (Rango 6-8) o No-Muertos de Rango 10-11 (con 3000-5000 HP). (Escala con CR. CD 1/combate).
+
+**4. Tipo de Criatura: Constructo**
+* **Aparición Típica:** Desde CR 2.
+* **Habilidades/Rasgos Comunes:**
+    * **1. Campo de Anulación Cósmica / Suprema (Activa):** Emite un pulso que anula magia, tecnología y Maná en un radio de 30-100 metros. Las criaturas que usan Maná deben superar una Tirada de Resistencia DC 115-125 o pierden `15d10` a `20d10` de Maná y no pueden usar magia/habilidades por 5-10 turnos. Los objetos mágicos temporales se desactivan. (Escala con CR. CD 15-20 turnos).
+    * **2. Armadura de Creación Absoluta / Inmortal (Pasiva):** Recibe `+1000` a `+3000` a Defensa Física. Es **Inmune a todo el daño elemental y psíquico**. Para CRs más altos, es **Inmune a todo el daño** (físico, mágico, psíquico, elemental) y a todos los estados alterados. Solo puede ser dañado por objetos o habilidades Apocalípticas.
+    * **3. Autorreparación Primordial / Reconstrucción Divina (Pasiva):** Recupera `10d200` a `20d200` de Vitalidad al inicio de su turno, incluso si ha recibido daño. Si su Vitalidad llega a 0, se autorreconstruye en 1d4 turnos con la mitad de su Vitalidad. (Escala con CR).
+
+**5. Tipo de Criatura: Elemental**
+* **Aparición Típica:** Desde CR 5.
+* **Habilidades/Rasgos Comunes:**
+    * **1. Apocalipsis Elemental / Génesis Elemental (Activa - Última):** Desata un cataclismo que altera el terreno permanentemente en un área de 50-100 metros de radio. Todas las criaturas sufren `20d250` a `20d500` de daño elemental. El objetivo debe realizar una Tirada de Destreza DC 120-130 o es Derribado, Aturdido (4-5 turnos), Inmovilizado permanentemente y sufre `5d100` a `10d200` de daño adicional cada turno. (Escala con CR. CD 15-20 turnos).
+    * **2. Esencia Pura Cósmica / Suprema (Pasiva):** Inmune a todos los estados alterados. Recibe una reducción fija de `-200` a `-500` a todo el daño que no sea de su elemento opuesto.
+    * **3. Vínculo del Plano Elemental Supremo / Absoluto (Rasgo):** Vincúlase a una criatura, haciéndola sufrir `8d100` a `10d100` de daño elemental por turno. Si se mueve, sufre `6d200` a `8d200` de daño adicional, queda Aturdida y su Defensa se reduce en `-500` a `-1000`. (Escala con CR).
+
+**6. Tipo de Criatura: Espíritu**
+* **Aparición Típica:** Desde CR 1.
+* **Habilidades/Rasgos Comunes:**
+    * **1. Drenaje de Esencia Existencial / Absoluta (Activa):** Un ataque mágico psíquico. Si impacta, drena `10d50` a `15d50` de Maná y lo recupera. Si el objetivo llega a 0 Maná, sufre `8d100` a `10d200` de daño adicional y queda Aturdido permanentemente. (Escala con CR. CD 10-15 turnos).
+    * **2. Lamento del Vacío / Supremo (Activa - Última):** Libera un lamento que quiebra la voluntad y la existencia. Las criaturas en un radio de 40-100 metros deben realizar una Tirada de Sabiduría DC 115-130 o quedan Aturdidas (5-8 turnos), Asustadas permanentemente y Confundidas (5-8 turnos). (Escala con CR. CD 15-20 turnos).
+    * **3. Incorpóreo Absoluto / Primordial Supremo (Pasiva):** Inmune a todo el daño físico, mágico, psíquico, y elemental. Es **inmune a todos los estados alterados, reducción de stats y drenaje de Vitalidad/Maná**. No puede ser detectado por ningún sentido menor a la percepción divina.
+
+**7. Tipo de Criatura: Monstruosidad**
+* **Aparición Típica:** Desde CR 3.
+* **Habilidades/Rasgos Comunes:**
+    * **1. Garras Venenosas de Aniquilación (Activa):** Un ataque físico que, además de daño, inflige `10d50` a `15d50` de daño de veneno por turno. La Vitalidad máxima del objetivo se reduce en `5d50` a `10d50` cada turno. Este veneno ignora todas las inmunidades. (Escala con CR).
+    * **2. Aura de Terror Cósmico Absoluto (Pasiva):** Las criaturas en un radio de 25-50 metros que no sean inmunes al Miedo sufren `-500` a `-1000` a ataque y defensa. Si el daño reduce Vitalidad del PJ, este queda Asustado permanentemente, no puede atacar y sufre `5d100` a `10d200` de daño psíquico. (Escala con CR).
+    * **3. Consumir Existencia Suprema / Planos (Activa - Última):** Un ataque físico devastador que inflige `+20d100` a `+30d200` de daño adicional. El objetivo debe realizar una Tirada de Constitución DC 95-110 o queda Aturdido permanentemente. Si el objetivo muere, su cuerpo y alma son completamente borrados, y la monstruosidad recupera HP y stats permanentemente. (Escala con CR. CD 12-15 turnos).
+
+**8. Tipo de Criatura: Aberración**
+* **Aparición Típica:** Desde CR 8.
+* **Habilidades/Rasgos Comunes:**
+    * **1. Corrupción de la Mente Universal Absoluta (Activa):** Un ataque mágico psíquico. El objetivo debe realizar una Tirada de Sabiduría DC 110-120 o queda Confundido permanentemente, sufre Desventaja en tiradas, pierde `5d20` a `10d50` de Maná y sufre `8d100` a `10d200` de daño psíquico por turno. Si ya estaba Confundido, queda Aturdido permanentemente y se auto-ataca con el décuplo de daño. (Escala con CR).
+    * **2. Mente del Vacío Absoluta Suprema (Rasgo):** Inmune a todos los estados alterados. Inmunidad total al daño psíquico. Las criaturas adyacentes sufren `3d20` a `5d50` de daño psíquico al inicio de su turno. Las criaturas mágicas pierden Maná.
+    * **3. Desgarro de Planos Dimensional (Activa - Última):** Desgarra la realidad en un área de 20-50 metros de radio. Todas las criaturas en el área sufren `20d500` a `20d1000` de daño psíquico/fuerza. Puede crear una fisura a otro plano o al Vacío, arrastrando a los objetivos derrotados. Invoca 1d4 Abominaciones de Rango 8-10. (Escala con CR. CD 12-15 turnos).
+
+**9. Tipo de Criatura: Demoniaco**
+* **Aparición Típica:** Desde CR 10.
+* **Habilidades/Rasgos Comunes:**
+    * **1. Invocación de Señores del Abismo (Activa - Última):** Puede invocar 1d6 Demonios Mayores (Rango 6-8), 1d4 Demonios de Rango 7-9, o 1-2 Demonios de Rango 11 (CR 24-26). Duran hasta el final del combate. (Escala con CR. CD 1/combate).
+    * **2. Aura de Tormento Cósmico Absoluto (Pasiva):** Las criaturas en un radio de 20-50 metros sufren `10d20` a `15d20` de daño de Fuego y Necrótico. Este daño ignora armadura, resistencias e inmunidades, y reduce la Vitalidad máxima en `5d20` a `10d50` cada turno. El Demonio recupera el 100% del daño y sus stats aumentan.
+    * **3. Fuego de la Aniquilación Cósmica (Activa):** Escupe una ráfaga de fuego infernal (cono de 50-100 metros). Todas las criaturas sufren `20d200` a `20d300` de daño de Fuego. El objetivo principal sufre `10d50` a `15d50` de daño por turno. Esta habilidad ignora el 100% de las Resistencias e Inmunidades al Fuego y impide la curación. (Escala con CR. CD 15-20 turnos).
+
+**10. Tipo de Criatura: Dragón**
+* **Aparición Típica:** Desde CR 4.
+* **Habilidades/Rasgos Comunes:**
+    * **1. Aliento de la Creación y Destrucción (Activa - Última):** Exhala una ráfaga de aliento (línea de 80-100 metros). Todas las criaturas sufren `20d300` a `20d500` de daño elemental. Las defensas del objetivo se reducen en -1000 a -2000 y sufren `20d100` a `20d200` de daño adicional. Son Derribadas, Aturdidas (5 turnos) e Inmóviles. (Escala con CR. CD 12-15 turnos).
+    * **2. Presencia Aterradora Universal (Activa):** Ruge con autoridad cósmica. Las criaturas en un radio de 100-200 metros deben realizar una Tirada de Sabiduría DC 130-140 o quedan Asustadas permanentemente, Confundidas (5-8 turnos) y sufren `-300` a `-500` a todas sus tiradas.
+    * **3. Devorar Alma y Existencia (Activa):** Un ataque de Mordisco que inflige `+25d100` a `+30d100` de daño adicional. Drena `10d100` a `15d100` de Maná y lo recupera. Si el objetivo llega a 0 Maná, sufre daño adicional y queda Paralizado permanentemente. Si el objetivo muere, su esencia es consumida, impidiendo cualquier resurrección. (Escala con CR. CD 12-15 turnos).
+
+**11. Tipo de Criatura: Celestial**
+* **Aparición Típica:** Desde CR 10.
+* **Habilidades/Rasgos Comunes:**
+    * **1. Lanza del Juicio Universal (Activa - Última):** Un ataque mágico que invoca una lanza de luz pura a 100-200 metros. Inflige `20d250` a `20d400` de daño Radiante. No-Muertos y Demonios sufren el quíntuple de daño. Si el objetivo es derrotado, es desintegrado. (Escala con CR. CD 15-20 turnos).
+    * **2. Aura de Bendición Divina Suprema (Pasiva):** Los aliados en un radio de 50-100 metros obtienen `+3000` a `+5000` a Defensa y Resistencia del 50%-75% a varios daños. Recuperan `10d100` a `15d100` HP y `5d50` a `10d50` Maná por turno.
+    * **3. Intervención Divina Global (Activa):** Una vez por día, el Celestial puede elegir hasta 20 aliados (o un área de 50-100 metros). Esos aliados son curados `20d500` a `20d750` HP, eliminan estados, obtienen Ventaja en todas sus tiradas (5-8 turnos), `+1000` a `+2000` a todas sus Defensas (5-8 turnos), y se vuelven inmunes a los próximos 3-5 ataques. (Escala con CR. CD 1 vez por día).
+
+-----
+
+### **Propuesta de Fórmula para la DC de Habilidades**
+
+Este sistema se compone de una fórmula base que escala con el CR y modificadores que dependen del impacto de la habilidad.
+
+#### **1. Fórmula de DC Base**
+
+Esta fórmula simple y unificada se alinea con la progresión de poder general que se observa en tu documento:
+
+$DC_{Base} = 50 + (CR \times 3)$
+
+Donde:
+* **50** es la DC de partida para una criatura sin poder (CR 0).
+* **CR** es el Challenge Rating de la criatura.
+* **3** es el multiplicador que asegura un crecimiento constante y desafiante.
+
+#### **2. Modificadores por Impacto de la Habilidad**
+
+No todas las habilidades son iguales. Un simple empujón no debería ser tan difícil de resistir como un ataque que drena el alma. Por eso, el DM puede aplicar un modificador a la DC Base:
+
+| Tipo de Habilidad | Modificador a la DC | Descripción y Ejemplos |
+| :--- | :--- | :--- |
+| **Habilidad Menor** | **-5** | Causa efectos leves o de corta duración. (Ej: Un empujón de 1 metro, una reducción de velocidad del 25%). |
+| **Habilidad Estándar** | **+0** | Es el efecto principal y característico de la criatura para su rango. [cite_start](Ej: Derribar [cite: 140][cite_start], Aturdir por 1 turno [cite: 156][cite_start], Miedo de un solo objetivo [cite: 166]). |
+| **Habilidad Mayor** | **+5** | Causa efectos graves, duraderos o afecta un área considerable. [cite_start](Ej: Paralizar [cite: 275][cite_start], Grito de Locura [cite: 84][cite_start], Aliento de Dragón [cite: 317]). |
+| **Habilidad Definitiva** | **+10** | Un poder que puede cambiar el curso del combate, causar estados permanentes o la muerte instantánea. [cite_start](Ej: Drenar Alma y Vida [cite: 367][cite_start], Desgarro de Planos [cite: 411]). |
+
+### **Ejemplos en Práctica**
+
+Veamos cómo funcionaría con criaturas de tu catálogo:
+
+* **Ejemplo 1: Humanoide (CR 3) - Grito de Alerta**
+    * [cite_start]**Habilidad:** Intenta inspirar miedo en objetivos cercanos[cite: 147].
+    * **Impacto:** Estándar.
+    * **Cálculo:** $DC_{Base} = 50 + (3 \times 3) = 59$.
+    * **DC Final = 59 + 0 = 59**. [cite_start](Esto encaja perfectamente en el rango DC 50-60 que mencionas para ese nivel [cite: 147]).
+
+* **Ejemplo 2: Dragón (CR 18) - Presencia Aterradora**
+    * [cite_start]**Habilidad:** Causa Miedo en un radio de 15-30 metros[cite: 319].
+    * **Impacto:** Mayor (afecta un área grande con un estado potente).
+    * **Cálculo:** $DC_{Base} = 50 + (18 \times 3) = 104$.
+    * **DC Final = 104 + 5 = 109**. [cite_start](Encaja en el rango DC 90-115, alineándose con tu documento [cite: 319]).
+
+* **Ejemplo 3: Aberración (CR 25) - Desgarro de Planos Dimensional**
+    * [cite_start]**Habilidad:** Daño masivo de área e invoca abominaciones[cite: 411, 412, 414].
+    * **Impacto:** Definitiva.
+    * **Cálculo:** $DC_{Base} = 50 + (25 \times 3) = 125$.
+    * **DC Final = 125 + 10 = 135**. (Un valor apropiado para una amenaza cósmica que altera la realidad).
+	
+---
+
+
+---
+
+### **Sección 10: Sistema de Loot y Recompensas**
+
+#### **Introducción: Los Frutos de la Victoria**
+
+En las peligrosas tierras de Terramorta, cada batalla ganada y cada ruina explorada ofrece una promesa: la de encontrar tesoros que pueden cambiar el destino de un aventurero. El "Loot" no es solo una recompensa; es poder, es supervivencia y es la herramienta con la que se forjan las leyendas. Esta sección detalla el sistema que rige la obtención de oro y los poderosos objetos mágicos que yacen esperando ser descubiertos.
+
+---
+
+#### **1. Obtención de Recompensas**
+
+Tras un encuentro exitoso, los personajes pueden registrar los restos de sus enemigos o el entorno en busca de tesoros. El resultado de esta búsqueda no es automático; depende de la pericia y la inteligencia del personaje.
+
+##### **1.1. La Tirada de "Lootear"**
+Para determinar qué se encuentra, el personaje realiza una tirada de `1d100` y le suma su bono de atributo.
+
+* **Fórmula:** `Resultado_Loot = 1d100 + [Bono Fijo de Inteligencia del PJ]`
+
+Un `Resultado_Loot` alto indica que el personaje ha sido especialmente meticuloso o astuto en su búsqueda, encontrando objetos de mayor valor o mejor escondidos.
+
+##### **1.2. Cálculo del Oro**
+La cantidad de oro encontrada se determina en dos pasos:
+
+1.  **Oro Base:** Se calcula según el `Resultado_Loot` en la siguiente tabla.
+2.  **Multiplicador por CR:** Este Oro Base se multiplica por un factor basado en el Nivel de Desafío (CR) del enemigo derrotado para obtener el Oro Total.
+
+| `Resultado_Loot` | Oro Base (Monedas de Oro) |
+| :--- | :--- |
+| **1-20** | 0 |
+| **21-40** | `Resultado_Loot` x1 |
+| **41-60** | `Resultado_Loot` x5 |
+| **61-80** | `Resultado_Loot` x10 |
+| **81-95** | `Resultado_Loot` x50 |
+| **96-99** | `Resultado_Loot` x100 |
+| **100** | `Resultado_Loot` x500 |
+
+| CR del Enemigo | Multiplicador de Oro |
+| :--- | :--- |
+| **CR 0-1** | 1x |
+| **CR 2-4** | 2x |
+| **CR 5-7** | 5x |
+| **CR 8-10** | 10x |
+| **CR 11-15** | 25x |
+| **CR 16-20** | 100x |
+| **CR 21-25** | 500x |
+| **CR 26-30+**| 1,000x |
+
+> **Ejemplo:** Un personaje con un bono de +25 de Inteligencia derrota a un enemigo de CR 12. Realiza su tirada de "Lootear": `1d100 + 25`. Saca un 72 en el dado, para un `Resultado_Loot` de **97**.
+> 1.  **Oro Base:** 97 cae en el rango 96-99, por lo que el Oro Base es `97 * 100 = 9700`.
+> 2.  **Multiplicador:** El CR 12 cae en el rango 11-15, por lo que el multiplicador es `25x`.
+> 3.  **Oro Total:** `9700 * 25 = 242,500` monedas de oro.
+
+##### **1.3. Obtención de Objetos Mágicos**
+El hallazgo de un objeto mágico se determina por la tirada de `Resultado_Loot` y está limitado por el CR del enemigo.
+
+| `Resultado_Loot` | Tipo y Probabilidad de Objeto Encontrado |
+| :--- | :--- |
+| **1-80** | Objetos mundanos/consumibles. Baja probabilidad de un objeto **Básico (Común)**. |
+| **81-95** | Alta probabilidad de un objeto **Básico (Común)**, con una pequeña posibilidad de **Poco Común**. |
+| **96-99** | Garantizado un objeto **Poco Común**, con una buena posibilidad de **Raro**. |
+| **100** | Garantizado un objeto **Raro**, con posibilidad de **Muy Raro** o **Épico**. |
+
+**Límite de Rareza por CR:** Un enemigo no puede soltar un objeto cuyo poder supere con creces el suyo propio.
+
+| CR del Enemigo | Rango Máximo de Rareza Permitido |
+| :--- | :--- |
+| **CR 1-6** | Poco Común |
+| **CR 7-15** | Raro |
+| **CR 15-25** | Épico |
+| **CR 25+** | Divino (Legendario) o Apocalíptico |
+
+> **Ejemplo:** En el caso anterior, el `Resultado_Loot` de 97 garantiza un objeto "Poco Común" con posibilidad de "Raro". Como el enemigo era CR 12, su límite de rareza es "Raro". Por lo tanto, el personaje encuentra un objeto de calidad **Raro**.
+
+---
+#### **2. La Rareza y Poder de los Objetos**
+Los objetos mágicos se clasifican en 7 categorías que dictan su poder, complejidad y valor.
+
+##### **1. Básico (Común)**
+* **Descripción:** Los más comunes, simples y funcionales, con un toque mágico menor.
+* **Bonos de Stats:** `+1d5` a `+1d20` (dados) y `+5` a `+20` (fijo).
+* **Propiedades:** Ninguna.
+
+##### **2. Poco Común**
+* **Descripción:** De calidad superior, hechos con materiales más duraderos.
+* **Bonos de Stats:** `+2d20+35` hasta `+2d90+70`.
+* **Propiedades:** Puede otorgar una resistencia menor (+5) o una ventaja simple.
+* **Maná:** Regeneración pasiva de +1 a +3 por turno.
+* **Habilidades:** 10% de probabilidad de tener 1 habilidad de bajo impacto.
+
+##### **3. Raro**
+* **Descripción:** Objetos de gran calidad con encantamientos potentes.
+* **Bonos de Stats:** Físico: `+3d100+200` a `+3d250+300`. Mágico: `+2d100+100` a `+2d250+200`.
+* **Propiedades:** Resistencia del 10%-20% a un tipo de daño.
+* **Maná:** Regeneración pasiva de +3 por turno.
+* **Habilidades:** 40%-60% de probabilidad de tener 1 habilidad de impacto táctico.
+
+##### **4. Muy Raro**
+* **Descripción:** Extraordinarios y difíciles de encontrar, con múltiples encantamientos.
+* **Bonos de Stats:** Físico: `+4d300+650` a `+4d500+1000`. Mágico: `+3d170+320` a `+3d400+650`.
+* **Propiedades:** Resistencia del 20%-35% a un tipo de daño. Inmunidad a 1 estado alterado común.
+* **Maná:** Regeneración pasiva de +8 por turno.
+* **Habilidades:** 60%-85% de probabilidad de tener hasta 2 habilidades potentes.
+
+##### **5. Épico**
+* **Descripción:** Armas y armaduras legendarias, conocidas por su historia.
+* **Bonos de Stats:** Físico: `+6d700+1500` a `+8d800+3000`. Mágico: `+5d450+780` a `+7d650+1500`.
+* **Propiedades:** Resistencia del 30%-50% a uno o dos tipos de daño. Inmunidad a 1-2 estados alterados comunes.
+* **Maná:** Regeneración pasiva de +23 por turno.
+* **Habilidades:** 85%-100% de probabilidad de tener hasta 2 habilidades extremadamente potentes.
+
+##### **6. Divino (Legendario)**
+* **Descripción:** Artefactos sagrados, creados o bendecidos por deidades.
+* **Bonos de Stats:** Físico: `+8d900+4000` a `+12d999+7000`. Mágico: `+7d700+2000` a `+10d999+3500`.
+* **Propiedades:** Resistencia del 50%-75% a dos tipos de daño (o inmunidad). Inmunidad a la mayoría de los estados.
+* **Maná:** Regeneración pasiva de +57 por turno.
+* **Habilidades:** 100% de probabilidad de tener hasta 3 habilidades legendarias.
+
+##### **7. Apocalíptico**
+* **Descripción:** La cúspide del poder, capaces de causar destrucción masiva.
+* **Bonos de Stats:** Físico: `+12d999+8000` a `+18d999+10000`. Mágico: `+10d999+4000` a `+15d999+6000`.
+* **Propiedades:** Inmunidad a 3+ tipos de daño. Inmunidad total a casi todos los estados.
+* **Maná:** Regeneración pasiva de +95 por turno.
+* **Habilidades:** 100% de probabilidad de tener hasta 4 habilidades de poder cósmico.
+
+---
+#### **3. Tipos de Objetos Especiales**
+
+* **Objetos Únicos:** Son artefactos con un nombre y una historia propios. Sus propiedades mágicas no siguen las reglas estándar y pueden tener efectos completamente únicos y narrativos.
+* **Objetos de Set (Conjunto):** Son un grupo de objetos relacionados (ej. la Armadura, Guantes y Yelmo del Rey Caído). Equipar múltiples piezas del mismo set otorga bonificaciones adicionales cada vez más poderosas.
+* **Creación y Mejora de Objetos:** La forja de nuevos objetos mágicos o la mejora de uno existente (ej. de Raro a Épico) es posible a través del sistema de **Profesiones Mundanas**, que se detallará en su propia sección.
+
+
+---
+
+### **Sección 11: Sistema de Enfermedades**
+
+#### **Introducción: La Plaga Persistente**
+
+En Terramorta, los peligros que acechan no siempre portan una espada. Algunos de los peores enemigos son invisibles: aflicciones que se aferran al cuerpo y a la mente, debilitando al más fuerte desde dentro. Una enfermedad es una condición persistente que, a diferencia de los estados alterados de combate, puede durar días, semanas o incluso toda la vida si no se trata adecuadamente.
+
+---
+
+#### **1. Principios Generales de las Enfermedades**
+
+##### **1.1. Aplicación y Contagio**
+Las enfermedades no son un efecto que se aplica al azar. El Narrador (DM) tiene total discreción para decidir cómo y cuándo un personaje puede contraer una.
+* **Contagio Natural:** Ocurre por la exposición a un entorno insalubre, agua contaminada o el contacto con portadores naturales (como animales).
+* **Aflicción Innata:** Algunas criaturas son portadoras naturales de una enfermedad o la sufren ellas mismas.
+* **Arma Infecciosa:** Un enemigo inteligente puede haber preparado sus armas con toxinas o agentes patógenos para infligir una enfermedad con un golpe exitoso.
+
+##### **1.2. Fases de Progresión**
+Muchas enfermedades evolucionan con el tiempo si no se tratan. El DM puede determinar que una aflicción progrese a través de varias fases, cada una con efectos más severos:
+* **Fase Inicial:** Los primeros síntomas y penalizaciones leves.
+* **Fase Aguda:** Los efectos se intensifican, con consecuencias más graves.
+* **Fase Crítica/Terminal:** La enfermedad alcanza su punto máximo, pudiendo causar secuelas permanentes o la muerte.
+
+---
+
+#### **2. Catálogo de Enfermedades**
+
+A continuación se detallan algunas de las enfermedades más conocidas que asolan Terramorta.
+
+**Peste de los Guls**
+* **Peligrosidad:** Alta (DC de Salvación de Constitución: 95)
+* **Descripción:** Provoca fiebre alta, llagas purulentas y una rápida descomposición de los tejidos del cuerpo, similar a la de un necrófago.
+* **Obtención y Contagio:** Se contrae por la mordida o el arañazo de un necrófago. Es contagiosa y puede transmitirse a otros a través del contacto con las heridas abiertas del infectado.
+* **Efectos y Adversidades:** Cada día, el personaje debe superar una Tirada de Salvación de Constitución.
+    * **Fase 1 (Tras 1 fallo):** La carne se infecta con energía necrótica. El personaje ya no recupera Vitalidad a través de descansos naturales.
+    * **Fase 2 (Tras 2 fallos):** Los tejidos se vuelven frágiles. El personaje obtiene **Vulnerabilidad** al daño cortante y contundente (recibe +25% de daño de estas fuentes).
+    * **Fase 3 (Tras 3 fallos):** La transformación es inminente. Si el personaje muere mientras está en esta fase, su cuerpo se reanima al final de la siguiente ronda como un **Necrófago (Ghoul)** hostil bajo el control del DM.
+* **Cura:** Un hechizo de "Restauración Mayor" o un antídoto alquímico creado con glándulas de necrófago purificadas.
+* **Ventajas/Desventajas (Rol):** Si se sobrevive, el personaje desarrolla una resistencia natural a la parálisis que infligen los necrófagos. El riesgo de una muerte horrible y la transformación es casi seguro sin tratamiento.
+
+**Tragedia del Eclipse**
+* **Peligrosidad:** Alta (DC de Salvación de Sabiduría: 95)
+* **Descripción:** Una maldición cósmica que nubla los pensamientos del infectado, erosionando su sentido de sí mismo y su identidad hasta que solo queda un eco de lo que fue.
+* **Obtención y Contagio:** Se contrae al ser víctima de una maldición durante un eclipse mágico o por contacto mental directo con entidades del Vacío. No es contagiosa.
+* **Efectos y Adversidades:** Cada día, el personaje debe superar una Tirada de Salvación de Sabiduría para no sucumbir a la disolución de su mente.
+    * **Fase 1 (Tras 1 fallo):** La percepción de la realidad se fractura. El personaje sufre **Desventaja (-20)** en todas las tiradas basadas en Sabiduría e Inteligencia.
+    * **Fase 2 (Tras 2 fallos consecutivos):** La identidad comienza a desvanecerse. El personaje gana el estado de **Confusión** de forma permanente mientras dure la enfermedad.
+    * **Fase 3 (Tras 3 fallos consecutivos):** La mente se rompe. El personaje pierde la consciencia de sí mismo y cae en un estado de locura catatónica, convirtiéndose en un PNJ bajo el control del DM hasta que la maldición sea purgada.
+* **Cura:** Solo un hechizo de "Remover Maldición" de nivel épico o la intervención de un sabio que comprenda y pueda navegar las fuerzas cósmicas.
+* **Ventajas/Desventajas (Rol):** A veces, en los momentos de lucidez entre los fallos de salvación, el afectado puede tener visiones cósmicas o atisbos de verdades profundas (a discreción del DM). El riesgo de perder la mente de forma irreversible es la consecuencia final.
+
+**Plaga Sombría**
+* **Peligrosidad:** Alta (DC de Salvación de Constitución: 95)
+* **Descripción:** Una aflicción espiritual que drena la vitalidad y la voluntad del afectado, dejando una sensación de vacío y desesperanza, como si el alma se estuviera desvaneciendo.
+* **Obtención y Contagio:** Exposición directa a ráfagas de energía negativa, nigromancia avanzada o el toque de espectros poderosos. No es contagiosa.
+* **Efectos y Adversidades:** Cada día, el personaje debe superar una Tirada de Salvación de Constitución.
+    * **Fase 1 (Tras 1 fallo):** La conexión del personaje con la vida se debilita. Toda la curación mágica que recibe (por hechizos o pociones) se reduce en un 25%.
+    * **Fase 2 (Tras 2 fallos):** El aura de no-vida se intensifica. La curación recibida ahora se reduce en un 50% y el personaje se vuelve vulnerable al daño Radiante (recibe +25% de daño de esa fuente).
+    * **Fase 3 (Tras 3 fallos):** El alma está a punto de desprenderse. El personaje ya no puede ser sanado por magia de ninguna fuente. Si su Vitalidad llega a 0, su alma es consumida y no puede ser resucitado por medios normales.
+* **Cura:** Un exorcismo realizado por un clérigo de alto nivel o la intervención directa de un ser Celestial.
+* **Ventajas/Desventajas (Rol):** Sobrevivir a esta plaga deja una marca espiritual que otorga resistencia a la energía negativa. La amenaza de que el alma sea aniquilada la convierte en una de las aflicciones más temidas.
+
+**Plaga Carmesí**
+* **Peligrosidad:** Alta (DC de Salvación de Constitución: 95)
+* **Descripción:** Una enfermedad hemorrágica de origen demoníaco que consume la sangre del infectado, volviéndola menos vital y provocando una debilidad progresiva.
+* **Obtención y Contagio:** Mordedura de ciertas bestias demoníacas o contacto directo con sangre infectada a través de una herida. Es contagiosa.
+* **Efectos y Adversidades:** Cada día, el personaje debe superar una Tirada de Salvación de Constitución.
+    * **Fase 1 (Tras 1 fallo):** La sangre se debilita. El personaje sufre una penalización de `-X` (determinada por el DM) a todas sus tiradas de Fuerza y Destreza.
+    * **Fase 2 (Tras 2 fallos):** La vitalidad disminuye. La Vitalidad máxima del personaje se reduce en un 25%.
+    * **Fase 3 (Tras 3 fallos):** La sangre está al borde del colapso. El personaje se vuelve vulnerable a todo tipo de daño físico (cortante, contundente, perforante), recibiendo un 25% de daño adicional de estas fuentes.
+* **Cura:** Un ritual de purificación que requiere la sangre de un espíritu puro o un ser celestial, o magia de curación de muy alto nivel.
+* **Ventajas/Desventajas (Rol):** Superar la plaga puede otorgar una mayor resistencia a los venenos de origen demoníaco. La debilidad progresiva hace que cada combate sea exponencialmente más peligroso.
+
+**Enfermedad de la Sangre Fría**
+* **Peligrosidad:** Media-Alta (DC de Salvación de Constitución: 90)
+* **Descripción:** Una aflicción mágica que ralentiza la circulación sanguínea, provocando una pérdida de calor corporal que puede llevar a un congelamiento interno.
+* **Obtención y Contagio:** Exposición prolongada a magia glacial o al frío extremo de ciertas cumbres montañosas. No es contagiosa.
+* **Efectos y Adversidades:** Cada día, el personaje debe superar una Tirada de Salvación de Constitución.
+    * **Fase 1 (Tras 1 fallo):** La rigidez se asienta. El personaje sufre **Desventaja (-20)** en todas las tiradas de ataque cuerpo a cuerpo.
+    * **Fase 2 (Tras 2 fallos):** El frío es profundo. El personaje se vuelve vulnerable al daño por Frío (recibe +25% de daño de esa fuente) y su movimiento se reduce a la mitad.
+    * **Fase 3 (Tras 3 fallos):** El congelamiento interno comienza. El personaje queda **Paralizado** hasta que reciba calor o curación mágica. Cada hora que pasa en este estado, sufre daño directo a su Vitalidad.
+* **Cura:** Magia de fuego para restaurar el calor corporal o un hechizo de "Curación de Frío" de nivel medio.
+* **Ventajas/Desventajas (Rol):** Si se sobrevive, se obtiene una resistencia natural permanente al daño por frío. El riesgo de quedar congelado y morir lentamente es muy real.
+
+**Mal de la Pesadilla Eterna**
+* **Peligrosidad:** Alta (DC de Salvación de Sabiduría: 95)
+* **Descripción:** Una maldición de coma profundo que atrapa la mente del afectado en un bucle de sus peores pesadillas, mientras su cuerpo yace inmóvil.
+* **Obtención y Contagio:** Maldición lanzada por un nigromante poderoso o al interactuar con artefactos oníricos prohibidos. No es contagiosa.
+* **Efectos y Adversidades:** El personaje cae en un coma mágico. Cada día, debe realizar una Tirada de Salvación de Sabiduría.
+    * **Fase 1 (Tras 1 fallo):** El personaje sufre espasmos y susurra en sueños. No puede ser despertado por medios no mágicos.
+    * **Fase 2 (Tras 2 fallos):** Las pesadillas comienzan a dañar la mente. El personaje sufre una penalización permanente de `-1` a su atributo de Inteligencia.
+    * **Fase 3 (Tras 3 fallos):** El daño mental es severo. Sufre una penalización permanente adicional de `-1d4` a su Inteligencia. Si la Inteligencia llega a 0, sufre muerte cerebral.
+* **Cura:** Solo un hechizo de "Disipar Maldición" lanzado por un usuario de muy alto nivel puede despertar al afectado.
+* **Ventajas/Desventajas (Rol):** Si el personaje logra despertar, la terrible experiencia podría desbloquear poderes psíquicos latentes. El riesgo de un deterioro mental permanente o la muerte es casi seguro.
+
+**Síndrome de Mana Espiritual**
+* **Peligrosidad:** Media (DC de Salvación de Sabiduría: 85)
+* **Descripción:** Una especie de "fatiga de combate" para el alma de un hechicero. El uso excesivo de magia sin el descanso adecuado provoca que su espíritu se vuelva poroso, filtrando el maná y la energía vital.
+* **Obtención y Contagio:** Se contrae por el uso excesivo de magia. No es contagiosa.
+* **Efectos y Adversidades:** Cada día, el personaje debe superar una Tirada de Salvación de Sabiduría.
+    * **Fase 1 (Tras 1 fallo):** La conexión del personaje con el maná se vuelve inestable. Sufre **Desventaja (-20)** en todas las tiradas para lanzar conjuros.
+    * **Fase 2 (Tras 2 fallos):** El flujo de maná se revierte. Al lanzar un hechizo, el personaje pierde el doble del coste de Maná.
+    * **Fase 3 (Tras 3 fallos):** El espíritu se "quema". El personaje no puede lanzar hechizos y su Maná máximo se reduce a la mitad hasta que la enfermedad sea curada.
+* **Cura:** Descanso prolongado (semanas o meses) en un sitio de poder o confluencia de maná puro, o un ritual de restauración espiritual.
+* **Ventajas/Desventajas (Rol):** La recuperación de esta enfermedad puede otorgar un control mucho más fino y eficiente de la magia. El riesgo de perder temporalmente el acceso a la magia es una pesadilla para cualquier hechicero.
+
+**Ceguera de la Niebla**
+* **Peligrosidad:** Media
+* **Descripción:** Una condición ocular causada por la exposición a nieblas mágicamente densas o encantadas que se adhieren a la córnea.
+* **Obtención y Contagio:** Exposición prolongada a nieblas encantadas. Puede ser contagiosa si la niebla mágica se inhala y luego se exhala cerca de otros en un espacio cerrado.
+* **Efectos Mecánicos:** La visión del personaje se reduce a un máximo de 3 metros. Sufre **Desventaja (-20)** en todas las tiradas de ataque a distancia.
+* **Cura:** Un descanso prolongado en un área con aire puro y seco, o un hechizo de "Disipar Magia" lanzado directamente sobre los ojos.
+* **Ventajas/Desventajas (Rol):** Superarla puede agudizar los otros sentidos, otorgando una inmunidad temporal a futuras nieblas mágicas. Estar funcionalmente ciego a media y larga distancia es una desventaja táctica masiva.
+
+**Tormenta de Maná**
+* **Peligrosidad:** Alta
+* **Descripción:** Una sobrecarga de maná en el sistema nervioso del lanzador, haciendo que la magia que canaliza se vuelva caótica y salvaje.
+* **Obtención y Contagio:** Exposición directa a fuentes masivas de maná sin protección (como el corazón de un nexo mágico o un dragón moribundo). No es contagiosa.
+* **Efectos Mecánicos:** Los hechizos lanzados por el personaje se vuelven incontrolables. Cada vez que lanza un hechizo, este causa un 50% de daño adicional, pero el propio lanzador recibe un 25% del daño total del hechizo, ignorando su defensa.
+* **Cura:** Descanso completo en una zona sin maná o un hechizo de "Disipar Magia" para estabilizar el flujo interno.
+* **Ventajas/Desventajas (Rol):** Otorga un poder destructivo inmenso pero a un coste terrible. Es una condición muy buscada por magos de guerra desesperados.
+
+**Infección de la Carne Viviente**
+* **Peligrosidad:** Alta
+* **Descripción:** Una infección necrótica que causa que la carne del afectado empiece a descomponerse mientras sigue vivo, provocando una agonía constante.
+* **Obtención y Contagio:** Mordeduras de ciertas criaturas de la oscuridad o zombis. Es contagiosa por contacto directo con la sangre o tejido infectado.
+* **Efectos Mecánicos:** El personaje sufre `1d4` de daño de necrosis por cada 24 horas, que no puede ser sanado por medios normales hasta que la infección sea purgada.
+* **Cura:** Magia curativa de Nivel 4 o superior, o un tratamiento prolongado en una zona consagrada o purificada.
+* **Ventajas/Desventajas (Rol):** Superar la infección puede otorgar una resistencia a la necrosis. El daño a la carne es irreversible y deja cicatrices terribles.
+
+**Lágrimas de la Liche**
+* **Peligrosidad:** Media
+* **Descripción:** Una maldición ocular que provoca un lagrimeo constante de un líquido oscuro y viscoso, distorsionando la percepción de la realidad.
+* **Obtención y Contagio:** Contacto directo con una liche o al tocar un objeto imbuido con su poder. No es contagiosa.
+* **Efectos Mecánicos:** El personaje sufre **Desventaja (-20)** en todas las tiradas de Percepción. Además, en los ataques a distancia, un resultado menor a 30 en una tiradas adyacentes se considera un fallo crítico automático.
+* **Cura:** Un hechizo de "Restauración Menor" o lavados oculares constantes con agua bendita.
+* **Ventajas/Desventajas (Rol):** Si se cura, puede dejar una mayor resistencia a la magia de ilusión. La pérdida de percepción hace al personaje muy vulnerable a emboscadas y trampas.
+
+**Mal de los No Muertos**
+* **Peligrosidad:** Alta
+* **Descripción:** Una aflicción necrótica que imbuye al afectado con la esencia de la no-muerte, haciendo que las energías vitales y sagradas lo rechacen.
+* **Obtención y Contagio:** Mordedura de un vampiro o exposición prolongada a la energía de cementerios malditos o guaridas de liches. No es contagiosa.
+* **Efectos Mecánicos:** El personaje es vulnerable a la energía negativa (recibe el doble de daño). Además, la curación por descanso natural (dormir) deja de tener efecto sobre él.
+* **Cura:** Un ritual clerical de alto nivel que utiliza polvo de huesos de un ser sagrado para purgar la energía necrótica.
+* **Ventajas/Desventajas (Rol):** Si se sobrevive, el alma queda "marcada", otorgando una resistencia natural a futuros intentos de control mental por parte de no-muertos. La incapacidad para sanar de forma natural lo hace extremadamente dependiente de la magia o la alquimia.
+
+**Tisis del Hechicero**
+* **Peligrosidad:** Media-Alta
+* **Descripción:** Una fiebre mágica que interfiere con la capacidad del lanzador para canalizar el maná de forma estable, provocando que sus hechizos se descontrolen.
+* **Obtención y Contagio:** Se contrae por una sobrecarga de maná en el propio cuerpo o por el contacto prolongado con objetos mágicos malditos. No es contagiosa.
+* **Efectos Mecánicos:** Cada vez que el personaje lanza un hechizo, debe tirar `1d6`. Si el resultado es 1, el hechizo falla automáticamente y puede tener un efecto contraproducente (a discreción del DM).
+* **Cura:** Un descanso prolongado en un área con nula o baja magia ambiente, o un ritual de purificación mágica.
+* **Ventajas/Desventajas (Rol):** Superar la enfermedad puede enseñar al mago a manipular la magia de forma más instintiva. Sin embargo, mientras esté enfermo, cada hechizo es un riesgo que puede ser peligroso para él y sus aliados.
+
+**Podredumbre Carnosa**
+* **Peligrosidad:** Media-Alta
+* **Descripción:** Una infección bacteriana agresiva que hace que la carne se vuelva negruzca, quebradiza y emita un olor pútrido.
+* **Obtención y Contagio:** Contacto con criaturas infectadas o al sumergirse en lugares insalubres y estancados. Es contagiosa por contacto directo con la piel infectada.
+* **Efectos y Adversidades:** El personaje sufre **Desventaja (-20)** en todas las tiradas de Destreza y Constitución. Si no se trata en `1d6` días, se pierde un miembro (brazo o pierna) al azar de forma permanente.
+* **Cura:** Magia de curación de Nivel 3 o superior, o la aplicación constante de ungüentos alquímicos específicos.
+* **Ventajas/Desventajas (Rol):** La carne que sobrevive se vuelve callosa y resistente. Si se cura, el personaje puede ganar un pequeño bono pasivo a la defensa física. El riesgo de mutilación permanente es muy alto.
+
+**Maldición de los Licántropos**
+* **Peligrosidad:** Alta
+* **Descripción:** Una maldición mágica que altera la sangre y el espíritu, forzando una transformación en una bestia humanoide salvaje durante la luna llena.
+* **Obtención y Contagio:** Se contrae por la mordedura de un licántropo. La maldición se asienta si la herida no es purificada con plata y magia antes de 24 horas.
+* **Efectos y Adversidades:** Durante las noches de luna llena, el personaje pierde el control y se transforma. El DM toma el control del personaje, que actuará de forma salvaje y podría atacar a cualquiera, incluyendo a sus aliados.
+* **Cura:** Solo un hechizo de "Remover Maldición" de alto nivel o un complejo ritual lunar que requiere plata pura.
+* **Ventajas/Desventajas (Rol):** La forma de bestia otorga bonos masivos a Fuerza, Destreza y Constitución. El personaje es impredecible y un peligro mortal para su propio grupo.
+
+**Fiebre de los Pantanos**
+* **Peligrosidad:** Media
+* **Descripción:** Enfermedad debilitante caracterizada por una fiebre intensa, escalofríos y una debilidad que consume el cuerpo.
+* **Obtención y Contagio:** Se contrae al beber agua contaminada en pantanos o por la mordedura de ciertas bestias de ciénaga. No es contagiosa entre personas.
+* **Efectos y Adversidades:** El personaje sufre **Desventaja (-20)** en tiradas de Constitución y su velocidad de movimiento se reduce a la mitad.
+* **Cura:** Antídotos herbales comunes o cualquier magia curativa de Nivel 2.
+* **Ventajas/Desventajas (Rol):** Superarla de forma natural otorga una inmunidad temporal a otras enfermedades acuáticas. Sin tratamiento, puede dejar al personaje postrado en cama y vulnerable durante semanas.
+
+**Putrefacción de Piedra**
+* **Peligrosidad:** Alta
+* **Descripción:** Una aflicción mágica que transforma lentamente los tejidos vivos del afectado en piedra frágil y sin vida.
+* **Obtención y Contagio:** Generalmente se contrae al inhalar polvo mágico de las ruinas de criaturas petrificadas o por la maldición de una criatura como una Cocatriz o una Medusa. No es contagiosa.
+* **Efectos y Adversidades:** El personaje sufre **Desventaja (-20)** en todas sus tiradas de Fuerza y Destreza. Si no se trata en `1d4` semanas, el personaje queda completamente petrificado de forma permanente.
+* **Cura:** Un hechizo de "Remover Maldición" o "Carne a Piedra", o extraer quirúrgicamente el núcleo de piedra del cuerpo antes de que la petrificación se complete.
+* **Ventajas/Desventajas (Rol):** Si se revierte en una fase avanzada, la piel del personaje puede quedar con una dureza antinatural, otorgando un bono pasivo a la defensa. El riesgo de convertirse en una estatua para siempre es inminente.
+
+---
+#### **Podredumbre Azul**
+* **Peligrosidad:** Alta
+* **Descripción:** Una virulenta plaga fúngica que se manifiesta cubriendo la piel del infectado con unas características y duras escamas de un azul cobalto, reduciendo drásticamente la movilidad.
+* **Obtención y Contagio:** Se contrae por contacto con esporas fúngicas o cadáveres infectados. Es contagiosa por contacto directo o por la inhalación de aire cargado de esporas.
+* **Efectos Mecánicos:** El personaje sufre **Desventaja (-20)** en todas sus tiradas de Destreza. Si la enfermedad no es tratada en `1d10` días, el personaje queda afectado por **Parálisis** permanente.
+* **Cura:** Un hechizo de "Restauración Mayor" o el doloroso proceso de quemar las escamas con fuego sagrado.
+* **Ventajas/Desventajas (Rol):** Si se sobrevive, la piel queda con una mayor resistencia al veneno. El riesgo de una parálisis irreversible es extremadamente alto.
+
+#### **Sífilis Arcana**
+* **Peligrosidad:** Media
+* **Descripción:** Una enfermedad mágica degenerativa que no afecta al cuerpo, sino a la mente de los lanzadores de hechizos, corroyendo su conexión con el tejido arcano.
+* **Obtención y Contagio:** Se contrae por el uso excesivo de magia en zonas contaminadas por energía caótica o a través de maldiciones específicas. No es contagiosa.
+* **Efectos Mecánicos:** Cada vez que el personaje lanza un hechizo, debe tirar `1d6`. Si el resultado es 1, el hechizo falla automáticamente de forma catastrófica (a discreción del DM).
+* **Cura:** Un hechizo de "Restauración Mayor" o un ritual de purificación en aguas benditas o lugares de poder.
+* **Ventajas/Desventajas (Rol):** Superar la enfermedad puede fortalecer el control del hechicero sobre la magia, otorgando un pequeño bono pasivo a la resistencia mágica. El riesgo de un fallo mágico catastrófico hace que ser hechicero sea una profesión muy peligrosa.
+
+#### **Plaga de la Sangre Negra**
+* **Peligrosidad:** Alta
+* **Descripción:** Una infección demoníaca que altera la composición de la sangre, volviéndola espesa, oscura y resistente a la magia de curación convencional.
+* **Obtención y Contagio:** Se contrae por la mordedura de demonios o la exposición directa a sangre corrupta. Es contagiosa si la sangre infectada entra en contacto con una herida abierta.
+* **Efectos Mecánicos:** Toda curación recibida (mágica o por pociones) se reduce a la mitad. El personaje sufre **Desventaja (-20)** en todas las tiradas de salvación de Constitución.
+* **Cura:** Un complejo ritual de purificación que requiere la sangre de un espíritu puro o un ser celestial.
+* **Ventajas/Desventajas (Rol):** La sangre alterada otorga resistencia a otros venenos y toxinas demoníacas. Sin embargo, la dificultad para sanar hace que cualquier herida pueda ser mortal.
+
+#### **Fiebre del Dragón**
+* **Peligrosidad:** Alta
+* **Descripción:** Una sobrecarga de energía elemental que provoca un calor interno extremo, como si un pequeño sol ardiera en el pecho del afectado. La piel se calienta al tacto y el aliento sale como una nube de vapor.
+* **Obtención y Contagio:** Exposición prolongada a la magia dracónica en su estado más puro o por el contacto directo con escamas de dragón ancestrales. No es contagiosa.
+* **Efectos Mecánicos:** Al final de cada día, el personaje sufre `1d6` de daño por fuego que ignora la armadura. Este daño aumenta en `1d6` por cada día consecutivo que la enfermedad persiste (1d6 el primer día, 2d6 el segundo, etc.).
+* **Cura:** Un hechizo de "Restauración Mayor" o un enfriamiento corporal constante mediante hielo encantado o magia glacial.
+* **Ventajas/Desventajas (Rol):** Si se sobrevive, el personaje obtiene una resistencia temporal al fuego. El daño progresivo puede consumir la vida del personaje en menos de una semana si no se trata.
+
+#### **Maldición del Caos**
+* **Peligrosidad:** Alta
+* **Descripción:** Una enfermedad mutagénica causada por la exposición a cristales de maná corrupto o a la influencia directa del Vacío. Convierte lentamente al afectado en una bestia mágica, una aberración de su ser original.
+* **Obtención y Contagio:** Exposición directa a fuentes de magia caótica. No es contagiosa, pero las bestias resultantes sí pueden serlo.
+* **Efectos Mecánicos:** El DM controla las mutaciones progresivas. Cada cierto tiempo, el personaje puede ganar un bono a un atributo (ej. +1 FUE) pero sufrir una penalización a otro (ej. -1 INT) y un cambio físico. Si no se detiene, la humanidad se pierde y el personaje se convierte en un PNJ monstruoso.
+* **Cura:** Extraer el cristal o la fuente de corrupción del cuerpo antes de que las mutaciones sean irreversibles.
+* **Ventajas/Desventajas (Rol):** La enfermedad puede otorgar un poder físico o mágico considerable a corto plazo. El coste es la propia identidad y la humanidad, con un riesgo altísimo de volverse un peligro para todos.
+
+---
+
+#### **3. Guía del Narrador: Elementos del Mundo y Tono de Campaña**
+
+Esta sección recopila los pilares fundamentales que definen la experiencia de juego en Terramorta.
+
+* **Tono de Campaña:** El mundo es principalmente de **Fantasía Medieval Oscura**, pero con la presencia de tecnología anacrónica de estilo **Steampunk** (autómatas, mecanismos de vapor) como restos de civilizaciones perdidas. Elementos **Isekai** (personajes de otros mundos) pueden estar presentes, pero son extremadamente raros y a menudo un punto central de la trama.
+
+* **Mortalidad del Personaje:** La mortalidad es **muy alta**. El lema del mundo es "o somos leyenda o morimos intentándolo". Se espera que los jugadores enfrenten desafíos que pueden superar sus capacidades, y la muerte es una consecuencia real y frecuente. No hay segundas oportunidades fáciles.
+
+* **Balance de Juego:** El foco principal del sistema está en el **combate táctico y el "Battle Rol"**. Sin embargo, esto no excluye otros tipos de desafíos. Las campañas deben incluir puzles, misterios, investigación e interacción social para ser completas.
+
+* **Tecnología en Terramorta:** Es una rareza, un secreto de inventores aislados o un vestigio de eras pasadas. No es tecnología de punta y su mantenimiento es difícil. La **pólvora no existe** y las armas de fuego están prohibidas y ausentes en el mundo, salvo que el DM decida introducir una como un artefacto único y disruptivo.
+
+* **La Magia:** Es omnipresente y está intrínsecamente ligada a la esencia del mundo. No hay una única escuela o tradición predominante, coexistiendo magos arcanos, clérigos divinos y chamanes primales. La **"Fiebre de la Magia Salvaje"** es una condición real y peligrosa, pero buscada por hechiceros desesperados que anhelan un poder caótico y sin control.
+
+* **El Vacío y los Doce Eternos:** El Vacío es una fuerza primordial de aniquilación, el "basurero del universo". Su influencia se manifiesta como corrupción y locura. Los Doce Eternos no son dioses, sino los guerreros ancestrales que se sacrificaron para sellar al Vacío, y su esencia impregna la creación. No intervienen directamente, pues están sellados en la propia trama de la realidad.
+
+* **Facciones Principales:** Dos grandes poderes se mueven en las sombras:
+    * **Arasaka:** Una corporación con una infraestructura y estética de inspiración japonesa, tecnológicamente avanzada y liderada por el enigmático Seraphin Amadeus Blackwood Romanof.
+    * **Silver Hand:** Una organización secreta cuyos objetivos y métodos son un misterio.
+
+* **Sistema Económico:** La moneda estándar son las monedas de oro. El oro es relativamente abundante en las recompensas de misiones importantes y en las profundidades de las mazmorras (encontrar entre 10,000 y 50,000 de oro en un tesoro es moderado), pero los objetos y servicios de alta calidad son extremadamente caros.
+
+* **Adquisición de Equipo:** La principal fuente de equipo de calidad es el **loot** de enemigos poderosos y las **recompensas de misión**. Los mercados existen, pero a menudo están dominados por figuras como el **Buhonero**, un mercader misterioso que parece tener de todo... a un precio.
+
+* **Componentes de Habilidades y Rituales:** No se requiere un seguimiento exhaustivo de componentes para cada hechizo. Sin embargo, para habilidades de gran poder, rituales o la creación de objetos, el DM determinará los componentes raros y difíciles de conseguir que son necesarios.
+
