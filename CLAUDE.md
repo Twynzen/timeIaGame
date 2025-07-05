@@ -3,11 +3,39 @@
 ## Descripción del Proyecto
 Un juego de rol (RPG) desarrollado en Python con interfaz gráfica Tkinter que simula una "Habitación del Tiempo" donde los jugadores entrenan para volverse más fuertes. El juego integra IA (OpenAI GPT-4) para generar narrativa dinámica.
 
+**Versión Actual**: v0.2.0 - Arquitectura Modular Refactorizada
+
 ## Estructura del Proyecto
 ```
 timeIaGame/
-├── timeIagame.py           # Archivo principal del juego
-├── save_garret.json        # Archivo de guardado de ejemplo
+├── main.py                 # Punto de entrada principal (NUEVO)
+├── timeIagame.py          # Archivo original (legacy, mantener para referencia)
+├── save_garret.json       # Archivo de guardado de ejemplo
+├── src/                   # Arquitectura modular (NUEVO)
+│   ├── __init__.py
+│   ├── config/            # Configuración centralizada
+│   │   ├── __init__.py
+│   │   └── game_config.py
+│   ├── core/              # Sistemas centrales del juego
+│   │   ├── __init__.py
+│   │   ├── character.py   # Sistema de personajes
+│   │   ├── dice_system.py # Sistema de dados
+│   │   ├── combat_system.py # Sistema de combate
+│   │   └── game_state.py  # Gestión de estado con patrón Observer
+│   ├── entities/          # Entidades del juego
+│   │   ├── __init__.py
+│   │   └── enemy.py       # Sistema de enemigos
+│   ├── ai/                # Sistemas de inteligencia artificial
+│   │   ├── __init__.py
+│   │   ├── game_master.py # Game Master con IA
+│   │   └── narrative_manager.py # Gestión narrativa avanzada
+│   ├── ui/                # Interfaz de usuario
+│   │   ├── __init__.py
+│   │   ├── main_window.py # Ventana principal
+│   │   └── character_creation.py # Creación de personajes
+│   └── data/              # Persistencia y datos
+│       ├── __init__.py
+│       └── persistence.py # Sistema de guardado/carga
 ├── documentacion_de_crecimiento/
 │   ├── Manual MVP v1.2.txt
 │   └── manualtecnicomcppython.txt
@@ -90,7 +118,12 @@ from dotenv import load_dotenv
 
 ## Comandos de Desarrollo
 
-### Ejecutar el juego
+### Ejecutar el juego (Versión Modular v0.2.0)
+```bash
+python main.py
+```
+
+### Ejecutar versión legacy (Solo para referencia)
 ```bash
 python timeIagame.py
 ```
@@ -104,6 +137,28 @@ pip install openai python-dotenv
 ```
 OPENAI_API_KEY=tu_clave_api_aqui
 ```
+
+## Arquitectura Modular v0.2.0
+
+### Beneficios del Refactor
+- **Separación de responsabilidades**: Cada módulo tiene una función específica
+- **Mantenibilidad mejorada**: Código más fácil de entender y modificar
+- **Escalabilidad**: Estructura preparada para futuras expansiones
+- **Patrón Observer**: Comunicación desacoplada entre componentes
+- **Configuración centralizada**: Gestión unificada de settings
+- **Mejor testing**: Componentes aislados permiten testing unitario
+
+### Nuevas Características
+- **GameStateManager**: Gestión centralizada del estado con eventos
+- **NarrativeManager**: Sistema avanzado de tracking narrativo
+- **GameConfig**: Configuración centralizada y modificable
+- **SaveManager**: Sistema robusto de persistencia
+- **Logging integrado**: Sistema de logs para debugging
+- **Fallback de IA**: Narrativa offline cuando no hay API
+- **Validación de dependencias**: Verificación automática al inicio
+
+### Migración desde v0.1.0
+El juego v0.2.0 es **completamente compatible** con partidas guardadas de la versión anterior. Simplemente ejecuta `python main.py` en lugar de `python timeIagame.py`.
 
 ## Mecánicas del Juego
 
