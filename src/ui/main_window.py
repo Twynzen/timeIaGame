@@ -14,6 +14,7 @@ from ..core.combat_system import CombatSystem
 from ..entities.enemy import Enemy
 from ..ai.game_master import AIGameMaster
 from ..ai.narrative_manager import NarrativeManager
+from ..ai.divine_narrator import NarrativePhase
 from ..data.persistence import SaveManager
 from .character_creation import CharacterCreationDialog
 
@@ -33,9 +34,19 @@ class GameMainWindow(tk.Tk):
         self.game_state = GameStateManager()
         self.dice_system = DiceSystem()
         self.combat_system = CombatSystem(self.dice_system)
-        self.ai_gm = AIGameMaster()
+        
+        # Inicializar IA con configuración mejorada
+        from ..config.game_config import GameConfig
+        game_config = GameConfig()
+        ai_config = game_config.get_ai_config()
+        
+        self.ai_gm = AIGameMaster(api_key=ai_config.get("openai_api_key"), config=ai_config)
         self.narrative_manager = NarrativeManager()
         self.save_manager = SaveManager()
+        
+        # Estado del proceso narrativo divino
+        self.in_divine_questioning = False
+        self.awaiting_world_creation = False
         
         # Suscribirse a eventos del juego
         self.game_state.subscribe(self.on_game_event)
@@ -98,10 +109,14 @@ class GameMainWindow(tk.Tk):
         left_frame = tk.Frame(parent, bg='#1a1a1a')
         left_frame.grid(row=0, column=0, sticky='nsew', padx=(0, 5))
         
-        # Área de narración
-        narration_frame = tk.LabelFrame(left_frame, text="📜 Narración", 
+        # Configurar layout con área de narración e imagen
+        content_frame = tk.Frame(left_frame, bg='#1a1a1a')
+        content_frame.pack(fill=tk.BOTH, expand=True)
+        
+        # Área de narración (lado izquierdo)
+        narration_frame = tk.LabelFrame(content_frame, text="📜 Narración", 
                                        bg='#1a1a1a', fg='white', font=('Arial', 12, 'bold'))
-        narration_frame.pack(fill=tk.BOTH, expand=True)
+        narration_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=True, padx=(0, 5))
         
         self.narration_text = scrolledtext.ScrolledText(narration_frame, 
                                                         wrap=tk.WORD, 
@@ -110,6 +125,28 @@ class GameMainWindow(tk.Tk):
                                                         font=('Arial', 11),
                                                         height=25)
         self.narration_text.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
+        
+        # Área de imagen (lado derecho)
+        self.image_frame = tk.LabelFrame(content_frame, text="🖼️ Escenario", 
+                                        bg='#1a1a1a', fg='white', font=('Arial', 12, 'bold'))
+        self.image_frame.pack(side=tk.RIGHT, fill=tk.Y, padx=(5, 0))
+        
+        # Canvas para mostrar imagen
+        self.image_canvas = tk.Canvas(self.image_frame, width=400, height=300,
+                                     bg='#2a2a2a', highlightthickness=1,
+                                     highlightbackground='#4a4a4a')
+        self.image_canvas.pack(padx=5, pady=5)
+        
+        # Etiqueta de estado de imagen
+        self.image_status_label = tk.Label(self.image_frame, 
+                                          text="No hay imagen disponible",
+                                          bg='#1a1a1a', fg='#aaaaaa', 
+                                          font=('Arial', 9))
+        self.image_status_label.pack(pady=(0, 5))
+        
+        # Inicialmente ocultar el frame de imagen
+        self.image_frame.pack_forget()
+        self.current_image = None
         
         # Frame de acciones
         action_frame = tk.Frame(left_frame, bg='#1a1a1a')
@@ -366,10 +403,13 @@ class GameMainWindow(tk.Tk):
             # Establecer en game state
             self.game_state.set_character(character)
             
-            # Generar escena inicial
+            # Iniciar proceso narrativo divino
             self.add_narration("\n" + "="*50 + "\n", "system")
-            initial_scene = self.ai_gm.generate_initial_scene(character)
-            self.add_narration(initial_scene, "narration")
+            self.in_divine_questioning = True
+            
+            # Generar escena inicial con preguntas divinas
+            divine_narrative = self.ai_gm.start_divine_narrative(character)
+            self.add_narration(divine_narrative, "divine")
     
     def process_input(self):
         """Procesa la entrada del jugador"""
@@ -382,8 +422,18 @@ class GameMainWindow(tk.Tk):
             return
         
         # Mostrar entrada del jugador
-        self.add_narration(f"> {user_input}", "system")
+        self.add_narration(f"> {user_input}", "player")
         self.input_var.set("")
+        
+        # Si estamos en el proceso de preguntas divinas
+        if self.in_divine_questioning:
+            self.handle_divine_response(user_input)
+            return
+        
+        # Si estamos esperando creación del mundo
+        if self.awaiting_world_creation:
+            self.complete_world_creation()
+            return
         
         # Si estamos en combate, manejar comandos de combate
         if self.game_state.combat_active:
@@ -399,9 +449,13 @@ class GameMainWindow(tk.Tk):
             enemy = Enemy(enemy_type)
             self.game_state.start_combat(enemy)
         else:
-            # Generar narración normal
-            narration = self.ai_gm.generate_narration(user_input, self.game_state.character)
+            # Generar narración mejorada con posible imagen
+            narration, image_path = self.ai_gm.generate_enhanced_narration(user_input, self.game_state.character)
             self.add_narration(narration, "narration")
+            
+            # Mostrar imagen si está disponible
+            if image_path:
+                self.display_scene_image(image_path)
     
     def quick_attack(self):
         """Ejecuta un ataque rápido"""
@@ -475,6 +529,89 @@ class GameMainWindow(tk.Tk):
         
         if result['player_defeated']:
             self.game_state.end_combat()
+    
+    def handle_divine_response(self, user_response: str):
+        """Maneja las respuestas del jugador a las preguntas divinas"""
+        try:
+            reaction, is_complete, next_question = self.ai_gm.process_divine_response(user_response)
+            
+            # Mostrar reacción divina
+            self.add_narration(reaction, "divine")
+            
+            if is_complete:
+                # Preguntas completadas, preparar creación del mundo
+                self.add_narration("\n*Preparándose para crear tu mundo personalizado...*", "system")
+                self.in_divine_questioning = False
+                self.awaiting_world_creation = True
+                
+                # Mensaje al jugador
+                self.add_narration("\n**Presiona Enter para presenciar la creación de tu mundo...**", "system")
+                
+            elif next_question:
+                # Mostrar siguiente pregunta
+                self.add_narration(f"\n{next_question}", "divine")
+                
+        except Exception as e:
+            self.add_narration(f"*Error en el proceso divino: {str(e)}*", "system")
+    
+    def complete_world_creation(self):
+        """Completa el proceso de creación del mundo"""
+        try:
+            self.awaiting_world_creation = False
+            
+            # Mostrar mensaje de creación
+            self.add_narration("\n*El poder divino fluye, moldeando la realidad...*", "system")
+            
+            # Generar narrativa y imagen del mundo
+            world_narrative, world_image_path = self.ai_gm.generate_world_creation(self.game_state.character)
+            
+            # Mostrar narrativa del mundo creado
+            self.add_narration(world_narrative, "world_creation")
+            
+            # Mostrar imagen del mundo si está disponible
+            if world_image_path:
+                self.display_scene_image(world_image_path)
+                self.add_narration("\n*Una imagen del mundo creado aparece ante tus ojos*", "system")
+            
+            # El juego ahora está en modo normal
+            self.add_narration("\n**Tu aventura ha comenzado. ¿Qué harás?**", "system")
+            
+        except Exception as e:
+            self.add_narration(f"*Error creando el mundo: {str(e)}*", "system")
+    
+    def display_scene_image(self, image_path: str):
+        """Muestra una imagen de escenario en la interfaz"""
+        try:
+            # Cargar imagen usando el generador de imágenes
+            tk_image = self.ai_gm.image_generator.load_image_for_display(image_path)
+            
+            if tk_image:
+                # Mostrar el frame de imagen si estaba oculto
+                self.image_frame.pack(side=tk.RIGHT, fill=tk.Y, padx=(5, 0))
+                
+                # Limpiar canvas anterior
+                self.image_canvas.delete("all")
+                
+                # Mostrar nueva imagen
+                self.image_canvas.create_image(200, 150, image=tk_image, anchor=tk.CENTER)
+                
+                # Guardar referencia para evitar garbage collection
+                self.current_image = tk_image
+                
+                # Actualizar etiqueta de estado
+                self.image_status_label.config(text="Escenario actual", fg='#00FF00')
+                
+            else:
+                self.image_status_label.config(text="Error cargando imagen", fg='#FF6666')
+                
+        except Exception as e:
+            print(f"Error mostrando imagen: {e}")
+            self.image_status_label.config(text="Error mostrando imagen", fg='#FF6666')
+    
+    def hide_scene_image(self):
+        """Oculta el área de imagen"""
+        self.image_frame.pack_forget()
+        self.current_image = None
     
     def roll_perception(self):
         """Realiza una tirada de percepción"""
@@ -694,6 +831,18 @@ class GameMainWindow(tk.Tk):
         elif tag == "reward":
             self.narration_text.tag_add("reward", start_index, end_index)
             self.narration_text.tag_config("reward", foreground="#FFD700")
+        elif tag == "divine":
+            self.narration_text.tag_add("divine", start_index, end_index)
+            self.narration_text.tag_config("divine", foreground="#9932CC", 
+                                         font=('Arial', 12, 'bold'))
+        elif tag == "player":
+            self.narration_text.tag_add("player", start_index, end_index)
+            self.narration_text.tag_config("player", foreground="#87CEEB",
+                                         font=('Arial', 11, 'italic'))
+        elif tag == "world_creation":
+            self.narration_text.tag_add("world_creation", start_index, end_index)
+            self.narration_text.tag_config("world_creation", foreground="#FF1493",
+                                         font=('Arial', 12, 'bold'))
         
         # Auto-scroll
         self.narration_text.see(tk.END)

@@ -1,12 +1,15 @@
 """
-AI Game Master - OpenAI integration for narrative generation
+AI Game Master - OpenAI integration for enhanced narrative generation
 """
 
 import os
 import random
-from typing import Optional, Dict, Any
+import logging
+from typing import Optional, Dict, Any, Tuple
 from ..core.character import Character
 from ..entities.enemy import Enemy
+from .divine_narrator import DivineNarrator, NarrativePhase
+from .image_generator import ImageGenerator
 
 try:
     import openai
@@ -16,50 +19,76 @@ except ImportError:
 
 
 class AIGameMaster:
-    """IA que actúa como Game Master"""
+    """IA que actúa como Game Master con narrativa inmersiva y generación visual"""
     
-    def __init__(self, api_key: Optional[str] = None):
+    def __init__(self, api_key: Optional[str] = None, config: Optional[Dict[str, Any]] = None):
+        self.logger = logging.getLogger("AIGameMaster")
         self.api_key = api_key or os.getenv("OPENAI_API_KEY")
+        
+        # Configuración
+        default_config = {
+            "max_history_length": 10,
+            "max_tokens": 500,
+            "temperature": 0.8,
+            "model": "gpt-4o-mini"
+        }
+        self.config = {**default_config, **(config or {})}
+        
+        # Sistemas narrativos avanzados
+        self.divine_narrator = DivineNarrator()
+        self.image_generator = ImageGenerator(api_key, config)
+        
+        # Estado del juego y contexto
         self.conversation_history = []
         self.world_context = {
             "current_location": "",
             "explored_locations": [],
             "active_quests": [],
-            "npcs_met": []
+            "npcs_met": [],
+            "environmental_features": [],
+            "mood_atmosphere": "neutral"
         }
-        
-        # Configuración
-        self.max_history_length = 10
-        self.max_tokens = 500
-        self.temperature = 0.8
         
         # Cliente OpenAI
         if OPENAI_AVAILABLE and self.api_key:
             self.client = openai.OpenAI(api_key=self.api_key)
             self.enabled = True
+            self.logger.info("AIGameMaster inicializado con IA habilitada")
         else:
             self.client = None
             self.enabled = False
+            self.logger.warning("AIGameMaster inicializado sin IA")
         
-        # Prompt del sistema
-        self.system_prompt = """Eres el Narrador de la Habitación del Tiempo, una dimensión mística donde los guerreros entrenan.
+        # Sistema de prompts mejorado
+        self.base_system_prompt = """Eres un Narrador maestro de la Habitación del Tiempo, una dimensión mística donde las almas valientes entrenan para trascender sus límites.
 
-REGLAS IMPORTANTES:
-1. Siempre describe las escenas de forma inmersiva y atmosférica
-2. La Habitación del Tiempo es un espacio infinito con diferentes zonas de entrenamiento
-3. Cuando el jugador busque enemigos o explore, describe lo que encuentra
-4. NO realices tiradas de dados - solo describe las situaciones
-5. Cuando aparezca un enemigo, describe su apariencia y espera la acción del jugador
-6. Las descripciones deben ser concisas pero evocativas (máximo 3 párrafos)
-7. Siempre termina con una pregunta o situación que requiera decisión del jugador
+IDENTIDAD NARRATIVA:
+- Eres una voz omnisciente que observa y describe con maestría cinematográfica
+- Tu narrativa debe ser inmersiva, evocativa y ricamen descriptiva
+- Adaptas tu tono y estilo según el contexto emocional del momento
+- Describes tanto lo visible como lo que se siente en el ambiente
 
-CONTEXTO DEL MUNDO:
-- La Habitación del Tiempo es una dimensión especial donde el tiempo fluye diferente
-- Contiene diversas zonas: desiertos infinitos, montañas flotantes, bosques oscuros, etc.
-- Los enemigos aparecen como manifestaciones de energía para entrenar
-- El objetivo es volverse más fuerte enfrentando desafíos cada vez mayores
+REGLAS DE NARRACIÓN:
+1. IMMERSIÓN TOTAL: Cada descripción debe transportar al jugador al escenario
+2. DETALLES SENSORIALES: Incluye qué se ve, oye, huele, siente
+3. ATMÓSFERA DINÁMICA: El mood debe coincidir con la situación y personalidad del jugador
+4. CONSECUENCIAS NARRATIVAS: Las acciones del jugador tienen impacto en el mundo
+5. PACING CINEMATOGRÁFICO: Varía entre momentos intensos y pausas contemplativas
 
-Responde SOLO con la narración, sin metadatos ni explicaciones."""
+MUNDO ADAPTATIVO:
+- El mundo refleja la personalidad y elecciones del protagonista
+- Los escenarios cambian según el tema dominante del jugador
+- Cada zona tiene características únicas que desafían aspectos específicos
+- Las descripciones incluyen detalles que invitan a la exploración
+
+ESTRUCTURA DE RESPUESTA:
+1. Descripción sensorial del entorno inmediato
+2. Elementos dinámicos y detalles atmosféricos 
+3. Reacción del mundo a la presencia/acción del jugador
+4. Gancho narrativo que invite a la siguiente acción
+
+IMPORTANTE: No hagas tiradas de dados. Tu función es describir y narrar.
+Responde SOLO con narrativa inmersiva. Sin metadatos ni explicaciones técnicas."""
     
     def generate_narration(self, player_input: str, character: Character) -> str:
         """Genera narración basada en la entrada del jugador"""
@@ -111,22 +140,73 @@ Personaje actual:
             print(f"Error en AI GameMaster: {e}")
             return self._generate_fallback_narration(player_input, character)
     
-    def generate_initial_scene(self, character: Character) -> str:
-        """Genera la escena inicial para un nuevo personaje"""
-        if not self.enabled:
-            return self._generate_fallback_initial_scene(character)
+    def start_divine_narrative(self, character: Character) -> str:
+        """Inicia el proceso narrativo divino con la primera pregunta"""
+        self.divine_narrator.reset()
+        awakening_message = self.divine_narrator.get_awakening_message(character)
         
-        prompt = f"""
-Un nuevo guerrero entra a la Habitación del Tiempo:
-- Nombre: {character.name}
-- Raza: {character.race}
-- Clase: {character.char_class}
-
-Describe su entrada a esta dimensión de entrenamiento, el ambiente que lo rodea y las primeras sensaciones que experimenta.
-La entrada es un vasto espacio blanco infinito con una extraña gravedad. Menciona las diferentes zonas visibles a lo lejos.
-Termina con opciones claras de qué puede hacer.
-"""
-        return self.generate_narration(prompt, character)
+        # Primera pregunta automáticamente
+        first_question = self.divine_narrator.get_next_question()
+        
+        return f"{awakening_message}\n\n{first_question}"
+    
+    def process_divine_response(self, player_response: str) -> Tuple[str, bool, Optional[str]]:
+        """
+        Procesa una respuesta a las preguntas divinas
+        
+        Returns:
+            (response_text, is_complete, next_question)
+        """
+        reaction = self.divine_narrator.process_player_response(player_response)
+        
+        if self.divine_narrator.is_questioning_complete():
+            return reaction, True, None
+        else:
+            next_question = self.divine_narrator.get_next_question()
+            return reaction, False, next_question
+    
+    def generate_world_creation(self, character: Character) -> Tuple[str, Optional[str]]:
+        """
+        Genera la narrativa de creación del mundo y opcionalmente una imagen
+        
+        Returns:
+            (world_creation_narrative, image_path)
+        """
+        world_narrative = self.divine_narrator.generate_world_creation_narrative(character)
+        
+        # Intentar generar imagen del mundo creado
+        image_path = None
+        if self.image_generator.is_available():
+            try:
+                narrative_context = self.divine_narrator.get_enhanced_narrative_context()
+                world_description = self._extract_world_description_for_image(narrative_context)
+                character_context = f"{character.race} {character.char_class} llamado {character.name}"
+                
+                image_path = self.image_generator.generate_scene_image(
+                    world_description, 
+                    character_context
+                )
+                
+                if image_path:
+                    self.logger.info(f"Imagen del mundo generada: {image_path}")
+                
+            except Exception as e:
+                self.logger.error(f"Error generando imagen del mundo: {e}")
+        
+        return world_narrative, image_path
+    
+    def generate_initial_scene(self, character: Character) -> str:
+        """Genera la escena inicial para un nuevo personaje (método legacy)"""
+        # Si el proceso divino no está completo, iniciarlo
+        if self.divine_narrator.get_current_phase() == NarrativePhase.AWAKENING:
+            return self.start_divine_narrative(character)
+        
+        # Si ya se completó el proceso divino, usar narrativa mejorada
+        if self.divine_narrator.get_current_phase() == NarrativePhase.ACTIVE_PLAY:
+            return self._generate_contextual_scene(character)
+        
+        # Fallback
+        return self._generate_fallback_initial_scene(character)
     
     def determine_encounter(self, action: str) -> Optional[str]:
         """Determina si una acción resulta en un encuentro"""
@@ -158,6 +238,102 @@ Termina con opciones claras de qué puede hacer.
             f"*La Habitación del Tiempo observa tu progreso...*\n\nTu acción resuena por el espacio infinito. Como {character.race} {character.char_class}, sientes una conexión especial con las energías de entrenamiento que te rodean."
         ]
         return random.choice(templates)
+    
+    def _generate_contextual_scene(self, character: Character) -> str:
+        """Genera una escena inicial contextual basada en el mundo creado"""
+        if not self.enabled:
+            return self._generate_fallback_initial_scene(character)
+        
+        narrative_context = self.divine_narrator.get_enhanced_narrative_context()
+        theme = narrative_context.get("theme", "balance")
+        tone = narrative_context.get("tone", "balanced")
+        
+        contextual_prompt = f"""
+El personaje {character.name} ({character.race} {character.char_class}) se encuentra ahora 
+en el mundo personalizado que ha sido creado según su esencia.
+
+Contexto del mundo:
+- Tema dominante: {theme}
+- Tono general: {tone}
+- Rasgos del personaje: {', '.join(narrative_context.get('traits', []))}
+
+Describe la primera escena después de la creación del mundo. El personaje debe encontrarse
+en un lugar específico que refleje su personalidad y ofrezca oportunidades de crecimiento.
+Incluye detalles sensoriales ricos y elementos que inviten a la exploración.
+"""
+        
+        return self.generate_narration(contextual_prompt, character)
+    
+    def _extract_world_description_for_image(self, narrative_context: Dict[str, Any]) -> str:
+        """Extrae y formatea la descripción del mundo para generar imagen"""
+        theme = narrative_context.get("theme", "balance")
+        tone = narrative_context.get("tone", "balanced")
+        
+        world_descriptions = {
+            "darkness": "Un reino crepuscular con bosques de árboles negros, torres de cristal emitiendo luz desafiante, y cielos de tormenta perpetua",
+            "light": "Un reino resplandeciente con campos dorados, ciudades de mármol blanco, y montañas distantes donde habitan dragones antiguos",
+            "power": "Un mundo épico con titanes de piedra caminando por valles, ciudades flotantes, volcanes escupiendo oro líquido y dragones soberanos",
+            "wisdom": "Un plano místico con bibliotecas infinitas flotando en el vacío, conectadas por puentes de luz solidificada",
+            "freedom": "Un mundo sin fronteras con continentes flotantes navegando por cielos infinitos y ciudades nómadas de aventureros",
+            "justice": "Un mundo en equilibrio con ciudades resplandecientes de justicia contrastando con tierras salvajes"
+        }
+        
+        return world_descriptions.get(theme, "Un mundo de equilibrio perfecto donde todas las fuerzas coexisten en armonía")
+    
+    def generate_enhanced_narration(self, player_input: str, character: Character) -> Tuple[str, Optional[str]]:
+        """
+        Genera narrativa mejorada con posible imagen de escenario
+        
+        Returns:
+            (narration_text, image_path)
+        """
+        # Verificar si es una acción que merece imagen
+        location_keywords = ["explorar", "ir", "caminar", "viajar", "buscar", "entrar", "llegar"]
+        should_generate_image = any(keyword in player_input.lower() for keyword in location_keywords)
+        
+        # Generar narrativa principal
+        narration = self.generate_narration(player_input, character)
+        
+        # Generar imagen si es apropiado
+        image_path = None
+        if should_generate_image and self.image_generator.is_available():
+            try:
+                # Extraer descripción del lugar de la narrativa
+                location_description = self._extract_location_from_narration(narration)
+                character_context = f"{character.race} {character.char_class} de nivel {character.level}"
+                
+                image_path = self.image_generator.generate_scene_image(
+                    location_description,
+                    character_context
+                )
+                
+            except Exception as e:
+                self.logger.error(f"Error generando imagen para narración: {e}")
+        
+        return narration, image_path
+    
+    def _extract_location_from_narration(self, narration: str) -> str:
+        """Extrae descripción del lugar de la narrativa para generar imagen"""
+        # Tomar las primeras 200 palabras que usualmente contienen la descripción del lugar
+        words = narration.split()[:200]
+        location_text = " ".join(words)
+        
+        # Limpiar marcado de narrativa
+        import re
+        location_text = re.sub(r'\*[^*]*\*', '', location_text)  # Remover *acciones*
+        location_text = re.sub(r'\*\*[^*]*\*\*:', '', location_text)  # Remover **nombres**:
+        
+        return location_text.strip()
+    
+    def get_narrative_status(self) -> Dict[str, Any]:
+        """Obtiene el estado del sistema narrativo"""
+        return {
+            "divine_phase": self.divine_narrator.get_current_phase().value,
+            "questions_completed": self.divine_narrator.is_questioning_complete(),
+            "image_generation_available": self.image_generator.is_available(),
+            "ai_enabled": self.enabled,
+            "world_context": self.world_context
+        }
     
     def _generate_fallback_initial_scene(self, character: Character) -> str:
         """Genera escena inicial de respaldo"""

@@ -160,6 +160,62 @@ OPENAI_API_KEY=tu_clave_api_aqui
 ### Migración desde v0.1.0
 El juego v0.2.0 es **completamente compatible** con partidas guardadas de la versión anterior. Simplemente ejecuta `python main.py` en lugar de `python timeIagame.py`.
 
+## Nuevas Características v0.2.0 - Sistema Narrativo Inmersivo
+
+### 🌟 Sistema de "Voz Divina"
+- **Proceso de 3 Preguntas**: Al crear un personaje, una entidad divina hace 3 preguntas profundas
+- **Creación de Mundo Personalizado**: Las respuestas moldean un mundo único para cada jugador
+- **Temas Dinámicos**: Darkness, Light, Power, Wisdom, Freedom, Justice
+- **Narrativa Adaptativa**: El mundo refleja la personalidad del jugador
+
+### 🎨 Generación de Imágenes con DALL-E
+- **Visualización de Escenarios**: Imágenes automáticas de lugares descritos
+- **Integración con OpenAI**: Usa DALL-E 3 para arte conceptual de alta calidad
+- **Caché Inteligente**: Evita regenerar la misma imagen múltiples veces
+- **UI Mejorada**: Panel lateral para mostrar escenarios visuales
+
+### 🎭 Narrativa Inmersiva Mejorada
+- **Múltiples Voces Divinas**: El Observador Eterno, La Fuerza Primordial, El Tejedor de Destinos
+- **Descripciones Sensoriales**: Incluye qué se ve, oye, huele y siente
+- **Atmósfera Dinámica**: El mood cambia según las acciones y personalidad
+- **Consecuencias Narrativas**: Las decisiones impactan permanentemente el mundo
+
+### ⚙️ Configuración Avanzada
+```python
+# En .env, agregar:
+OPENAI_API_KEY=tu_clave_api_aqui
+
+# La configuración de DALL-E es automática:
+# - Modelo: dall-e-3
+# - Resolución: 1024x1024
+# - Caché: generated_images/
+```
+
+### 🎮 Flujo de Juego Mejorado
+
+1. **Creación de Personaje**: Selección tradicional de raza/clase/atributos
+2. **Despertar Divino**: Una voz divina se manifiesta y se presenta
+3. **Proceso de Preguntas**: 3 preguntas profundas sobre esencia, miedos y valores
+4. **Creación del Mundo**: Las respuestas generan un mundo personalizado con imagen
+5. **Aventura Inmersiva**: Narrativa adaptada con escenarios visuales automáticos
+
+### 🏗️ Arquitectura de los Nuevos Sistemas
+
+```
+src/ai/
+├── divine_narrator.py      # Sistema de preguntas divinas y creación de mundo
+├── image_generator.py      # Integración con DALL-E para imágenes
+├── game_master.py         # IA narrativa mejorada (actualizado)
+└── narrative_manager.py   # Gestión de contexto narrativo
+```
+
+### 💡 Características Técnicas
+
+- **Fallback Graceful**: Funciona sin API key (modo narrativo básico)
+- **Gestión de Errores**: Manejo robusto de fallos de API
+- **Optimización**: Caché de imágenes y prompts inteligentes
+- **Compatibilidad**: Mantiene toda la funcionalidad original
+
 ## Mecánicas del Juego
 
 ### Sistema de Dados

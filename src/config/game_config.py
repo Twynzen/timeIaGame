@@ -20,7 +20,11 @@ class GameConfig:
             "model": "gpt-4o-mini",
             "max_tokens": 500,
             "temperature": 0.8,
-            "max_history_length": 10
+            "max_history_length": 10,
+            "dalle_model": "dall-e-3",
+            "image_size": "1024x1024",
+            "enable_image_generation": True,
+            "image_cache_dir": "generated_images"
         }
         
         # Configuración de combate
