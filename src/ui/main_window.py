@@ -876,10 +876,14 @@ class GameMainWindow(tk.Tk):
                 self.update_character_display()
         except Exception as e:
             messagebox.showerror("Error", f"Error al cargar: {str(e)}")
+
+ #CREACION INTERFAZ NIVELES   
     
-    def show_commands(self):
-        """Muestra los comandos disponibles"""
-        commands = """
+def show_commands(self):
+    """Muestra los comandos disponibles"""
+    commands = """
+
+ 
 COMANDOS Y ACCIONES:
 
 🗺️ Exploración:
@@ -903,7 +907,7 @@ COMANDOS Y ACCIONES:
 - Si mueres, revives con la mitad de HP
 - Guarda tu progreso frecuentemente
 """
-        messagebox.showinfo("Comandos", commands)
+    messagebox.showinfo("Comandos", commands)
     
     def show_about(self):
         """Muestra información sobre el juego"""
